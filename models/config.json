@@ -1,0 +1,14 @@
+{
+  "sample_rate": 32000,
+  "window_seconds": 5,
+  "window_samples": 160000,
+  "file_seconds": 60,
+  "n_windows": 12,
+  "n_classes": 234,
+  "embedding_dim": 1536,
+  "ensemble_weight": 0.5,
+  "proto_rank_weight": 0.6,
+  "sed_rank_weight": 0.4,
+  "sonotype_mirroring": false,
+  "rare_taxon_suppression": false
+}
