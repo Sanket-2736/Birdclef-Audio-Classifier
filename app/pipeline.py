@@ -2,6 +2,7 @@ from pathlib import Path
 import json
 import numpy as np
 
+from .species_mapping import get_species_info
 from .first_pass_predict import predict_first_pass
 from .sed_predict import predict_sed
 from .final_blend import final_rank_blend
@@ -102,9 +103,15 @@ def predict_pipeline(
     top_predictions = []
 
     for idx in top_idx:
+        label = CLASSES[idx]
+        species = get_species_info(label)
+
         top_predictions.append({
             "class_index": int(idx),
-            "label": CLASSES[idx],
+            "label": label,
+            "species_name": species["common_name"],
+            "scientific_name": species["scientific_name"],
+            "taxonomic_class": species["class_name"],
             "score": float(file_probs[idx]),
         })
 
@@ -123,12 +130,16 @@ def predict_pipeline(
         predictions = []
 
         for idx in top_window_idx:
+            label = CLASSES[idx]
+            species = get_species_info(label)
+
             predictions.append({
                 "class_index": int(idx),
-                "label": CLASSES[idx],
-                "score": float(
-                    final_probs[window_idx, idx]
-                ),
+                "label": label,
+                "species_name": species["common_name"],
+                "scientific_name": species["scientific_name"],
+                "taxonomic_class": species["class_name"],
+                "score": float(final_probs[window_idx][idx]),
             })
 
         window_predictions.append({

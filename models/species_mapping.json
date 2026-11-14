@@ -1,0 +1,1640 @@
+{
+  "1161364": {
+    "class_index": 0,
+    "class_code": "1161364",
+    "common_name": "Guyalna cuta",
+    "scientific_name": "Guyalna cuta",
+    "class_name": "Insecta"
+  },
+  "116570": {
+    "class_index": 1,
+    "class_code": "116570",
+    "common_name": "Southern Spectacled Caiman",
+    "scientific_name": "Caiman yacare",
+    "class_name": "Reptilia"
+  },
+  "1176823": {
+    "class_index": 2,
+    "class_code": "1176823",
+    "common_name": "Wrestler Frog",
+    "scientific_name": "Leptodactylus luctator",
+    "class_name": "Amphibia"
+  },
+  "1491113": {
+    "class_index": 3,
+    "class_code": "1491113",
+    "common_name": "Guaraní leaf-litter frog",
+    "scientific_name": "Adenomera guarani",
+    "class_name": "Amphibia"
+  },
+  "1595929": {
+    "class_index": 4,
+    "class_code": "1595929",
+    "common_name": "Uruguay Harlequin Frog",
+    "scientific_name": "Lysapsus limellum",
+    "class_name": "Amphibia"
+  },
+  "209233": {
+    "class_index": 5,
+    "class_code": "209233",
+    "common_name": "Feral Horse",
+    "scientific_name": "Equus caballus",
+    "class_name": "Mammalia"
+  },
+  "22930": {
+    "class_index": 6,
+    "class_code": "22930",
+    "common_name": "Basin White-lipped Frog",
+    "scientific_name": "Leptodactylus syphax",
+    "class_name": "Amphibia"
+  },
+  "22956": {
+    "class_index": 7,
+    "class_code": "22956",
+    "common_name": "Mustached Frog",
+    "scientific_name": "Leptodactylus mystacinus",
+    "class_name": "Amphibia"
+  },
+  "22961": {
+    "class_index": 8,
+    "class_code": "22961",
+    "common_name": "Pointedbelly Frog",
+    "scientific_name": "Leptodactylus podicipinus",
+    "class_name": "Amphibia"
+  },
+  "22967": {
+    "class_index": 9,
+    "class_code": "22967",
+    "common_name": "Marbled White-lipped Frog",
+    "scientific_name": "Leptodactylus elenae",
+    "class_name": "Amphibia"
+  },
+  "22973": {
+    "class_index": 10,
+    "class_code": "22973",
+    "common_name": "Whistling Grass Frog",
+    "scientific_name": "Leptodactylus fuscus",
+    "class_name": "Amphibia"
+  },
+  "22983": {
+    "class_index": 11,
+    "class_code": "22983",
+    "common_name": "Pepper Frog",
+    "scientific_name": "Leptodactylus labyrinthicus",
+    "class_name": "Amphibia"
+  },
+  "22985": {
+    "class_index": 12,
+    "class_code": "22985",
+    "common_name": "Peter's Jungle Frog",
+    "scientific_name": "Leptodactylus petersii",
+    "class_name": "Amphibia"
+  },
+  "23150": {
+    "class_index": 13,
+    "class_code": "23150",
+    "common_name": "Central Dwarf Frog",
+    "scientific_name": "Physalaemus centralis",
+    "class_name": "Amphibia"
+  },
+  "23154": {
+    "class_index": 14,
+    "class_code": "23154",
+    "common_name": "Bahia Dwarf Frog",
+    "scientific_name": "Physalaemus albifrons",
+    "class_name": "Amphibia"
+  },
+  "23158": {
+    "class_index": 15,
+    "class_code": "23158",
+    "common_name": "Pale-legged Weeping Frog",
+    "scientific_name": "Physalaemus albonotatus",
+    "class_name": "Amphibia"
+  },
+  "23176": {
+    "class_index": 16,
+    "class_code": "23176",
+    "common_name": "Cope's Swamp Froglet",
+    "scientific_name": "Pseudopaludicola mystacalis",
+    "class_name": "Amphibia"
+  },
+  "23724": {
+    "class_index": 17,
+    "class_code": "23724",
+    "common_name": "Waxy Monkey Tree Frog",
+    "scientific_name": "Phyllomedusa sauvagii",
+    "class_name": "Amphibia"
+  },
+  "24279": {
+    "class_index": 18,
+    "class_code": "24279",
+    "common_name": "Lesser Snouted Tree Frog",
+    "scientific_name": "Scinax nasicus",
+    "class_name": "Amphibia"
+  },
+  "24285": {
+    "class_index": 19,
+    "class_code": "24285",
+    "common_name": "Snouted Tree Frog",
+    "scientific_name": "Scinax fuscovarius",
+    "class_name": "Amphibia"
+  },
+  "24287": {
+    "class_index": 20,
+    "class_code": "24287",
+    "common_name": "Brown-bordered Snouted Tree Frog",
+    "scientific_name": "Scinax fuscomarginatus",
+    "class_name": "Amphibia"
+  },
+  "24321": {
+    "class_index": 21,
+    "class_code": "24321",
+    "common_name": "Mato Grosso Snouted Tree Frog",
+    "scientific_name": "Scinax acuminatus",
+    "class_name": "Amphibia"
+  },
+  "244024": {
+    "class_index": 22,
+    "class_code": "244024",
+    "common_name": "Giant Cicada",
+    "scientific_name": "Quesada gigas",
+    "class_name": "Insecta"
+  },
+  "25073": {
+    "class_index": 23,
+    "class_code": "25073",
+    "common_name": "Chiasmocleis mehelyi",
+    "scientific_name": "Chiasmocleis mehelyi",
+    "class_name": "Amphibia"
+  },
+  "25092": {
+    "class_index": 24,
+    "class_code": "25092",
+    "common_name": "Two-colored oval frog",
+    "scientific_name": "Elachistocleis bicolor",
+    "class_name": "Amphibia"
+  },
+  "25214": {
+    "class_index": 25,
+    "class_code": "25214",
+    "common_name": "Muller's Termite Frog",
+    "scientific_name": "Dermatonotus muelleri",
+    "class_name": "Amphibia"
+  },
+  "326272": {
+    "class_index": 26,
+    "class_code": "326272",
+    "common_name": "Weeping Frog",
+    "scientific_name": "Physalaemus biligonigerus",
+    "class_name": "Amphibia"
+  },
+  "41970": {
+    "class_index": 27,
+    "class_code": "41970",
+    "common_name": "Jaguar",
+    "scientific_name": "Panthera onca",
+    "class_name": "Mammalia"
+  },
+  "43435": {
+    "class_index": 28,
+    "class_code": "43435",
+    "common_name": "Black Howling Monkey",
+    "scientific_name": "Alouatta caraya",
+    "class_name": "Mammalia"
+  },
+  "47144": {
+    "class_index": 29,
+    "class_code": "47144",
+    "common_name": "Domestic Dog",
+    "scientific_name": "Canis familiaris",
+    "class_name": "Mammalia"
+  },
+  "47158son01": {
+    "class_index": 30,
+    "class_code": "47158son01",
+    "common_name": "Insect sonotype01",
+    "scientific_name": "Insect son01",
+    "class_name": "Insecta"
+  },
+  "47158son02": {
+    "class_index": 31,
+    "class_code": "47158son02",
+    "common_name": "Insect sonotype02",
+    "scientific_name": "Insect son02",
+    "class_name": "Insecta"
+  },
+  "47158son03": {
+    "class_index": 32,
+    "class_code": "47158son03",
+    "common_name": "Insect sonotype03",
+    "scientific_name": "Insect son03",
+    "class_name": "Insecta"
+  },
+  "47158son04": {
+    "class_index": 33,
+    "class_code": "47158son04",
+    "common_name": "Insect sonotype04",
+    "scientific_name": "Insect son04",
+    "class_name": "Insecta"
+  },
+  "47158son05": {
+    "class_index": 34,
+    "class_code": "47158son05",
+    "common_name": "Insect sonotype05",
+    "scientific_name": "Insect son05",
+    "class_name": "Insecta"
+  },
+  "47158son06": {
+    "class_index": 35,
+    "class_code": "47158son06",
+    "common_name": "Insect sonotype06",
+    "scientific_name": "Insect son06",
+    "class_name": "Insecta"
+  },
+  "47158son07": {
+    "class_index": 36,
+    "class_code": "47158son07",
+    "common_name": "Insect sonotype07",
+    "scientific_name": "Insect son07",
+    "class_name": "Insecta"
+  },
+  "47158son08": {
+    "class_index": 37,
+    "class_code": "47158son08",
+    "common_name": "Insect sonotype08",
+    "scientific_name": "Insect son08",
+    "class_name": "Insecta"
+  },
+  "47158son09": {
+    "class_index": 38,
+    "class_code": "47158son09",
+    "common_name": "Insect sonotype09",
+    "scientific_name": "Insect son09",
+    "class_name": "Insecta"
+  },
+  "47158son10": {
+    "class_index": 39,
+    "class_code": "47158son10",
+    "common_name": "Insect sonotype10",
+    "scientific_name": "Insect son10",
+    "class_name": "Insecta"
+  },
+  "47158son11": {
+    "class_index": 40,
+    "class_code": "47158son11",
+    "common_name": "Insect sonotype11",
+    "scientific_name": "Insect son11",
+    "class_name": "Insecta"
+  },
+  "47158son12": {
+    "class_index": 41,
+    "class_code": "47158son12",
+    "common_name": "Insect sonotype12",
+    "scientific_name": "Insect son12",
+    "class_name": "Insecta"
+  },
+  "47158son13": {
+    "class_index": 42,
+    "class_code": "47158son13",
+    "common_name": "Insect sonotype13",
+    "scientific_name": "Insect son13",
+    "class_name": "Insecta"
+  },
+  "47158son14": {
+    "class_index": 43,
+    "class_code": "47158son14",
+    "common_name": "Insect sonotype14",
+    "scientific_name": "Insect son14",
+    "class_name": "Insecta"
+  },
+  "47158son15": {
+    "class_index": 44,
+    "class_code": "47158son15",
+    "common_name": "Insect sonotype15",
+    "scientific_name": "Insect son15",
+    "class_name": "Insecta"
+  },
+  "47158son16": {
+    "class_index": 45,
+    "class_code": "47158son16",
+    "common_name": "Insect sonotype16",
+    "scientific_name": "Insect son16",
+    "class_name": "Insecta"
+  },
+  "47158son17": {
+    "class_index": 46,
+    "class_code": "47158son17",
+    "common_name": "Insect sonotype17",
+    "scientific_name": "Insect son17",
+    "class_name": "Insecta"
+  },
+  "47158son18": {
+    "class_index": 47,
+    "class_code": "47158son18",
+    "common_name": "Insect sonotype18",
+    "scientific_name": "Insect son18",
+    "class_name": "Insecta"
+  },
+  "47158son19": {
+    "class_index": 48,
+    "class_code": "47158son19",
+    "common_name": "Insect sonotype19",
+    "scientific_name": "Insect son19",
+    "class_name": "Insecta"
+  },
+  "47158son20": {
+    "class_index": 49,
+    "class_code": "47158son20",
+    "common_name": "Insect sonotype20",
+    "scientific_name": "Insect son20",
+    "class_name": "Insecta"
+  },
+  "47158son21": {
+    "class_index": 50,
+    "class_code": "47158son21",
+    "common_name": "Insect sonotype21",
+    "scientific_name": "Insect son21",
+    "class_name": "Insecta"
+  },
+  "47158son22": {
+    "class_index": 51,
+    "class_code": "47158son22",
+    "common_name": "Insect sonotype22",
+    "scientific_name": "Insect son22",
+    "class_name": "Insecta"
+  },
+  "47158son23": {
+    "class_index": 52,
+    "class_code": "47158son23",
+    "common_name": "Insect sonotype23",
+    "scientific_name": "Insect son23",
+    "class_name": "Insecta"
+  },
+  "47158son24": {
+    "class_index": 53,
+    "class_code": "47158son24",
+    "common_name": "Insect sonotype24",
+    "scientific_name": "Insect son24",
+    "class_name": "Insecta"
+  },
+  "47158son25": {
+    "class_index": 54,
+    "class_code": "47158son25",
+    "common_name": "Insect sonotype25",
+    "scientific_name": "Insect son25",
+    "class_name": "Insecta"
+  },
+  "476521": {
+    "class_index": 55,
+    "class_code": "476521",
+    "common_name": "Cuyaba Dwarf Frog",
+    "scientific_name": "Physalaemus nattereri",
+    "class_name": "Amphibia"
+  },
+  "516975": {
+    "class_index": 56,
+    "class_code": "516975",
+    "common_name": "Hooded Capuchin",
+    "scientific_name": "Sapajus cay",
+    "class_name": "Mammalia"
+  },
+  "517063": {
+    "class_index": 57,
+    "class_code": "517063",
+    "common_name": "Southern Orange-legged Leaf Frog",
+    "scientific_name": "Pithecopus azureus",
+    "class_name": "Amphibia"
+  },
+  "555123": {
+    "class_index": 58,
+    "class_code": "555123",
+    "common_name": "Usina Tree Frog",
+    "scientific_name": "Boana lundii",
+    "class_name": "Amphibia"
+  },
+  "555145": {
+    "class_index": 59,
+    "class_code": "555145",
+    "common_name": "Polka-dot Tree Frog",
+    "scientific_name": "Boana punctata",
+    "class_name": "Amphibia"
+  },
+  "555146": {
+    "class_index": 60,
+    "class_code": "555146",
+    "common_name": "Chaco Tree Frog",
+    "scientific_name": "Boana raniceps",
+    "class_name": "Amphibia"
+  },
+  "64898": {
+    "class_index": 61,
+    "class_code": "64898",
+    "common_name": "Yungas de la Paz Poison Frog",
+    "scientific_name": "Ameerega picta",
+    "class_name": "Amphibia"
+  },
+  "65377": {
+    "class_index": 62,
+    "class_code": "65377",
+    "common_name": "Lesser Tree Frog",
+    "scientific_name": "Dendropsophus minutus",
+    "class_name": "Amphibia"
+  },
+  "65380": {
+    "class_index": 63,
+    "class_code": "65380",
+    "common_name": "Dwarf Tree Frog",
+    "scientific_name": "Dendropsophus nanus",
+    "class_name": "Amphibia"
+  },
+  "66971": {
+    "class_index": 64,
+    "class_code": "66971",
+    "common_name": "Paraguayan Swimming Frog",
+    "scientific_name": "Pseudis platensis",
+    "class_name": "Amphibia"
+  },
+  "67107": {
+    "class_index": 65,
+    "class_code": "67107",
+    "common_name": "Rococo Toad",
+    "scientific_name": "Rhinella diptycha",
+    "class_name": "Amphibia"
+  },
+  "67252": {
+    "class_index": 66,
+    "class_code": "67252",
+    "common_name": "Milk Frog",
+    "scientific_name": "Trachycephalus typhonius",
+    "class_name": "Amphibia"
+  },
+  "70711": {
+    "class_index": 67,
+    "class_code": "70711",
+    "common_name": "Cei's White-lipped Frog",
+    "scientific_name": "Leptodactylus macrosternum",
+    "class_name": "Amphibia"
+  },
+  "738183": {
+    "class_index": 68,
+    "class_code": "738183",
+    "common_name": "White-coated Titi",
+    "scientific_name": "Plecturocebus pallescens",
+    "class_name": "Mammalia"
+  },
+  "74113": {
+    "class_index": 69,
+    "class_code": "74113",
+    "common_name": "Highland",
+    "scientific_name": "Bos taurus",
+    "class_name": "Mammalia"
+  },
+  "74580": {
+    "class_index": 70,
+    "class_code": "74580",
+    "common_name": "Black-tailed Marmoset",
+    "scientific_name": "Mico melanurus",
+    "class_name": "Mammalia"
+  },
+  "760266": {
+    "class_index": 71,
+    "class_code": "760266",
+    "common_name": "Prionacris erosa",
+    "scientific_name": "Prionacris erosa",
+    "class_name": "Insecta"
+  },
+  "ashgre1": {
+    "class_index": 72,
+    "class_code": "ashgre1",
+    "common_name": "Ashy-headed Greenlet",
+    "scientific_name": "Hylophilus pectoralis",
+    "class_name": "Aves"
+  },
+  "astcra1": {
+    "class_index": 73,
+    "class_code": "astcra1",
+    "common_name": "Ash-throated Crake",
+    "scientific_name": "Mustelirallus albicollis",
+    "class_name": "Aves"
+  },
+  "bafcur1": {
+    "class_index": 74,
+    "class_code": "bafcur1",
+    "common_name": "Bare-faced Curassow",
+    "scientific_name": "Crax fasciolata",
+    "class_name": "Aves"
+  },
+  "baffal1": {
+    "class_index": 75,
+    "class_code": "baffal1",
+    "common_name": "Barred Forest-Falcon",
+    "scientific_name": "Micrastur ruficollis",
+    "class_name": "Aves"
+  },
+  "banana": {
+    "class_index": 76,
+    "class_code": "banana",
+    "common_name": "Bananaquit",
+    "scientific_name": "Coereba flaveola",
+    "class_name": "Aves"
+  },
+  "barant1": {
+    "class_index": 77,
+    "class_code": "barant1",
+    "common_name": "Barred Antshrike",
+    "scientific_name": "Thamnophilus doliatus",
+    "class_name": "Aves"
+  },
+  "batbel1": {
+    "class_index": 78,
+    "class_code": "batbel1",
+    "common_name": "Bare-throated Bellbird",
+    "scientific_name": "Procnias nudicollis",
+    "class_name": "Aves"
+  },
+  "baymac": {
+    "class_index": 79,
+    "class_code": "baymac",
+    "common_name": "Blue-and-yellow Macaw",
+    "scientific_name": "Ara ararauna",
+    "class_name": "Aves"
+  },
+  "bbwduc": {
+    "class_index": 80,
+    "class_code": "bbwduc",
+    "common_name": "Black-bellied Whistling Duck",
+    "scientific_name": "Dendrocygna autumnalis",
+    "class_name": "Aves"
+  },
+  "bcwfin2": {
+    "class_index": 81,
+    "class_code": "bcwfin2",
+    "common_name": "Black-capped Warbling Finch",
+    "scientific_name": "Microspingus melanoleucus",
+    "class_name": "Aves"
+  },
+  "bkcdon": {
+    "class_index": 82,
+    "class_code": "bkcdon",
+    "common_name": "Black-capped Donacobius",
+    "scientific_name": "Donacobius atricapilla",
+    "class_name": "Aves"
+  },
+  "bkhpar": {
+    "class_index": 83,
+    "class_code": "bkhpar",
+    "common_name": "Nanday Parakeet",
+    "scientific_name": "Aratinga nenday",
+    "class_name": "Aves"
+  },
+  "blchaw1": {
+    "class_index": 84,
+    "class_code": "blchaw1",
+    "common_name": "Black-collared Hawk",
+    "scientific_name": "Busarellus nigricollis",
+    "class_name": "Aves"
+  },
+  "blheag1": {
+    "class_index": 85,
+    "class_code": "blheag1",
+    "common_name": "Black Hawk-Eagle",
+    "scientific_name": "Spizaetus tyrannus",
+    "class_name": "Aves"
+  },
+  "blttit1": {
+    "class_index": 86,
+    "class_code": "blttit1",
+    "common_name": "Black-tailed Tityra",
+    "scientific_name": "Tityra cayana",
+    "class_name": "Aves"
+  },
+  "bncfly": {
+    "class_index": 87,
+    "class_code": "bncfly",
+    "common_name": "Brown-crested Flycatcher",
+    "scientific_name": "Myiarchus tyrannulus",
+    "class_name": "Aves"
+  },
+  "bobfly1": {
+    "class_index": 88,
+    "class_code": "bobfly1",
+    "common_name": "Boat-billed Flycatcher",
+    "scientific_name": "Megarynchus pitangua",
+    "class_name": "Aves"
+  },
+  "brcmar1": {
+    "class_index": 89,
+    "class_code": "brcmar1",
+    "common_name": "Brown-chested Martin",
+    "scientific_name": "Progne tapera",
+    "class_name": "Aves"
+  },
+  "brnowl": {
+    "class_index": 90,
+    "class_code": "brnowl",
+    "common_name": "American Barn Owl",
+    "scientific_name": "Tyto furcata",
+    "class_name": "Aves"
+  },
+  "bucmot4": {
+    "class_index": 91,
+    "class_code": "bucmot4",
+    "common_name": "Amazonian Motmot",
+    "scientific_name": "Momotus momota",
+    "class_name": "Aves"
+  },
+  "bucpar": {
+    "class_index": 92,
+    "class_code": "bucpar",
+    "common_name": "Blue-crowned Parakeet",
+    "scientific_name": "Thectocercus acuticaudatus",
+    "class_name": "Aves"
+  },
+  "bufpar": {
+    "class_index": 93,
+    "class_code": "bufpar",
+    "common_name": "Turquoise-fronted Amazon",
+    "scientific_name": "Amazona aestiva",
+    "class_name": "Aves"
+  },
+  "bunibi1": {
+    "class_index": 94,
+    "class_code": "bunibi1",
+    "common_name": "Buff-necked Ibis",
+    "scientific_name": "Theristicus caudatus",
+    "class_name": "Aves"
+  },
+  "burowl": {
+    "class_index": 95,
+    "class_code": "burowl",
+    "common_name": "Burrowing Owl",
+    "scientific_name": "Athene cunicularia",
+    "class_name": "Aves"
+  },
+  "camfli1": {
+    "class_index": 96,
+    "class_code": "camfli1",
+    "common_name": "Campo Flicker",
+    "scientific_name": "Colaptes campestris",
+    "class_name": "Aves"
+  },
+  "chacha1": {
+    "class_index": 97,
+    "class_code": "chacha1",
+    "common_name": "Chaco Chachalaca",
+    "scientific_name": "Ortalis canicollis",
+    "class_name": "Aves"
+  },
+  "chbmoc1": {
+    "class_index": 98,
+    "class_code": "chbmoc1",
+    "common_name": "Chalk-browed Mockingbird",
+    "scientific_name": "Mimus saturninus",
+    "class_name": "Aves"
+  },
+  "chobla1": {
+    "class_index": 99,
+    "class_code": "chobla1",
+    "common_name": "Chopi Blackbird",
+    "scientific_name": "Gnorimopsar chopi",
+    "class_name": "Aves"
+  },
+  "chvcon1": {
+    "class_index": 100,
+    "class_code": "chvcon1",
+    "common_name": "Chestnut-vented Conebill",
+    "scientific_name": "Conirostrum speciosum",
+    "class_name": "Aves"
+  },
+  "cibspi1": {
+    "class_index": 101,
+    "class_code": "cibspi1",
+    "common_name": "Cinereous-breasted Spinetail",
+    "scientific_name": "Synallaxis hypospodia",
+    "class_name": "Aves"
+  },
+  "coffal1": {
+    "class_index": 102,
+    "class_code": "coffal1",
+    "common_name": "Collared Forest-Falcon",
+    "scientific_name": "Micrastur semitorquatus",
+    "class_name": "Aves"
+  },
+  "compau": {
+    "class_index": 103,
+    "class_code": "compau",
+    "common_name": "Pauraque",
+    "scientific_name": "Nyctidromus albicollis",
+    "class_name": "Aves"
+  },
+  "compot1": {
+    "class_index": 104,
+    "class_code": "compot1",
+    "common_name": "Common Potoo",
+    "scientific_name": "Nyctibius griseus",
+    "class_name": "Aves"
+  },
+  "crbthr1": {
+    "class_index": 105,
+    "class_code": "crbthr1",
+    "common_name": "Creamy-bellied Thrush",
+    "scientific_name": "Turdus amaurochalinus",
+    "class_name": "Aves"
+  },
+  "crebec1": {
+    "class_index": 106,
+    "class_code": "crebec1",
+    "common_name": "Crested Becard",
+    "scientific_name": "Pachyramphus validus",
+    "class_name": "Aves"
+  },
+  "dwatin1": {
+    "class_index": 107,
+    "class_code": "dwatin1",
+    "common_name": "Dwarf Tinamou",
+    "scientific_name": "Taoniscus nanus",
+    "class_name": "Aves"
+  },
+  "epaori4": {
+    "class_index": 108,
+    "class_code": "epaori4",
+    "common_name": "Variable Oriole",
+    "scientific_name": "Icterus pyrrhopterus",
+    "class_name": "Aves"
+  },
+  "eulfly1": {
+    "class_index": 109,
+    "class_code": "eulfly1",
+    "common_name": "Euler's Flycatcher",
+    "scientific_name": "Lathrotriccus euleri",
+    "class_name": "Aves"
+  },
+  "fabwre1": {
+    "class_index": 110,
+    "class_code": "fabwre1",
+    "common_name": "Fawn-breasted Wren",
+    "scientific_name": "Cantorchilus guarayanus",
+    "class_name": "Aves"
+  },
+  "fepowl": {
+    "class_index": 111,
+    "class_code": "fepowl",
+    "common_name": "Ferruginous Pygmy Owl",
+    "scientific_name": "Glaucidium brasilianum",
+    "class_name": "Aves"
+  },
+  "ficman1": {
+    "class_index": 112,
+    "class_code": "ficman1",
+    "common_name": "Fiery-capped Manakin",
+    "scientific_name": "Machaeropterus pyrocephalus",
+    "class_name": "Aves"
+  },
+  "flawar1": {
+    "class_index": 113,
+    "class_code": "flawar1",
+    "common_name": "Flavescent Warbler",
+    "scientific_name": "Myiothlypis flaveola",
+    "class_name": "Aves"
+  },
+  "fotfly": {
+    "class_index": 114,
+    "class_code": "fotfly",
+    "common_name": "Fork-tailed Flycatcher",
+    "scientific_name": "Tyrannus savana",
+    "class_name": "Aves"
+  },
+  "fusfly1": {
+    "class_index": 115,
+    "class_code": "fusfly1",
+    "common_name": "Fuscous Flycatcher",
+    "scientific_name": "Cnemotriccus fuscatus",
+    "class_name": "Aves"
+  },
+  "gilhum1": {
+    "class_index": 116,
+    "class_code": "gilhum1",
+    "common_name": "Gilded Hummingbird",
+    "scientific_name": "Hylocharis chrysura",
+    "class_name": "Aves"
+  },
+  "giwrai1": {
+    "class_index": 117,
+    "class_code": "giwrai1",
+    "common_name": "Giant Wood Rail",
+    "scientific_name": "Aramides ypecaha",
+    "class_name": "Aves"
+  },
+  "glteme1": {
+    "class_index": 118,
+    "class_code": "glteme1",
+    "common_name": "Glittering-throated Emerald",
+    "scientific_name": "Chionomesa fimbriata",
+    "class_name": "Aves"
+  },
+  "grasal3": {
+    "class_index": 119,
+    "class_code": "grasal3",
+    "common_name": "Bluish-grey Saltator",
+    "scientific_name": "Saltator coerulescens",
+    "class_name": "Aves"
+  },
+  "greani1": {
+    "class_index": 120,
+    "class_code": "greani1",
+    "common_name": "Greater Ani",
+    "scientific_name": "Crotophaga major",
+    "class_name": "Aves"
+  },
+  "greant1": {
+    "class_index": 121,
+    "class_code": "greant1",
+    "common_name": "Great Antshrike",
+    "scientific_name": "Taraba major",
+    "class_name": "Aves"
+  },
+  "greela": {
+    "class_index": 122,
+    "class_code": "greela",
+    "common_name": "Greenish Elaenia",
+    "scientific_name": "Myiopagis viridicata",
+    "class_name": "Aves"
+  },
+  "grekis": {
+    "class_index": 123,
+    "class_code": "grekis",
+    "common_name": "Great Kiskadee",
+    "scientific_name": "Pitangus sulphuratus",
+    "class_name": "Aves"
+  },
+  "grepot1": {
+    "class_index": 124,
+    "class_code": "grepot1",
+    "common_name": "Great Potoo",
+    "scientific_name": "Nyctibius grandis",
+    "class_name": "Aves"
+  },
+  "gretho2": {
+    "class_index": 125,
+    "class_code": "gretho2",
+    "common_name": "Greater Thornbird",
+    "scientific_name": "Phacellodomus ruber",
+    "class_name": "Aves"
+  },
+  "greyel": {
+    "class_index": 126,
+    "class_code": "greyel",
+    "common_name": "Greater Yellowlegs",
+    "scientific_name": "Tringa melanoleuca",
+    "class_name": "Aves"
+  },
+  "grfdov1": {
+    "class_index": 127,
+    "class_code": "grfdov1",
+    "common_name": "Grey-fronted Dove",
+    "scientific_name": "Leptotila rufaxilla",
+    "class_name": "Aves"
+  },
+  "grhtan1": {
+    "class_index": 128,
+    "class_code": "grhtan1",
+    "common_name": "Grey-headed Tanager",
+    "scientific_name": "Eucometis penicillata",
+    "class_name": "Aves"
+  },
+  "gycwor1": {
+    "class_index": 129,
+    "class_code": "gycwor1",
+    "common_name": "Grey-cowled Wood Rail",
+    "scientific_name": "Aramides cajaneus",
+    "class_name": "Aves"
+  },
+  "horscr1": {
+    "class_index": 130,
+    "class_code": "horscr1",
+    "common_name": "Horned Screamer",
+    "scientific_name": "Anhima cornuta",
+    "class_name": "Aves"
+  },
+  "houspa": {
+    "class_index": 131,
+    "class_code": "houspa",
+    "common_name": "House Sparrow",
+    "scientific_name": "Passer domesticus",
+    "class_name": "Aves"
+  },
+  "hyamac1": {
+    "class_index": 132,
+    "class_code": "hyamac1",
+    "common_name": "Hyacinth Macaw",
+    "scientific_name": "Anodorhynchus hyacinthinus",
+    "class_name": "Aves"
+  },
+  "larela1": {
+    "class_index": 133,
+    "class_code": "larela1",
+    "common_name": "Large Elaenia",
+    "scientific_name": "Elaenia spectabilis",
+    "class_name": "Aves"
+  },
+  "lesela1": {
+    "class_index": 134,
+    "class_code": "lesela1",
+    "common_name": "Lesser Elaenia",
+    "scientific_name": "Elaenia chiriquensis",
+    "class_name": "Aves"
+  },
+  "lesgrf1": {
+    "class_index": 135,
+    "class_code": "lesgrf1",
+    "common_name": "Lesser Grass-Finch",
+    "scientific_name": "Emberizoides ypiranganus",
+    "class_name": "Aves"
+  },
+  "limpki": {
+    "class_index": 136,
+    "class_code": "limpki",
+    "common_name": "Limpkin",
+    "scientific_name": "Aramus guarauna",
+    "class_name": "Aves"
+  },
+  "linwoo1": {
+    "class_index": 137,
+    "class_code": "linwoo1",
+    "common_name": "Lineated Woodpecker",
+    "scientific_name": "Dryocopus lineatus",
+    "class_name": "Aves"
+  },
+  "litcuc2": {
+    "class_index": 138,
+    "class_code": "litcuc2",
+    "common_name": "Little Cuckoo",
+    "scientific_name": "Coccycua minuta",
+    "class_name": "Aves"
+  },
+  "litnig1": {
+    "class_index": 139,
+    "class_code": "litnig1",
+    "common_name": "Little Nightjar",
+    "scientific_name": "Setopagis parvula",
+    "class_name": "Aves"
+  },
+  "mabpar": {
+    "class_index": 140,
+    "class_code": "mabpar",
+    "common_name": "Maroon-bellied Parakeet",
+    "scientific_name": "Pyrrhura frontalis",
+    "class_name": "Aves"
+  },
+  "magant1": {
+    "class_index": 141,
+    "class_code": "magant1",
+    "common_name": "Mato Grosso Antbird",
+    "scientific_name": "Cercomacra melanaria",
+    "class_name": "Aves"
+  },
+  "magtan2": {
+    "class_index": 142,
+    "class_code": "magtan2",
+    "common_name": "Magpie Tanager",
+    "scientific_name": "Cissopis leverianus",
+    "class_name": "Aves"
+  },
+  "masgna1": {
+    "class_index": 143,
+    "class_code": "masgna1",
+    "common_name": "Masked Gnatcatcher",
+    "scientific_name": "Polioptila dumicola",
+    "class_name": "Aves"
+  },
+  "nacnig1": {
+    "class_index": 144,
+    "class_code": "nacnig1",
+    "common_name": "Nacunda Nighthawk",
+    "scientific_name": "Chordeiles nacunda",
+    "class_name": "Aves"
+  },
+  "ocecra1": {
+    "class_index": 145,
+    "class_code": "ocecra1",
+    "common_name": "Ocellated Crake",
+    "scientific_name": "Rufirallus schomburgkii",
+    "class_name": "Aves"
+  },
+  "oliwoo1": {
+    "class_index": 146,
+    "class_code": "oliwoo1",
+    "common_name": "Olivaceous Woodcreeper",
+    "scientific_name": "Sittasomus griseicapillus",
+    "class_name": "Aves"
+  },
+  "orbtro3": {
+    "class_index": 147,
+    "class_code": "orbtro3",
+    "common_name": "Orange-backed Troupial",
+    "scientific_name": "Icterus croconotus",
+    "class_name": "Aves"
+  },
+  "orwpar": {
+    "class_index": 148,
+    "class_code": "orwpar",
+    "common_name": "Orange-winged Amazon",
+    "scientific_name": "Amazona amazonica",
+    "class_name": "Aves"
+  },
+  "osprey": {
+    "class_index": 149,
+    "class_code": "osprey",
+    "common_name": "Osprey",
+    "scientific_name": "Pandion haliaetus",
+    "class_name": "Aves"
+  },
+  "pabspi1": {
+    "class_index": 150,
+    "class_code": "pabspi1",
+    "common_name": "Pale-breasted Spinetail",
+    "scientific_name": "Synallaxis albescens",
+    "class_name": "Aves"
+  },
+  "palhor3": {
+    "class_index": 151,
+    "class_code": "palhor3",
+    "common_name": "Pale-legged Hornero",
+    "scientific_name": "Furnarius leucopus",
+    "class_name": "Aves"
+  },
+  "paltan1": {
+    "class_index": 152,
+    "class_code": "paltan1",
+    "common_name": "Palm Tanager",
+    "scientific_name": "Thraupis palmarum",
+    "class_name": "Aves"
+  },
+  "phecuc1": {
+    "class_index": 153,
+    "class_code": "phecuc1",
+    "common_name": "Pheasant Cuckoo",
+    "scientific_name": "Dromococcyx phasianellus",
+    "class_name": "Aves"
+  },
+  "picpig2": {
+    "class_index": 154,
+    "class_code": "picpig2",
+    "common_name": "Picazuro Pigeon",
+    "scientific_name": "Patagioenas picazuro",
+    "class_name": "Aves"
+  },
+  "pirfly1": {
+    "class_index": 155,
+    "class_code": "pirfly1",
+    "common_name": "Piratic Flycatcher",
+    "scientific_name": "Legatus leucophaius",
+    "class_name": "Aves"
+  },
+  "plasla1": {
+    "class_index": 156,
+    "class_code": "plasla1",
+    "common_name": "Planalto Slaty Antshrike",
+    "scientific_name": "Thamnophilus pelzelni",
+    "class_name": "Aves"
+  },
+  "platyr1": {
+    "class_index": 157,
+    "class_code": "platyr1",
+    "common_name": "Plain Inezia",
+    "scientific_name": "Inezia inornata",
+    "class_name": "Aves"
+  },
+  "plcjay1": {
+    "class_index": 158,
+    "class_code": "plcjay1",
+    "common_name": "Plush-crested Jay",
+    "scientific_name": "Cyanocorax chrysops",
+    "class_name": "Aves"
+  },
+  "pluibi1": {
+    "class_index": 159,
+    "class_code": "pluibi1",
+    "common_name": "Plumbeous Ibis",
+    "scientific_name": "Theristicus caerulescens",
+    "class_name": "Aves"
+  },
+  "purjay1": {
+    "class_index": 160,
+    "class_code": "purjay1",
+    "common_name": "Purplish Jay",
+    "scientific_name": "Cyanocorax cyanomelas",
+    "class_name": "Aves"
+  },
+  "pvttyr1": {
+    "class_index": 161,
+    "class_code": "pvttyr1",
+    "common_name": "Pearly-vented Tody-Tyrant",
+    "scientific_name": "Hemitriccus margaritaceiventer",
+    "class_name": "Aves"
+  },
+  "ragmac1": {
+    "class_index": 162,
+    "class_code": "ragmac1",
+    "common_name": "Red-and-green Macaw",
+    "scientific_name": "Ara chloropterus",
+    "class_name": "Aves"
+  },
+  "rebscy1": {
+    "class_index": 163,
+    "class_code": "rebscy1",
+    "common_name": "Red-billed Scythebill",
+    "scientific_name": "Campylorhamphus trochilirostris",
+    "class_name": "Aves"
+  },
+  "recfin1": {
+    "class_index": 164,
+    "class_code": "recfin1",
+    "common_name": "Red-crested Finch",
+    "scientific_name": "Coryphospingus cucullatus",
+    "class_name": "Aves"
+  },
+  "redjun": {
+    "class_index": 165,
+    "class_code": "redjun",
+    "common_name": "Red Junglefowl",
+    "scientific_name": "Gallus gallus",
+    "class_name": "Aves"
+  },
+  "relser1": {
+    "class_index": 166,
+    "class_code": "relser1",
+    "common_name": "Red-legged Seriema",
+    "scientific_name": "Cariama cristata",
+    "class_name": "Aves"
+  },
+  "rinkin1": {
+    "class_index": 167,
+    "class_code": "rinkin1",
+    "common_name": "Ringed Kingfisher",
+    "scientific_name": "Megaceryle torquata",
+    "class_name": "Aves"
+  },
+  "rivwar1": {
+    "class_index": 168,
+    "class_code": "rivwar1",
+    "common_name": "Riverbank Warbler",
+    "scientific_name": "Myiothlypis rivularis",
+    "class_name": "Aves"
+  },
+  "roahaw": {
+    "class_index": 169,
+    "class_code": "roahaw",
+    "common_name": "Roadside Hawk",
+    "scientific_name": "Rupornis magnirostris",
+    "class_name": "Aves"
+  },
+  "rubthr1": {
+    "class_index": 170,
+    "class_code": "rubthr1",
+    "common_name": "Rufous-bellied Thrush",
+    "scientific_name": "Turdus rufiventris",
+    "class_name": "Aves"
+  },
+  "rufcac2": {
+    "class_index": 171,
+    "class_code": "rufcac2",
+    "common_name": "Rufous Cacholote",
+    "scientific_name": "Pseudoseisura unirufa",
+    "class_name": "Aves"
+  },
+  "rufcas2": {
+    "class_index": 172,
+    "class_code": "rufcas2",
+    "common_name": "Rufous Casiornis",
+    "scientific_name": "Casiornis rufus",
+    "class_name": "Aves"
+  },
+  "rufgna3": {
+    "class_index": 173,
+    "class_code": "rufgna3",
+    "common_name": "Rufous Gnateater",
+    "scientific_name": "Conopophaga lineata",
+    "class_name": "Aves"
+  },
+  "rufhor2": {
+    "class_index": 174,
+    "class_code": "rufhor2",
+    "common_name": "Rufous Hornero",
+    "scientific_name": "Furnarius rufus",
+    "class_name": "Aves"
+  },
+  "rufnig1": {
+    "class_index": 175,
+    "class_code": "rufnig1",
+    "common_name": "Rufous Nightjar",
+    "scientific_name": "Antrostomus rufus",
+    "class_name": "Aves"
+  },
+  "ruftho1": {
+    "class_index": 176,
+    "class_code": "ruftho1",
+    "common_name": "Rufous-fronted Thornbird",
+    "scientific_name": "Phacellodomus rufifrons",
+    "class_name": "Aves"
+  },
+  "ruftof1": {
+    "class_index": 177,
+    "class_code": "ruftof1",
+    "common_name": "Rusty-fronted Tody-Flycatcher",
+    "scientific_name": "Poecilotriccus latirostris",
+    "class_name": "Aves"
+  },
+  "rumfly1": {
+    "class_index": 178,
+    "class_code": "rumfly1",
+    "common_name": "Rusty-margined Flycatcher",
+    "scientific_name": "Myiozetetes cayanensis",
+    "class_name": "Aves"
+  },
+  "ruther1": {
+    "class_index": 179,
+    "class_code": "ruther1",
+    "common_name": "Rufescent Tiger Heron",
+    "scientific_name": "Tigrisoma lineatum",
+    "class_name": "Aves"
+  },
+  "rutjac1": {
+    "class_index": 180,
+    "class_code": "rutjac1",
+    "common_name": "Rufous-tailed Jacamar",
+    "scientific_name": "Galbula ruficauda",
+    "class_name": "Aves"
+  },
+  "sabspa1": {
+    "class_index": 181,
+    "class_code": "sabspa1",
+    "common_name": "Saffron-billed Sparrow",
+    "scientific_name": "Arremon flavirostris",
+    "class_name": "Aves"
+  },
+  "saffin": {
+    "class_index": 182,
+    "class_code": "saffin",
+    "common_name": "Saffron Finch",
+    "scientific_name": "Sicalis flaveola",
+    "class_name": "Aves"
+  },
+  "saytan1": {
+    "class_index": 183,
+    "class_code": "saytan1",
+    "common_name": "Sayaca Tanager",
+    "scientific_name": "Thraupis sayaca",
+    "class_name": "Aves"
+  },
+  "scadov1": {
+    "class_index": 184,
+    "class_code": "scadov1",
+    "common_name": "Scaled Dove",
+    "scientific_name": "Columbina squammata",
+    "class_name": "Aves"
+  },
+  "schpar1": {
+    "class_index": 185,
+    "class_code": "schpar1",
+    "common_name": "Scaly-headed Parrot",
+    "scientific_name": "Pionus maximiliani",
+    "class_name": "Aves"
+  },
+  "scther1": {
+    "class_index": 186,
+    "class_code": "scther1",
+    "common_name": "Scale-throated Hermit",
+    "scientific_name": "Phaethornis eurynome",
+    "class_name": "Aves"
+  },
+  "shcfly1": {
+    "class_index": 187,
+    "class_code": "shcfly1",
+    "common_name": "Short-crested Flycatcher",
+    "scientific_name": "Myiarchus ferox",
+    "class_name": "Aves"
+  },
+  "shshaw": {
+    "class_index": 188,
+    "class_code": "shshaw",
+    "common_name": "Sharp-shinned Hawk",
+    "scientific_name": "Accipiter striatus",
+    "class_name": "Aves"
+  },
+  "shtnig1": {
+    "class_index": 189,
+    "class_code": "shtnig1",
+    "common_name": "Short-tailed Nighthawk",
+    "scientific_name": "Lurocalis semitorquatus",
+    "class_name": "Aves"
+  },
+  "sibtan2": {
+    "class_index": 190,
+    "class_code": "sibtan2",
+    "common_name": "Silver-beaked Tanager",
+    "scientific_name": "Ramphocelus carbo",
+    "class_name": "Aves"
+  },
+  "smbani": {
+    "class_index": 191,
+    "class_code": "smbani",
+    "common_name": "Smooth-billed Ani",
+    "scientific_name": "Crotophaga ani",
+    "class_name": "Aves"
+  },
+  "smbtin1": {
+    "class_index": 192,
+    "class_code": "smbtin1",
+    "common_name": "Small-billed Tinamou",
+    "scientific_name": "Crypturellus parvirostris",
+    "class_name": "Aves"
+  },
+  "sobcac1": {
+    "class_index": 193,
+    "class_code": "sobcac1",
+    "common_name": "Solitary Cacique",
+    "scientific_name": "Cacicus solitarius",
+    "class_name": "Aves"
+  },
+  "sobtyr1": {
+    "class_index": 194,
+    "class_code": "sobtyr1",
+    "common_name": "Southern Beardless Tyrannulet",
+    "scientific_name": "Camptostoma obsoletum",
+    "class_name": "Aves"
+  },
+  "socfly1": {
+    "class_index": 195,
+    "class_code": "socfly1",
+    "common_name": "Social Flycatcher",
+    "scientific_name": "Myiozetetes similis",
+    "class_name": "Aves"
+  },
+  "sofspi1": {
+    "class_index": 196,
+    "class_code": "sofspi1",
+    "common_name": "Sooty-fronted Spinetail",
+    "scientific_name": "Synallaxis frontalis",
+    "class_name": "Aves"
+  },
+  "souant1": {
+    "class_index": 197,
+    "class_code": "souant1",
+    "common_name": "Southern Antpipit",
+    "scientific_name": "Corythopis delalandi",
+    "class_name": "Aves"
+  },
+  "soulap1": {
+    "class_index": 198,
+    "class_code": "soulap1",
+    "common_name": "Southern Lapwing",
+    "scientific_name": "Vanellus chilensis",
+    "class_name": "Aves"
+  },
+  "souscr1": {
+    "class_index": 199,
+    "class_code": "souscr1",
+    "common_name": "Southern Screamer",
+    "scientific_name": "Chauna torquata",
+    "class_name": "Aves"
+  },
+  "spbant3": {
+    "class_index": 200,
+    "class_code": "spbant3",
+    "common_name": "Spot-backed Antshrike",
+    "scientific_name": "Hypoedaleus guttatus",
+    "class_name": "Aves"
+  },
+  "spispi1": {
+    "class_index": 201,
+    "class_code": "spispi1",
+    "common_name": "Spix's Spinetail",
+    "scientific_name": "Synallaxis spixi",
+    "class_name": "Aves"
+  },
+  "sptnig1": {
+    "class_index": 202,
+    "class_code": "sptnig1",
+    "common_name": "Spot-tailed Nightjar",
+    "scientific_name": "Antiurus maculicaudus",
+    "class_name": "Aves"
+  },
+  "squcuc1": {
+    "class_index": 203,
+    "class_code": "squcuc1",
+    "common_name": "Common Squirrel-Cuckoo",
+    "scientific_name": "Piaya cayana",
+    "class_name": "Aves"
+  },
+  "stbwoo2": {
+    "class_index": 204,
+    "class_code": "stbwoo2",
+    "common_name": "Straight-billed Woodcreeper",
+    "scientific_name": "Dendroplex picus",
+    "class_name": "Aves"
+  },
+  "strcuc1": {
+    "class_index": 205,
+    "class_code": "strcuc1",
+    "common_name": "Striped Cuckoo",
+    "scientific_name": "Tapera naevia",
+    "class_name": "Aves"
+  },
+  "strher2": {
+    "class_index": 206,
+    "class_code": "strher2",
+    "common_name": "Striated Heron",
+    "scientific_name": "Butorides striata",
+    "class_name": "Aves"
+  },
+  "strowl1": {
+    "class_index": 207,
+    "class_code": "strowl1",
+    "common_name": "Striped Owl",
+    "scientific_name": "Asio clamator",
+    "class_name": "Aves"
+  },
+  "swthum1": {
+    "class_index": 208,
+    "class_code": "swthum1",
+    "common_name": "Swallow-tailed Hummingbird",
+    "scientific_name": "Eupetomena macroura",
+    "class_name": "Aves"
+  },
+  "swtman1": {
+    "class_index": 209,
+    "class_code": "swtman1",
+    "common_name": "Swallow-tailed Manakin",
+    "scientific_name": "Chiroxiphia caudata",
+    "class_name": "Aves"
+  },
+  "tattin1": {
+    "class_index": 210,
+    "class_code": "tattin1",
+    "common_name": "Tataupa Tinamou",
+    "scientific_name": "Crypturellus tataupa",
+    "class_name": "Aves"
+  },
+  "thlwre1": {
+    "class_index": 211,
+    "class_code": "thlwre1",
+    "common_name": "Thrush-like Wren",
+    "scientific_name": "Campylorhynchus turdinus",
+    "class_name": "Aves"
+  },
+  "toctou1": {
+    "class_index": 212,
+    "class_code": "toctou1",
+    "common_name": "Toco Toucan",
+    "scientific_name": "Ramphastos toco",
+    "class_name": "Aves"
+  },
+  "trokin": {
+    "class_index": 213,
+    "class_code": "trokin",
+    "common_name": "Tropical Kingbird",
+    "scientific_name": "Tyrannus melancholicus",
+    "class_name": "Aves"
+  },
+  "trsowl": {
+    "class_index": 214,
+    "class_code": "trsowl",
+    "common_name": "Tropical Screech Owl",
+    "scientific_name": "Megascops choliba",
+    "class_name": "Aves"
+  },
+  "undtin1": {
+    "class_index": 215,
+    "class_code": "undtin1",
+    "common_name": "Undulated Tinamou",
+    "scientific_name": "Crypturellus undulatus",
+    "class_name": "Aves"
+  },
+  "varant1": {
+    "class_index": 216,
+    "class_code": "varant1",
+    "common_name": "Variable Antshrike",
+    "scientific_name": "Thamnophilus caerulescens",
+    "class_name": "Aves"
+  },
+  "watjac1": {
+    "class_index": 217,
+    "class_code": "watjac1",
+    "common_name": "Wattled Jacana",
+    "scientific_name": "Jacana jacana",
+    "class_name": "Aves"
+  },
+  "wesfie1": {
+    "class_index": 218,
+    "class_code": "wesfie1",
+    "common_name": "Western Fire-eye",
+    "scientific_name": "Pyriglena maura",
+    "class_name": "Aves"
+  },
+  "wfwduc1": {
+    "class_index": 219,
+    "class_code": "wfwduc1",
+    "common_name": "White-faced Whistling Duck",
+    "scientific_name": "Dendrocygna viduata",
+    "class_name": "Aves"
+  },
+  "whbant2": {
+    "class_index": 220,
+    "class_code": "whbant2",
+    "common_name": "White-bearded Antshrike",
+    "scientific_name": "Biatas nigropectus",
+    "class_name": "Aves"
+  },
+  "whbwar2": {
+    "class_index": 221,
+    "class_code": "whbwar2",
+    "common_name": "White-browed Warbler",
+    "scientific_name": "Myiothlypis leucoblephara",
+    "class_name": "Aves"
+  },
+  "whiwoo1": {
+    "class_index": 222,
+    "class_code": "whiwoo1",
+    "common_name": "White Woodpecker",
+    "scientific_name": "Melanerpes candidus",
+    "class_name": "Aves"
+  },
+  "whlspi1": {
+    "class_index": 223,
+    "class_code": "whlspi1",
+    "common_name": "White-lored Spinetail",
+    "scientific_name": "Synallaxis albilora",
+    "class_name": "Aves"
+  },
+  "whnjay1": {
+    "class_index": 224,
+    "class_code": "whnjay1",
+    "common_name": "White-naped Jay",
+    "scientific_name": "Cyanocorax cyanopogon",
+    "class_name": "Aves"
+  },
+  "whtdov": {
+    "class_index": 225,
+    "class_code": "whtdov",
+    "common_name": "White-tipped Dove",
+    "scientific_name": "Leptotila verreauxi",
+    "class_name": "Aves"
+  },
+  "whwpic1": {
+    "class_index": 226,
+    "class_code": "whwpic1",
+    "common_name": "White-wedged Piculet",
+    "scientific_name": "Picumnus albosquamatus",
+    "class_name": "Aves"
+  },
+  "y00678": {
+    "class_index": 227,
+    "class_code": "y00678",
+    "common_name": "Crested Caracara",
+    "scientific_name": "Caracara plancus",
+    "class_name": "Aves"
+  },
+  "yebcar": {
+    "class_index": 228,
+    "class_code": "yebcar",
+    "common_name": "Yellow-billed Cardinal",
+    "scientific_name": "Paroaria capitata",
+    "class_name": "Aves"
+  },
+  "yebela1": {
+    "class_index": 229,
+    "class_code": "yebela1",
+    "common_name": "Yellow-bellied Elaenia",
+    "scientific_name": "Elaenia flavogaster",
+    "class_name": "Aves"
+  },
+  "yecmac": {
+    "class_index": 230,
+    "class_code": "yecmac",
+    "common_name": "Golden-collared Macaw",
+    "scientific_name": "Primolius auricollis",
+    "class_name": "Aves"
+  },
+  "yecpar": {
+    "class_index": 231,
+    "class_code": "yecpar",
+    "common_name": "Yellow-chevroned Parakeet",
+    "scientific_name": "Brotogeris chiriri",
+    "class_name": "Aves"
+  },
+  "yehcar1": {
+    "class_index": 232,
+    "class_code": "yehcar1",
+    "common_name": "Yellow-headed Caracara",
+    "scientific_name": "Daptrius chimachima",
+    "class_name": "Aves"
+  },
+  "yeofly1": {
+    "class_index": 233,
+    "class_code": "yeofly1",
+    "common_name": "Yellow-olive Flatbill",
+    "scientific_name": "Tolmomyias sulphurescens",
+    "class_name": "Aves"
+  }
+}

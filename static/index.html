@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BirdCLEF Audio Classifier</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .container {
+            width: min(1400px, 94%);
+            margin: 30px auto;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .upload-card,
+        .panel {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .upload-row {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+            background: #0f172a;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            color: white;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 11px;
+            background: #0f172a;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            color: white;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #22c55e;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+
+        button:disabled {
+            background: #475569;
+            cursor: not-allowed;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .loading {
+            display: none;
+            margin-top: 15px;
+            color: #38bdf8;
+        }
+
+        .error {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #7f1d1d;
+            color: #fecaca;
+        }
+
+        .results {
+            display: none;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 24px;
+        }
+
+        .species-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .rank {
+            color: #38bdf8;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .species-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .scientific-name {
+            color: #94a3b8;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .score {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .chart-container {
+            height: 420px;
+        }
+
+        .heatmap-wrapper {
+            overflow-x: auto;
+        }
+
+        .heatmap {
+            display: grid;
+            gap: 3px;
+            min-width: 900px;
+        }
+
+        .heatmap-cell {
+            height: 34px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: white;
+            min-width: 55px;
+        }
+
+        .species-label {
+            min-width: 220px;
+            padding: 8px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+        }
+
+        .time-label {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #334155;
+            text-align: left;
+        }
+
+        th {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .bar {
+            width: 150px;
+            height: 8px;
+            background: #334155;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #22c55e;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: 96%;
+            }
+
+            .chart-container {
+                height: 300px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🐦 BirdCLEF Audio Classifier</h1>
+
+    <div class="subtitle">
+        60-second audio analysis using Perch + ProtoSSM + SED ensemble
+    </div>
+
+    <!-- Upload -->
+    <div class="upload-card">
+
+        <h2>Analyze Audio</h2>
+
+        <div class="upload-row">
+
+            <input
+                type="file"
+                id="audioFile"
+                accept="audio/*"
+            >
+
+            <label>
+                Site ID:
+                <input
+                    type="number"
+                    id="siteId"
+                    value="0"
+                    min="0"
+                    max="19"
+                >
+            </label>
+
+            <label>
+                Hour:
+                <input
+                    type="number"
+                    id="hourId"
+                    value="12"
+                    min="0"
+                    max="23"
+                >
+            </label>
+
+            <button id="predictButton">
+                Analyze Audio
+            </button>
+
+        </div>
+
+        <audio id="audioPlayer" controls></audio>
+
+        <div class="loading" id="loading">
+            🔄 Running bird sound detection...
+        </div>
+
+        <div class="error" id="error"></div>
+
+    </div>
+
+
+    <!-- Results -->
+    <div class="results" id="results">
+
+        <!-- Top species -->
+        <div class="panel">
+
+            <h2>🏆 Top Detected Species</h2>
+
+            <div
+                class="cards"
+                id="speciesCards">
+            </div>
+
+        </div>
+
+
+        <!-- Timeline -->
+        <div class="panel">
+
+            <h2>📈 Detection Score Over Time</h2>
+
+            <p class="subtitle">
+                Highest model score detected in each 5-second audio window
+            </p>
+
+            <div class="chart-container">
+                <canvas id="timelineChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- Heatmap -->
+        <div class="panel">
+
+            <h2>🔥 Species Detection Heatmap</h2>
+
+            <p class="subtitle">
+                Detection strength across the 12 audio windows
+            </p>
+
+            <div class="heatmap-wrapper">
+
+                <div
+                    class="heatmap"
+                    id="heatmap">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Window predictions -->
+        <div class="panel">
+
+            <h2>🎵 Window-by-Window Detection</h2>
+
+            <div style="overflow-x:auto;">
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+                        <th>Window</th>
+                        <th>Time</th>
+                        <th>Species</th>
+                        <th>Scientific Name</th>
+                        <th>Score</th>
+                        <th>Strength</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="windowTable"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let timelineChart = null;
+
+
+/* -------------------------------------------------------
+   Audio upload
+------------------------------------------------------- */
+
+const audioFile = document.getElementById("audioFile");
+const audioPlayer = document.getElementById("audioPlayer");
+
+audioFile.addEventListener("change", () => {
+
+    const file = audioFile.files[0];
+
+    if (!file) {
+        return;
+    }
+
+    const url = URL.createObjectURL(file);
+
+    audioPlayer.src = url;
+
+});
+
+
+/* -------------------------------------------------------
+   Predict
+------------------------------------------------------- */
+
+document
+    .getElementById("predictButton")
+    .addEventListener("click", async () => {
+
+        const file = audioFile.files[0];
+
+        if (!file) {
+
+            showError("Please select an audio file.");
+
+            return;
+        }
+
+
+        const siteId =
+            document.getElementById("siteId").value;
+
+        const hourId =
+            document.getElementById("hourId").value;
+
+
+        const formData = new FormData();
+
+        formData.append("audio", file);
+        formData.append("site_id", siteId);
+        formData.append("hour_id", hourId);
+
+
+        setLoading(true);
+
+
+        try {
+
+            const response = await fetch(
+                "/predict",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+
+
+            const data = await response.json();
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data.detail || "Prediction failed."
+                );
+
+            }
+
+
+            renderResults(data);
+
+        }
+
+        catch (error) {
+
+            showError(error.message);
+
+        }
+
+        finally {
+
+            setLoading(false);
+
+        }
+
+    });
+
+
+/* -------------------------------------------------------
+   Loading
+------------------------------------------------------- */
+
+function setLoading(value) {
+
+    const loading =
+        document.getElementById("loading");
+
+    const button =
+        document.getElementById("predictButton");
+
+
+    loading.style.display =
+        value ? "block" : "none";
+
+
+    button.disabled = value;
+
+}
+
+
+/* -------------------------------------------------------
+   Error
+------------------------------------------------------- */
+
+function showError(message) {
+
+    const error =
+        document.getElementById("error");
+
+
+    error.textContent = message;
+
+    error.style.display = "block";
+
+
+    setTimeout(() => {
+
+        error.style.display = "none";
+
+    }, 5000);
+
+}
+
+
+/* -------------------------------------------------------
+   Render complete result
+------------------------------------------------------- */
+
+function renderResults(data) {
+
+    document
+        .getElementById("results")
+        .style.display = "block";
+
+
+    renderSpeciesCards(
+        data.top_predictions
+    );
+
+
+    renderTimeline(
+        data.window_predictions
+    );
+
+
+    renderHeatmap(
+        data.window_predictions
+    );
+
+
+    renderWindowTable(
+        data.window_predictions
+    );
+
+}
+
+
+/* -------------------------------------------------------
+   Top species cards
+------------------------------------------------------- */
+
+function renderSpeciesCards(predictions) {
+
+    const container =
+        document.getElementById("speciesCards");
+
+
+    container.innerHTML = "";
+
+
+    predictions
+        .slice(0, 5)
+        .forEach((prediction, index) => {
+
+            const score =
+                Number(prediction.score);
+
+
+            const card =
+                document.createElement("div");
+
+            card.className =
+                "species-card";
+
+
+            card.innerHTML = `
+
+                <div class="rank">
+                    #${index + 1}
+                </div>
+
+                <div class="species-name">
+                    ${prediction.species_name || prediction.label}
+                </div>
+
+                <div class="scientific-name">
+                    ${prediction.scientific_name || ""}
+                </div>
+
+                <div>
+                    <span class="score">
+                        ${(score * 100).toFixed(1)}
+                    </span>
+                    <span>%</span>
+                </div>
+
+            `;
+
+
+            container.appendChild(card);
+
+        });
+
+}
+
+
+/* -------------------------------------------------------
+   Timeline chart
+------------------------------------------------------- */
+
+function renderTimeline(windows) {
+
+    const labels =
+        windows.map(
+            w => `${w.start_sec}-${w.end_sec}s`
+        );
+
+
+    const scores =
+        windows.map(w => {
+
+            if (!w.predictions.length) {
+                return 0;
+            }
+
+            return Number(
+                w.predictions[0].score
+            );
+
+        });
+
+
+    const species =
+        windows.map(w => {
+
+            if (!w.predictions.length) {
+                return "";
+            }
+
+            return (
+                w.predictions[0].species_name ||
+                w.predictions[0].label
+            );
+
+        });
+
+
+    const ctx =
+        document
+            .getElementById("timelineChart")
+            .getContext("2d");
+
+
+    if (timelineChart) {
+
+        timelineChart.destroy();
+
+    }
+
+
+    timelineChart = new Chart(
+        ctx,
+        {
+            type: "line",
+
+            data: {
+
+                labels,
+
+                datasets: [
+
+                    {
+                        label: "Top Detection Score",
+
+                        data: scores,
+
+                        tension: 0.3,
+
+                        fill: true,
+
+                        pointRadius: 5
+
+                    }
+
+                ]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                scales: {
+
+                    y: {
+
+                        min: 0,
+
+                        max: 1,
+
+                        title: {
+
+                            display: true,
+
+                            text: "Model Score"
+
+                        }
+
+                    },
+
+                    x: {
+
+                        title: {
+
+                            display: true,
+
+                            text: "Audio Time"
+
+                        }
+
+                    }
+
+                },
+
+                plugins: {
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            afterLabel: function(context) {
+
+                                return (
+                                    "Species: " +
+                                    species[context.dataIndex]
+                                );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    );
+
+}
+
+
+/* -------------------------------------------------------
+   Heatmap
+------------------------------------------------------- */
+
+function renderHeatmap(windows) {
+
+    const container =
+        document.getElementById("heatmap");
+
+
+    container.innerHTML = "";
+
+
+    /*
+        Get unique species from top 5
+        predictions of every window.
+    */
+
+    const speciesMap = new Map();
+
+
+    windows.forEach(window => {
+
+        window.predictions
+            .slice(0, 5)
+            .forEach(prediction => {
+
+                const code =
+                    prediction.label;
+
+                if (!speciesMap.has(code)) {
+
+                    speciesMap.set(
+                        code,
+                        prediction
+                    );
+
+                }
+
+            });
+
+    });
+
+
+    const species =
+        Array.from(
+            speciesMap.values()
+        ).slice(0, 15);
+
+
+    /*
+        1 label column + 12 time columns
+    */
+
+    container.style.gridTemplateColumns =
+        `220px repeat(${windows.length}, 1fr)`;
+
+
+    /*
+        Header
+    */
+
+    container.appendChild(
+        createCell(
+            "Species",
+            "time-label"
+        )
+    );
+
+
+    windows.forEach(window => {
+
+        container.appendChild(
+            createCell(
+                `${window.start_sec}s`,
+                "time-label"
+            )
+        );
+
+    });
+
+
+    /*
+        Species rows
+    */
+
+    species.forEach(speciesInfo => {
+
+        const label =
+            document.createElement("div");
+
+        label.className =
+            "species-label";
+
+
+        label.textContent =
+            speciesInfo.species_name ||
+            speciesInfo.label;
+
+
+        container.appendChild(label);
+
+
+        windows.forEach(window => {
+
+            const prediction =
+                window.predictions.find(
+                    p =>
+                        p.label ===
+                        speciesInfo.label
+                );
+
+
+            const score =
+                prediction
+                    ? Number(prediction.score)
+                    : 0;
+
+
+            const cell =
+                document.createElement("div");
+
+            cell.className =
+                "heatmap-cell";
+
+
+            /*
+                Use intensity based on score.
+            */
+
+            const intensity =
+                Math.max(
+                    0.05,
+                    Math.min(1, score)
+                );
+
+
+            cell.style.background =
+                `rgba(34, 197, 94, ${intensity})`;
+
+
+            cell.textContent =
+                score > 0
+                    ? score.toFixed(2)
+                    : "";
+
+
+            cell.title =
+                `${speciesInfo.species_name || speciesInfo.label}: ${score.toFixed(3)}`;
+
+
+            container.appendChild(cell);
+
+        });
+
+    });
+
+}
+
+
+/* -------------------------------------------------------
+   Create heatmap cell
+------------------------------------------------------- */
+
+function createCell(text, className) {
+
+    const cell =
+        document.createElement("div");
+
+    cell.className =
+        className;
+
+    cell.textContent =
+        text;
+
+    return cell;
+
+}
+
+
+/* -------------------------------------------------------
+   Window table
+------------------------------------------------------- */
+
+function renderWindowTable(windows) {
+
+    const table =
+        document.getElementById("windowTable");
+
+
+    table.innerHTML = "";
+
+
+    windows.forEach(window => {
+
+        const prediction =
+            window.predictions[0];
+
+
+        if (!prediction) {
+            return;
+        }
+
+
+        const score =
+            Number(prediction.score);
+
+
+        const row =
+            document.createElement("tr");
+
+
+        row.innerHTML = `
+
+            <td>
+                ${window.window}
+            </td>
+
+            <td>
+                ${window.start_sec}s -
+                ${window.end_sec}s
+            </td>
+
+            <td>
+                <strong>
+                    ${prediction.species_name || prediction.label}
+                </strong>
+            </td>
+
+            <td>
+                <i>
+                    ${prediction.scientific_name || ""}
+                </i>
+            </td>
+
+            <td>
+                ${score.toFixed(3)}
+            </td>
+
+            <td>
+
+                <div class="bar">
+
+                    <div
+                        class="bar-fill"
+                        style="width:${score * 100}%">
+                    </div>
+
+                </div>
+
+            </td>
+
+        `;
+
+
+        table.appendChild(row);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

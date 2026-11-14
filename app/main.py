@@ -1,73 +1,34 @@
 from pathlib import Path
-import shutil
-import uuid
 
-from fastapi import (
-    FastAPI,
-    UploadFile,
-    File,
-    Form,
-    HTTPException,
-)
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from .pipeline import predict_pipeline
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-UPLOAD_DIR = BASE_DIR / "uploads"
-
-UPLOAD_DIR.mkdir(exist_ok=True)
-
-
-# ============================================================
-# FASTAPI
-# ============================================================
-
 app = FastAPI(
-    title="BirdCLEF 2026 API",
+    title="BirdCLEF Audio Classifier",
     version="1.0.0",
 )
 
 
-# ============================================================
-# CORS
-# ============================================================
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+
+app.mount(
+    "/static",
+    StaticFiles(directory=BASE_DIR / "static"),
+    name="static",
 )
 
 
-# ============================================================
-# ROOT
-# ============================================================
-
 @app.get("/")
-def root():
-    return {
-        "message": "BirdCLEF 2026 FastAPI Backend Running"
-    }
+async def home():
+    return FileResponse(
+        BASE_DIR / "static" / "index.html"
+    )
 
-
-# ============================================================
-# HEALTH
-# ============================================================
-
-@app.get("/health")
-def health():
-    return {
-        "status": "ok"
-    }
-
-
-# ============================================================
-# PREDICT
-# ============================================================
 
 @app.post("/predict")
 async def predict(
@@ -76,48 +37,36 @@ async def predict(
     hour_id: int = Form(12),
 ):
 
-    # --------------------------------------------------------
-    # Validate metadata
-    # --------------------------------------------------------
-
-    if site_id < 0 or site_id >= 20:
+    if not 0 <= site_id <= 19:
         raise HTTPException(
             status_code=400,
             detail="site_id must be between 0 and 19",
         )
 
-    if hour_id < 0 or hour_id >= 24:
+    if not 0 <= hour_id <= 23:
         raise HTTPException(
             status_code=400,
             detail="hour_id must be between 0 and 23",
         )
 
-    # --------------------------------------------------------
-    # Save uploaded audio
-    # --------------------------------------------------------
 
-    extension = Path(
-        audio.filename or ".wav"
-    ).suffix.lower()
+    uploads_dir = BASE_DIR / "uploads"
 
-    if not extension:
-        extension = ".wav"
+    uploads_dir.mkdir(
+        exist_ok=True
+    )
 
-    filename = f"{uuid.uuid4()}{extension}"
 
-    save_path = UPLOAD_DIR / filename
+    save_path = uploads_dir / audio.filename
+
 
     try:
 
-        with open(save_path, "wb") as buffer:
-            shutil.copyfileobj(
-                audio.file,
-                buffer,
-            )
+        contents = await audio.read()
 
-        # ----------------------------------------------------
-        # Run complete pipeline
-        # ----------------------------------------------------
+        with open(save_path, "wb") as f:
+            f.write(contents)
+
 
         result = predict_pipeline(
             audio_path=save_path,
@@ -125,25 +74,13 @@ async def predict(
             hour_id=hour_id,
         )
 
-        result["filename"] = audio.filename
 
         return result
 
-    except Exception as e:
-
-        raise HTTPException(
-            status_code=500,
-            detail=str(e),
-        )
 
     finally:
 
-        # ----------------------------------------------------
-        # Always remove uploaded file
-        # ----------------------------------------------------
-
-        save_path.unlink(
-            missing_ok=True
-        )
+        if save_path.exists():
+            save_path.unlink()
 
 # uvicorn app.main:app --reload
