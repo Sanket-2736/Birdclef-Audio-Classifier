@@ -1,0 +1,1874 @@
+{
+  "1161364": {
+    "common_name": "Guyalna cuta",
+    "scientific_name": "Guyalna cuta",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Guyalna_cuta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Guyalna+cuta",
+    "image_url": ""
+  },
+  "116570": {
+    "common_name": "Southern Spectacled Caiman",
+    "scientific_name": "Caiman yacare",
+    "taxon": "Reptilia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Caiman_yacare",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Caiman+yacare",
+    "image_url": ""
+  },
+  "1176823": {
+    "common_name": "Wrestler Frog",
+    "scientific_name": "Leptodactylus luctator",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_luctator",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+luctator",
+    "image_url": ""
+  },
+  "1491113": {
+    "common_name": "Guaran\u00ed leaf-litter frog",
+    "scientific_name": "Adenomera guarani",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Adenomera_guarani",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Adenomera+guarani",
+    "image_url": ""
+  },
+  "1595929": {
+    "common_name": "Uruguay Harlequin Frog",
+    "scientific_name": "Lysapsus limellum",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lysapsus_limellum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lysapsus+limellum",
+    "image_url": ""
+  },
+  "209233": {
+    "common_name": "Feral Horse",
+    "scientific_name": "Equus caballus",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Equus_caballus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Equus+caballus",
+    "image_url": ""
+  },
+  "22930": {
+    "common_name": "Basin White-lipped Frog",
+    "scientific_name": "Leptodactylus syphax",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_syphax",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+syphax",
+    "image_url": ""
+  },
+  "22956": {
+    "common_name": "Mustached Frog",
+    "scientific_name": "Leptodactylus mystacinus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_mystacinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+mystacinus",
+    "image_url": ""
+  },
+  "22961": {
+    "common_name": "Pointedbelly Frog",
+    "scientific_name": "Leptodactylus podicipinus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_podicipinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+podicipinus",
+    "image_url": ""
+  },
+  "22967": {
+    "common_name": "Marbled White-lipped Frog",
+    "scientific_name": "Leptodactylus elenae",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_elenae",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+elenae",
+    "image_url": ""
+  },
+  "22973": {
+    "common_name": "Whistling Grass Frog",
+    "scientific_name": "Leptodactylus fuscus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_fuscus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+fuscus",
+    "image_url": ""
+  },
+  "22983": {
+    "common_name": "Pepper Frog",
+    "scientific_name": "Leptodactylus labyrinthicus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_labyrinthicus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+labyrinthicus",
+    "image_url": ""
+  },
+  "22985": {
+    "common_name": "Peter's Jungle Frog",
+    "scientific_name": "Leptodactylus petersii",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_petersii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+petersii",
+    "image_url": ""
+  },
+  "23150": {
+    "common_name": "Central Dwarf Frog",
+    "scientific_name": "Physalaemus centralis",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_centralis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+centralis",
+    "image_url": ""
+  },
+  "23154": {
+    "common_name": "Bahia Dwarf Frog",
+    "scientific_name": "Physalaemus albifrons",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_albifrons",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+albifrons",
+    "image_url": ""
+  },
+  "23158": {
+    "common_name": "Pale-legged Weeping Frog",
+    "scientific_name": "Physalaemus albonotatus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_albonotatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+albonotatus",
+    "image_url": ""
+  },
+  "23176": {
+    "common_name": "Cope's Swamp Froglet",
+    "scientific_name": "Pseudopaludicola mystacalis",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pseudopaludicola_mystacalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudopaludicola+mystacalis",
+    "image_url": ""
+  },
+  "23724": {
+    "common_name": "Waxy Monkey Tree Frog",
+    "scientific_name": "Phyllomedusa sauvagii",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Phyllomedusa_sauvagii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phyllomedusa+sauvagii",
+    "image_url": ""
+  },
+  "24279": {
+    "common_name": "Lesser Snouted Tree Frog",
+    "scientific_name": "Scinax nasicus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_nasicus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+nasicus",
+    "image_url": ""
+  },
+  "24285": {
+    "common_name": "Snouted Tree Frog",
+    "scientific_name": "Scinax fuscovarius",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_fuscovarius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+fuscovarius",
+    "image_url": ""
+  },
+  "24287": {
+    "common_name": "Brown-bordered Snouted Tree Frog",
+    "scientific_name": "Scinax fuscomarginatus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_fuscomarginatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+fuscomarginatus",
+    "image_url": ""
+  },
+  "24321": {
+    "common_name": "Mato Grosso Snouted Tree Frog",
+    "scientific_name": "Scinax acuminatus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_acuminatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+acuminatus",
+    "image_url": ""
+  },
+  "244024": {
+    "common_name": "Giant Cicada",
+    "scientific_name": "Quesada gigas",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Quesada_gigas",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Quesada+gigas",
+    "image_url": ""
+  },
+  "25073": {
+    "common_name": "Chiasmocleis mehelyi",
+    "scientific_name": "Chiasmocleis mehelyi",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chiasmocleis_mehelyi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chiasmocleis+mehelyi",
+    "image_url": ""
+  },
+  "25092": {
+    "common_name": "Two-colored oval frog",
+    "scientific_name": "Elachistocleis bicolor",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Elachistocleis_bicolor",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elachistocleis+bicolor",
+    "image_url": ""
+  },
+  "25214": {
+    "common_name": "Muller's Termite Frog",
+    "scientific_name": "Dermatonotus muelleri",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dermatonotus_muelleri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dermatonotus+muelleri",
+    "image_url": ""
+  },
+  "326272": {
+    "common_name": "Weeping Frog",
+    "scientific_name": "Physalaemus biligonigerus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_biligonigerus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+biligonigerus",
+    "image_url": ""
+  },
+  "41970": {
+    "common_name": "Jaguar",
+    "scientific_name": "Panthera onca",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Panthera_onca",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Panthera+onca",
+    "image_url": ""
+  },
+  "43435": {
+    "common_name": "Black Howling Monkey",
+    "scientific_name": "Alouatta caraya",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Alouatta_caraya",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Alouatta+caraya",
+    "image_url": ""
+  },
+  "47144": {
+    "common_name": "Domestic Dog",
+    "scientific_name": "Canis familiaris",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Canis_familiaris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Canis+familiaris",
+    "image_url": ""
+  },
+  "47158son01": {
+    "common_name": "Insect sonotype01",
+    "scientific_name": "Insect son01",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son01",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son01",
+    "image_url": ""
+  },
+  "47158son02": {
+    "common_name": "Insect sonotype02",
+    "scientific_name": "Insect son02",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son02",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son02",
+    "image_url": ""
+  },
+  "47158son03": {
+    "common_name": "Insect sonotype03",
+    "scientific_name": "Insect son03",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son03",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son03",
+    "image_url": ""
+  },
+  "47158son04": {
+    "common_name": "Insect sonotype04",
+    "scientific_name": "Insect son04",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son04",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son04",
+    "image_url": ""
+  },
+  "47158son05": {
+    "common_name": "Insect sonotype05",
+    "scientific_name": "Insect son05",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son05",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son05",
+    "image_url": ""
+  },
+  "47158son06": {
+    "common_name": "Insect sonotype06",
+    "scientific_name": "Insect son06",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son06",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son06",
+    "image_url": ""
+  },
+  "47158son07": {
+    "common_name": "Insect sonotype07",
+    "scientific_name": "Insect son07",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son07",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son07",
+    "image_url": ""
+  },
+  "47158son08": {
+    "common_name": "Insect sonotype08",
+    "scientific_name": "Insect son08",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son08",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son08",
+    "image_url": ""
+  },
+  "47158son09": {
+    "common_name": "Insect sonotype09",
+    "scientific_name": "Insect son09",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son09",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son09",
+    "image_url": ""
+  },
+  "47158son10": {
+    "common_name": "Insect sonotype10",
+    "scientific_name": "Insect son10",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son10",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son10",
+    "image_url": ""
+  },
+  "47158son11": {
+    "common_name": "Insect sonotype11",
+    "scientific_name": "Insect son11",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son11",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son11",
+    "image_url": ""
+  },
+  "47158son12": {
+    "common_name": "Insect sonotype12",
+    "scientific_name": "Insect son12",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son12",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son12",
+    "image_url": ""
+  },
+  "47158son13": {
+    "common_name": "Insect sonotype13",
+    "scientific_name": "Insect son13",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son13",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son13",
+    "image_url": ""
+  },
+  "47158son14": {
+    "common_name": "Insect sonotype14",
+    "scientific_name": "Insect son14",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son14",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son14",
+    "image_url": ""
+  },
+  "47158son15": {
+    "common_name": "Insect sonotype15",
+    "scientific_name": "Insect son15",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son15",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son15",
+    "image_url": ""
+  },
+  "47158son16": {
+    "common_name": "Insect sonotype16",
+    "scientific_name": "Insect son16",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son16",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son16",
+    "image_url": ""
+  },
+  "47158son17": {
+    "common_name": "Insect sonotype17",
+    "scientific_name": "Insect son17",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son17",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son17",
+    "image_url": ""
+  },
+  "47158son18": {
+    "common_name": "Insect sonotype18",
+    "scientific_name": "Insect son18",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son18",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son18",
+    "image_url": ""
+  },
+  "47158son19": {
+    "common_name": "Insect sonotype19",
+    "scientific_name": "Insect son19",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son19",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son19",
+    "image_url": ""
+  },
+  "47158son20": {
+    "common_name": "Insect sonotype20",
+    "scientific_name": "Insect son20",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son20",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son20",
+    "image_url": ""
+  },
+  "47158son21": {
+    "common_name": "Insect sonotype21",
+    "scientific_name": "Insect son21",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son21",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son21",
+    "image_url": ""
+  },
+  "47158son22": {
+    "common_name": "Insect sonotype22",
+    "scientific_name": "Insect son22",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son22",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son22",
+    "image_url": ""
+  },
+  "47158son23": {
+    "common_name": "Insect sonotype23",
+    "scientific_name": "Insect son23",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son23",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son23",
+    "image_url": ""
+  },
+  "47158son24": {
+    "common_name": "Insect sonotype24",
+    "scientific_name": "Insect son24",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son24",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son24",
+    "image_url": ""
+  },
+  "47158son25": {
+    "common_name": "Insect sonotype25",
+    "scientific_name": "Insect son25",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son25",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son25",
+    "image_url": ""
+  },
+  "476521": {
+    "common_name": "Cuyaba Dwarf Frog",
+    "scientific_name": "Physalaemus nattereri",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_nattereri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+nattereri",
+    "image_url": ""
+  },
+  "516975": {
+    "common_name": "Hooded Capuchin",
+    "scientific_name": "Sapajus cay",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Sapajus_cay",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sapajus+cay",
+    "image_url": ""
+  },
+  "517063": {
+    "common_name": "Southern Orange-legged Leaf Frog",
+    "scientific_name": "Pithecopus azureus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pithecopus_azureus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pithecopus+azureus",
+    "image_url": ""
+  },
+  "555123": {
+    "common_name": "Usina Tree Frog",
+    "scientific_name": "Boana lundii",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Boana_lundii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana+lundii",
+    "image_url": ""
+  },
+  "555145": {
+    "common_name": "Polka-dot Tree Frog",
+    "scientific_name": "Boana punctata",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Boana_punctata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana+punctata",
+    "image_url": ""
+  },
+  "555146": {
+    "common_name": "Chaco Tree Frog",
+    "scientific_name": "Boana raniceps",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Boana_raniceps",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana+raniceps",
+    "image_url": ""
+  },
+  "64898": {
+    "common_name": "Yungas de la Paz Poison Frog",
+    "scientific_name": "Ameerega picta",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ameerega_picta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ameerega+picta",
+    "image_url": ""
+  },
+  "65377": {
+    "common_name": "Lesser Tree Frog",
+    "scientific_name": "Dendropsophus minutus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dendropsophus_minutus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendropsophus+minutus",
+    "image_url": ""
+  },
+  "65380": {
+    "common_name": "Dwarf Tree Frog",
+    "scientific_name": "Dendropsophus nanus",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dendropsophus_nanus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendropsophus+nanus",
+    "image_url": ""
+  },
+  "66971": {
+    "common_name": "Paraguayan Swimming Frog",
+    "scientific_name": "Pseudis platensis",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pseudis_platensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudis+platensis",
+    "image_url": ""
+  },
+  "67107": {
+    "common_name": "Rococo Toad",
+    "scientific_name": "Rhinella diptycha",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rhinella_diptycha",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rhinella+diptycha",
+    "image_url": ""
+  },
+  "67252": {
+    "common_name": "Milk Frog",
+    "scientific_name": "Trachycephalus typhonius",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Trachycephalus_typhonius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Trachycephalus+typhonius",
+    "image_url": ""
+  },
+  "70711": {
+    "common_name": "Cei's White-lipped Frog",
+    "scientific_name": "Leptodactylus macrosternum",
+    "taxon": "Amphibia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_macrosternum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+macrosternum",
+    "image_url": ""
+  },
+  "738183": {
+    "common_name": "White-coated Titi",
+    "scientific_name": "Plecturocebus pallescens",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Plecturocebus_pallescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Plecturocebus+pallescens",
+    "image_url": ""
+  },
+  "74113": {
+    "common_name": "Highland",
+    "scientific_name": "Bos taurus",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bos_taurus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Bos+taurus",
+    "image_url": ""
+  },
+  "74580": {
+    "common_name": "Black-tailed Marmoset",
+    "scientific_name": "Mico melanurus",
+    "taxon": "Mammalia",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mico_melanurus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mico+melanurus",
+    "image_url": ""
+  },
+  "760266": {
+    "common_name": "Prionacris erosa",
+    "scientific_name": "Prionacris erosa",
+    "taxon": "Insecta",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Prionacris_erosa",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Prionacris+erosa",
+    "image_url": ""
+  },
+  "ashgre1": {
+    "common_name": "Ashy-headed Greenlet",
+    "scientific_name": "Hylophilus pectoralis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hylophilus_pectoralis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hylophilus+pectoralis",
+    "image_url": ""
+  },
+  "astcra1": {
+    "common_name": "Ash-throated Crake",
+    "scientific_name": "Mustelirallus albicollis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mustelirallus_albicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mustelirallus+albicollis",
+    "image_url": ""
+  },
+  "bafcur1": {
+    "common_name": "Bare-faced Curassow",
+    "scientific_name": "Crax fasciolata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crax_fasciolata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crax+fasciolata",
+    "image_url": ""
+  },
+  "baffal1": {
+    "common_name": "Barred Forest-Falcon",
+    "scientific_name": "Micrastur ruficollis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Micrastur_ruficollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Micrastur+ruficollis",
+    "image_url": ""
+  },
+  "banana": {
+    "common_name": "Bananaquit",
+    "scientific_name": "Coereba flaveola",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Coereba_flaveola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coereba+flaveola",
+    "image_url": ""
+  },
+  "barant1": {
+    "common_name": "Barred Antshrike",
+    "scientific_name": "Thamnophilus doliatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Thamnophilus_doliatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus+doliatus",
+    "image_url": ""
+  },
+  "batbel1": {
+    "common_name": "Bare-throated Bellbird",
+    "scientific_name": "Procnias nudicollis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Procnias_nudicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Procnias+nudicollis",
+    "image_url": ""
+  },
+  "baymac": {
+    "common_name": "Blue-and-yellow Macaw",
+    "scientific_name": "Ara ararauna",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ara_ararauna",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ara+ararauna",
+    "image_url": ""
+  },
+  "bbwduc": {
+    "common_name": "Black-bellied Whistling Duck",
+    "scientific_name": "Dendrocygna autumnalis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dendrocygna_autumnalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendrocygna+autumnalis",
+    "image_url": ""
+  },
+  "bcwfin2": {
+    "common_name": "Black-capped Warbling Finch",
+    "scientific_name": "Microspingus melanoleucus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Microspingus_melanoleucus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Microspingus+melanoleucus",
+    "image_url": ""
+  },
+  "bkcdon": {
+    "common_name": "Black-capped Donacobius",
+    "scientific_name": "Donacobius atricapilla",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Donacobius_atricapilla",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Donacobius+atricapilla",
+    "image_url": ""
+  },
+  "bkhpar": {
+    "common_name": "Nanday Parakeet",
+    "scientific_name": "Aratinga nenday",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aratinga_nenday",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aratinga+nenday",
+    "image_url": ""
+  },
+  "blchaw1": {
+    "common_name": "Black-collared Hawk",
+    "scientific_name": "Busarellus nigricollis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Busarellus_nigricollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Busarellus+nigricollis",
+    "image_url": ""
+  },
+  "blheag1": {
+    "common_name": "Black Hawk-Eagle",
+    "scientific_name": "Spizaetus tyrannus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Spizaetus_tyrannus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Spizaetus+tyrannus",
+    "image_url": ""
+  },
+  "blttit1": {
+    "common_name": "Black-tailed Tityra",
+    "scientific_name": "Tityra cayana",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tityra_cayana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tityra+cayana",
+    "image_url": ""
+  },
+  "bncfly": {
+    "common_name": "Brown-crested Flycatcher",
+    "scientific_name": "Myiarchus tyrannulus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiarchus_tyrannulus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiarchus+tyrannulus",
+    "image_url": ""
+  },
+  "bobfly1": {
+    "common_name": "Boat-billed Flycatcher",
+    "scientific_name": "Megarynchus pitangua",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Megarynchus_pitangua",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megarynchus+pitangua",
+    "image_url": ""
+  },
+  "brcmar1": {
+    "common_name": "Brown-chested Martin",
+    "scientific_name": "Progne tapera",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Progne_tapera",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Progne+tapera",
+    "image_url": ""
+  },
+  "brnowl": {
+    "common_name": "American Barn Owl",
+    "scientific_name": "Tyto furcata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tyto_furcata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyto+furcata",
+    "image_url": ""
+  },
+  "bucmot4": {
+    "common_name": "Amazonian Motmot",
+    "scientific_name": "Momotus momota",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Momotus_momota",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Momotus+momota",
+    "image_url": ""
+  },
+  "bucpar": {
+    "common_name": "Blue-crowned Parakeet",
+    "scientific_name": "Thectocercus acuticaudatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Thectocercus_acuticaudatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thectocercus+acuticaudatus",
+    "image_url": ""
+  },
+  "bufpar": {
+    "common_name": "Turquoise-fronted Amazon",
+    "scientific_name": "Amazona aestiva",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Amazona_aestiva",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Amazona+aestiva",
+    "image_url": ""
+  },
+  "bunibi1": {
+    "common_name": "Buff-necked Ibis",
+    "scientific_name": "Theristicus caudatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Theristicus_caudatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Theristicus+caudatus",
+    "image_url": ""
+  },
+  "burowl": {
+    "common_name": "Burrowing Owl",
+    "scientific_name": "Athene cunicularia",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Athene_cunicularia",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Athene+cunicularia",
+    "image_url": ""
+  },
+  "camfli1": {
+    "common_name": "Campo Flicker",
+    "scientific_name": "Colaptes campestris",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Colaptes_campestris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Colaptes+campestris",
+    "image_url": ""
+  },
+  "chacha1": {
+    "common_name": "Chaco Chachalaca",
+    "scientific_name": "Ortalis canicollis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ortalis_canicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ortalis+canicollis",
+    "image_url": ""
+  },
+  "chbmoc1": {
+    "common_name": "Chalk-browed Mockingbird",
+    "scientific_name": "Mimus saturninus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mimus_saturninus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mimus+saturninus",
+    "image_url": ""
+  },
+  "chobla1": {
+    "common_name": "Chopi Blackbird",
+    "scientific_name": "Gnorimopsar chopi",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gnorimopsar_chopi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Gnorimopsar+chopi",
+    "image_url": ""
+  },
+  "chvcon1": {
+    "common_name": "Chestnut-vented Conebill",
+    "scientific_name": "Conirostrum speciosum",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Conirostrum_speciosum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Conirostrum+speciosum",
+    "image_url": ""
+  },
+  "cibspi1": {
+    "common_name": "Cinereous-breasted Spinetail",
+    "scientific_name": "Synallaxis hypospodia",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_hypospodia",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+hypospodia",
+    "image_url": ""
+  },
+  "coffal1": {
+    "common_name": "Collared Forest-Falcon",
+    "scientific_name": "Micrastur semitorquatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Micrastur_semitorquatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Micrastur+semitorquatus",
+    "image_url": ""
+  },
+  "compau": {
+    "common_name": "Pauraque",
+    "scientific_name": "Nyctidromus albicollis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctidromus_albicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctidromus+albicollis",
+    "image_url": ""
+  },
+  "compot1": {
+    "common_name": "Common Potoo",
+    "scientific_name": "Nyctibius griseus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctibius_griseus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctibius+griseus",
+    "image_url": ""
+  },
+  "crbthr1": {
+    "common_name": "Creamy-bellied Thrush",
+    "scientific_name": "Turdus amaurochalinus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Turdus_amaurochalinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Turdus+amaurochalinus",
+    "image_url": ""
+  },
+  "crebec1": {
+    "common_name": "Crested Becard",
+    "scientific_name": "Pachyramphus validus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pachyramphus_validus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pachyramphus+validus",
+    "image_url": ""
+  },
+  "dwatin1": {
+    "common_name": "Dwarf Tinamou",
+    "scientific_name": "Taoniscus nanus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Taoniscus_nanus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Taoniscus+nanus",
+    "image_url": ""
+  },
+  "epaori4": {
+    "common_name": "Variable Oriole",
+    "scientific_name": "Icterus pyrrhopterus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Icterus_pyrrhopterus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Icterus+pyrrhopterus",
+    "image_url": ""
+  },
+  "eulfly1": {
+    "common_name": "Euler's Flycatcher",
+    "scientific_name": "Lathrotriccus euleri",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lathrotriccus_euleri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lathrotriccus+euleri",
+    "image_url": ""
+  },
+  "fabwre1": {
+    "common_name": "Fawn-breasted Wren",
+    "scientific_name": "Cantorchilus guarayanus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cantorchilus_guarayanus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cantorchilus+guarayanus",
+    "image_url": ""
+  },
+  "fepowl": {
+    "common_name": "Ferruginous Pygmy Owl",
+    "scientific_name": "Glaucidium brasilianum",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Glaucidium_brasilianum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Glaucidium+brasilianum",
+    "image_url": ""
+  },
+  "ficman1": {
+    "common_name": "Fiery-capped Manakin",
+    "scientific_name": "Machaeropterus pyrocephalus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Machaeropterus_pyrocephalus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Machaeropterus+pyrocephalus",
+    "image_url": ""
+  },
+  "flawar1": {
+    "common_name": "Flavescent Warbler",
+    "scientific_name": "Myiothlypis flaveola",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiothlypis_flaveola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis+flaveola",
+    "image_url": ""
+  },
+  "fotfly": {
+    "common_name": "Fork-tailed Flycatcher",
+    "scientific_name": "Tyrannus savana",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tyrannus_savana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyrannus+savana",
+    "image_url": ""
+  },
+  "fusfly1": {
+    "common_name": "Fuscous Flycatcher",
+    "scientific_name": "Cnemotriccus fuscatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cnemotriccus_fuscatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cnemotriccus+fuscatus",
+    "image_url": ""
+  },
+  "gilhum1": {
+    "common_name": "Gilded Hummingbird",
+    "scientific_name": "Hylocharis chrysura",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hylocharis_chrysura",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hylocharis+chrysura",
+    "image_url": ""
+  },
+  "giwrai1": {
+    "common_name": "Giant Wood Rail",
+    "scientific_name": "Aramides ypecaha",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aramides_ypecaha",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramides+ypecaha",
+    "image_url": ""
+  },
+  "glteme1": {
+    "common_name": "Glittering-throated Emerald",
+    "scientific_name": "Chionomesa fimbriata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chionomesa_fimbriata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chionomesa+fimbriata",
+    "image_url": ""
+  },
+  "grasal3": {
+    "common_name": "Bluish-grey Saltator",
+    "scientific_name": "Saltator coerulescens",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Saltator_coerulescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Saltator+coerulescens",
+    "image_url": ""
+  },
+  "greani1": {
+    "common_name": "Greater Ani",
+    "scientific_name": "Crotophaga major",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crotophaga_major",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crotophaga+major",
+    "image_url": ""
+  },
+  "greant1": {
+    "common_name": "Great Antshrike",
+    "scientific_name": "Taraba major",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Taraba_major",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Taraba+major",
+    "image_url": ""
+  },
+  "greela": {
+    "common_name": "Greenish Elaenia",
+    "scientific_name": "Myiopagis viridicata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiopagis_viridicata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiopagis+viridicata",
+    "image_url": ""
+  },
+  "grekis": {
+    "common_name": "Great Kiskadee",
+    "scientific_name": "Pitangus sulphuratus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pitangus_sulphuratus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pitangus+sulphuratus",
+    "image_url": ""
+  },
+  "grepot1": {
+    "common_name": "Great Potoo",
+    "scientific_name": "Nyctibius grandis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctibius_grandis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctibius+grandis",
+    "image_url": ""
+  },
+  "gretho2": {
+    "common_name": "Greater Thornbird",
+    "scientific_name": "Phacellodomus ruber",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Phacellodomus_ruber",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phacellodomus+ruber",
+    "image_url": ""
+  },
+  "greyel": {
+    "common_name": "Greater Yellowlegs",
+    "scientific_name": "Tringa melanoleuca",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tringa_melanoleuca",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tringa+melanoleuca",
+    "image_url": ""
+  },
+  "grfdov1": {
+    "common_name": "Grey-fronted Dove",
+    "scientific_name": "Leptotila rufaxilla",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptotila_rufaxilla",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptotila+rufaxilla",
+    "image_url": ""
+  },
+  "grhtan1": {
+    "common_name": "Grey-headed Tanager",
+    "scientific_name": "Eucometis penicillata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eucometis_penicillata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Eucometis+penicillata",
+    "image_url": ""
+  },
+  "gycwor1": {
+    "common_name": "Grey-cowled Wood Rail",
+    "scientific_name": "Aramides cajaneus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aramides_cajaneus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramides+cajaneus",
+    "image_url": ""
+  },
+  "horscr1": {
+    "common_name": "Horned Screamer",
+    "scientific_name": "Anhima cornuta",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Anhima_cornuta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Anhima+cornuta",
+    "image_url": ""
+  },
+  "houspa": {
+    "common_name": "House Sparrow",
+    "scientific_name": "Passer domesticus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Passer_domesticus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Passer+domesticus",
+    "image_url": ""
+  },
+  "hyamac1": {
+    "common_name": "Hyacinth Macaw",
+    "scientific_name": "Anodorhynchus hyacinthinus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Anodorhynchus_hyacinthinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Anodorhynchus+hyacinthinus",
+    "image_url": ""
+  },
+  "larela1": {
+    "common_name": "Large Elaenia",
+    "scientific_name": "Elaenia spectabilis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Elaenia_spectabilis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia+spectabilis",
+    "image_url": ""
+  },
+  "lesela1": {
+    "common_name": "Lesser Elaenia",
+    "scientific_name": "Elaenia chiriquensis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Elaenia_chiriquensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia+chiriquensis",
+    "image_url": ""
+  },
+  "lesgrf1": {
+    "common_name": "Lesser Grass-Finch",
+    "scientific_name": "Emberizoides ypiranganus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Emberizoides_ypiranganus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Emberizoides+ypiranganus",
+    "image_url": ""
+  },
+  "limpki": {
+    "common_name": "Limpkin",
+    "scientific_name": "Aramus guarauna",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aramus_guarauna",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramus+guarauna",
+    "image_url": ""
+  },
+  "linwoo1": {
+    "common_name": "Lineated Woodpecker",
+    "scientific_name": "Dryocopus lineatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dryocopus_lineatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dryocopus+lineatus",
+    "image_url": ""
+  },
+  "litcuc2": {
+    "common_name": "Little Cuckoo",
+    "scientific_name": "Coccycua minuta",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Coccycua_minuta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coccycua+minuta",
+    "image_url": ""
+  },
+  "litnig1": {
+    "common_name": "Little Nightjar",
+    "scientific_name": "Setopagis parvula",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Setopagis_parvula",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Setopagis+parvula",
+    "image_url": ""
+  },
+  "mabpar": {
+    "common_name": "Maroon-bellied Parakeet",
+    "scientific_name": "Pyrrhura frontalis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pyrrhura_frontalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pyrrhura+frontalis",
+    "image_url": ""
+  },
+  "magant1": {
+    "common_name": "Mato Grosso Antbird",
+    "scientific_name": "Cercomacra melanaria",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cercomacra_melanaria",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cercomacra+melanaria",
+    "image_url": ""
+  },
+  "magtan2": {
+    "common_name": "Magpie Tanager",
+    "scientific_name": "Cissopis leverianus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cissopis_leverianus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cissopis+leverianus",
+    "image_url": ""
+  },
+  "masgna1": {
+    "common_name": "Masked Gnatcatcher",
+    "scientific_name": "Polioptila dumicola",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Polioptila_dumicola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Polioptila+dumicola",
+    "image_url": ""
+  },
+  "nacnig1": {
+    "common_name": "Nacunda Nighthawk",
+    "scientific_name": "Chordeiles nacunda",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chordeiles_nacunda",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chordeiles+nacunda",
+    "image_url": ""
+  },
+  "ocecra1": {
+    "common_name": "Ocellated Crake",
+    "scientific_name": "Rufirallus schomburgkii",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rufirallus_schomburgkii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rufirallus+schomburgkii",
+    "image_url": ""
+  },
+  "oliwoo1": {
+    "common_name": "Olivaceous Woodcreeper",
+    "scientific_name": "Sittasomus griseicapillus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Sittasomus_griseicapillus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sittasomus+griseicapillus",
+    "image_url": ""
+  },
+  "orbtro3": {
+    "common_name": "Orange-backed Troupial",
+    "scientific_name": "Icterus croconotus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Icterus_croconotus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Icterus+croconotus",
+    "image_url": ""
+  },
+  "orwpar": {
+    "common_name": "Orange-winged Amazon",
+    "scientific_name": "Amazona amazonica",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Amazona_amazonica",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Amazona+amazonica",
+    "image_url": ""
+  },
+  "osprey": {
+    "common_name": "Osprey",
+    "scientific_name": "Pandion haliaetus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pandion_haliaetus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pandion+haliaetus",
+    "image_url": ""
+  },
+  "pabspi1": {
+    "common_name": "Pale-breasted Spinetail",
+    "scientific_name": "Synallaxis albescens",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_albescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+albescens",
+    "image_url": ""
+  },
+  "palhor3": {
+    "common_name": "Pale-legged Hornero",
+    "scientific_name": "Furnarius leucopus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Furnarius_leucopus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Furnarius+leucopus",
+    "image_url": ""
+  },
+  "paltan1": {
+    "common_name": "Palm Tanager",
+    "scientific_name": "Thraupis palmarum",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Thraupis_palmarum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thraupis+palmarum",
+    "image_url": ""
+  },
+  "phecuc1": {
+    "common_name": "Pheasant Cuckoo",
+    "scientific_name": "Dromococcyx phasianellus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dromococcyx_phasianellus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dromococcyx+phasianellus",
+    "image_url": ""
+  },
+  "picpig2": {
+    "common_name": "Picazuro Pigeon",
+    "scientific_name": "Patagioenas picazuro",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Patagioenas_picazuro",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Patagioenas+picazuro",
+    "image_url": ""
+  },
+  "pirfly1": {
+    "common_name": "Piratic Flycatcher",
+    "scientific_name": "Legatus leucophaius",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Legatus_leucophaius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Legatus+leucophaius",
+    "image_url": ""
+  },
+  "plasla1": {
+    "common_name": "Planalto Slaty Antshrike",
+    "scientific_name": "Thamnophilus pelzelni",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Thamnophilus_pelzelni",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus+pelzelni",
+    "image_url": ""
+  },
+  "platyr1": {
+    "common_name": "Plain Inezia",
+    "scientific_name": "Inezia inornata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Inezia_inornata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Inezia+inornata",
+    "image_url": ""
+  },
+  "plcjay1": {
+    "common_name": "Plush-crested Jay",
+    "scientific_name": "Cyanocorax chrysops",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cyanocorax_chrysops",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax+chrysops",
+    "image_url": ""
+  },
+  "pluibi1": {
+    "common_name": "Plumbeous Ibis",
+    "scientific_name": "Theristicus caerulescens",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Theristicus_caerulescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Theristicus+caerulescens",
+    "image_url": ""
+  },
+  "purjay1": {
+    "common_name": "Purplish Jay",
+    "scientific_name": "Cyanocorax cyanomelas",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cyanocorax_cyanomelas",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax+cyanomelas",
+    "image_url": ""
+  },
+  "pvttyr1": {
+    "common_name": "Pearly-vented Tody-Tyrant",
+    "scientific_name": "Hemitriccus margaritaceiventer",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hemitriccus_margaritaceiventer",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hemitriccus+margaritaceiventer",
+    "image_url": ""
+  },
+  "ragmac1": {
+    "common_name": "Red-and-green Macaw",
+    "scientific_name": "Ara chloropterus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ara_chloropterus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ara+chloropterus",
+    "image_url": ""
+  },
+  "rebscy1": {
+    "common_name": "Red-billed Scythebill",
+    "scientific_name": "Campylorhamphus trochilirostris",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Campylorhamphus_trochilirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Campylorhamphus+trochilirostris",
+    "image_url": ""
+  },
+  "recfin1": {
+    "common_name": "Red-crested Finch",
+    "scientific_name": "Coryphospingus cucullatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Coryphospingus_cucullatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coryphospingus+cucullatus",
+    "image_url": ""
+  },
+  "redjun": {
+    "common_name": "Red Junglefowl",
+    "scientific_name": "Gallus gallus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gallus_gallus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Gallus+gallus",
+    "image_url": ""
+  },
+  "relser1": {
+    "common_name": "Red-legged Seriema",
+    "scientific_name": "Cariama cristata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cariama_cristata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cariama+cristata",
+    "image_url": ""
+  },
+  "rinkin1": {
+    "common_name": "Ringed Kingfisher",
+    "scientific_name": "Megaceryle torquata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Megaceryle_torquata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megaceryle+torquata",
+    "image_url": ""
+  },
+  "rivwar1": {
+    "common_name": "Riverbank Warbler",
+    "scientific_name": "Myiothlypis rivularis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiothlypis_rivularis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis+rivularis",
+    "image_url": ""
+  },
+  "roahaw": {
+    "common_name": "Roadside Hawk",
+    "scientific_name": "Rupornis magnirostris",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Rupornis_magnirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rupornis+magnirostris",
+    "image_url": ""
+  },
+  "rubthr1": {
+    "common_name": "Rufous-bellied Thrush",
+    "scientific_name": "Turdus rufiventris",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Turdus_rufiventris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Turdus+rufiventris",
+    "image_url": ""
+  },
+  "rufcac2": {
+    "common_name": "Rufous Cacholote",
+    "scientific_name": "Pseudoseisura unirufa",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pseudoseisura_unirufa",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudoseisura+unirufa",
+    "image_url": ""
+  },
+  "rufcas2": {
+    "common_name": "Rufous Casiornis",
+    "scientific_name": "Casiornis rufus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Casiornis_rufus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Casiornis+rufus",
+    "image_url": ""
+  },
+  "rufgna3": {
+    "common_name": "Rufous Gnateater",
+    "scientific_name": "Conopophaga lineata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Conopophaga_lineata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Conopophaga+lineata",
+    "image_url": ""
+  },
+  "rufhor2": {
+    "common_name": "Rufous Hornero",
+    "scientific_name": "Furnarius rufus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Furnarius_rufus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Furnarius+rufus",
+    "image_url": ""
+  },
+  "rufnig1": {
+    "common_name": "Rufous Nightjar",
+    "scientific_name": "Antrostomus rufus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Antrostomus_rufus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Antrostomus+rufus",
+    "image_url": ""
+  },
+  "ruftho1": {
+    "common_name": "Rufous-fronted Thornbird",
+    "scientific_name": "Phacellodomus rufifrons",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Phacellodomus_rufifrons",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phacellodomus+rufifrons",
+    "image_url": ""
+  },
+  "ruftof1": {
+    "common_name": "Rusty-fronted Tody-Flycatcher",
+    "scientific_name": "Poecilotriccus latirostris",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Poecilotriccus_latirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Poecilotriccus+latirostris",
+    "image_url": ""
+  },
+  "rumfly1": {
+    "common_name": "Rusty-margined Flycatcher",
+    "scientific_name": "Myiozetetes cayanensis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiozetetes_cayanensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiozetetes+cayanensis",
+    "image_url": ""
+  },
+  "ruther1": {
+    "common_name": "Rufescent Tiger Heron",
+    "scientific_name": "Tigrisoma lineatum",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tigrisoma_lineatum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tigrisoma+lineatum",
+    "image_url": ""
+  },
+  "rutjac1": {
+    "common_name": "Rufous-tailed Jacamar",
+    "scientific_name": "Galbula ruficauda",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Galbula_ruficauda",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Galbula+ruficauda",
+    "image_url": ""
+  },
+  "sabspa1": {
+    "common_name": "Saffron-billed Sparrow",
+    "scientific_name": "Arremon flavirostris",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Arremon_flavirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Arremon+flavirostris",
+    "image_url": ""
+  },
+  "saffin": {
+    "common_name": "Saffron Finch",
+    "scientific_name": "Sicalis flaveola",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Sicalis_flaveola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sicalis+flaveola",
+    "image_url": ""
+  },
+  "saytan1": {
+    "common_name": "Sayaca Tanager",
+    "scientific_name": "Thraupis sayaca",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Thraupis_sayaca",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thraupis+sayaca",
+    "image_url": ""
+  },
+  "scadov1": {
+    "common_name": "Scaled Dove",
+    "scientific_name": "Columbina squammata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Columbina_squammata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Columbina+squammata",
+    "image_url": ""
+  },
+  "schpar1": {
+    "common_name": "Scaly-headed Parrot",
+    "scientific_name": "Pionus maximiliani",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pionus_maximiliani",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pionus+maximiliani",
+    "image_url": ""
+  },
+  "scther1": {
+    "common_name": "Scale-throated Hermit",
+    "scientific_name": "Phaethornis eurynome",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Phaethornis_eurynome",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phaethornis+eurynome",
+    "image_url": ""
+  },
+  "shcfly1": {
+    "common_name": "Short-crested Flycatcher",
+    "scientific_name": "Myiarchus ferox",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiarchus_ferox",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiarchus+ferox",
+    "image_url": ""
+  },
+  "shshaw": {
+    "common_name": "Sharp-shinned Hawk",
+    "scientific_name": "Accipiter striatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Accipiter_striatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Accipiter+striatus",
+    "image_url": ""
+  },
+  "shtnig1": {
+    "common_name": "Short-tailed Nighthawk",
+    "scientific_name": "Lurocalis semitorquatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lurocalis_semitorquatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lurocalis+semitorquatus",
+    "image_url": ""
+  },
+  "sibtan2": {
+    "common_name": "Silver-beaked Tanager",
+    "scientific_name": "Ramphocelus carbo",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ramphocelus_carbo",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ramphocelus+carbo",
+    "image_url": ""
+  },
+  "smbani": {
+    "common_name": "Smooth-billed Ani",
+    "scientific_name": "Crotophaga ani",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crotophaga_ani",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crotophaga+ani",
+    "image_url": ""
+  },
+  "smbtin1": {
+    "common_name": "Small-billed Tinamou",
+    "scientific_name": "Crypturellus parvirostris",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crypturellus_parvirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus+parvirostris",
+    "image_url": ""
+  },
+  "sobcac1": {
+    "common_name": "Solitary Cacique",
+    "scientific_name": "Cacicus solitarius",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cacicus_solitarius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cacicus+solitarius",
+    "image_url": ""
+  },
+  "sobtyr1": {
+    "common_name": "Southern Beardless Tyrannulet",
+    "scientific_name": "Camptostoma obsoletum",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Camptostoma_obsoletum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Camptostoma+obsoletum",
+    "image_url": ""
+  },
+  "socfly1": {
+    "common_name": "Social Flycatcher",
+    "scientific_name": "Myiozetetes similis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiozetetes_similis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiozetetes+similis",
+    "image_url": ""
+  },
+  "sofspi1": {
+    "common_name": "Sooty-fronted Spinetail",
+    "scientific_name": "Synallaxis frontalis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_frontalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+frontalis",
+    "image_url": ""
+  },
+  "souant1": {
+    "common_name": "Southern Antpipit",
+    "scientific_name": "Corythopis delalandi",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Corythopis_delalandi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Corythopis+delalandi",
+    "image_url": ""
+  },
+  "soulap1": {
+    "common_name": "Southern Lapwing",
+    "scientific_name": "Vanellus chilensis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Vanellus_chilensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Vanellus+chilensis",
+    "image_url": ""
+  },
+  "souscr1": {
+    "common_name": "Southern Screamer",
+    "scientific_name": "Chauna torquata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chauna_torquata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chauna+torquata",
+    "image_url": ""
+  },
+  "spbant3": {
+    "common_name": "Spot-backed Antshrike",
+    "scientific_name": "Hypoedaleus guttatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Hypoedaleus_guttatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hypoedaleus+guttatus",
+    "image_url": ""
+  },
+  "spispi1": {
+    "common_name": "Spix's Spinetail",
+    "scientific_name": "Synallaxis spixi",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_spixi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+spixi",
+    "image_url": ""
+  },
+  "sptnig1": {
+    "common_name": "Spot-tailed Nightjar",
+    "scientific_name": "Antiurus maculicaudus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Antiurus_maculicaudus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Antiurus+maculicaudus",
+    "image_url": ""
+  },
+  "squcuc1": {
+    "common_name": "Common Squirrel-Cuckoo",
+    "scientific_name": "Piaya cayana",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Piaya_cayana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Piaya+cayana",
+    "image_url": ""
+  },
+  "stbwoo2": {
+    "common_name": "Straight-billed Woodcreeper",
+    "scientific_name": "Dendroplex picus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dendroplex_picus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendroplex+picus",
+    "image_url": ""
+  },
+  "strcuc1": {
+    "common_name": "Striped Cuckoo",
+    "scientific_name": "Tapera naevia",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tapera_naevia",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tapera+naevia",
+    "image_url": ""
+  },
+  "strher2": {
+    "common_name": "Striated Heron",
+    "scientific_name": "Butorides striata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Butorides_striata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Butorides+striata",
+    "image_url": ""
+  },
+  "strowl1": {
+    "common_name": "Striped Owl",
+    "scientific_name": "Asio clamator",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Asio_clamator",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Asio+clamator",
+    "image_url": ""
+  },
+  "swthum1": {
+    "common_name": "Swallow-tailed Hummingbird",
+    "scientific_name": "Eupetomena macroura",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Eupetomena_macroura",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Eupetomena+macroura",
+    "image_url": ""
+  },
+  "swtman1": {
+    "common_name": "Swallow-tailed Manakin",
+    "scientific_name": "Chiroxiphia caudata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chiroxiphia_caudata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chiroxiphia+caudata",
+    "image_url": ""
+  },
+  "tattin1": {
+    "common_name": "Tataupa Tinamou",
+    "scientific_name": "Crypturellus tataupa",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crypturellus_tataupa",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus+tataupa",
+    "image_url": ""
+  },
+  "thlwre1": {
+    "common_name": "Thrush-like Wren",
+    "scientific_name": "Campylorhynchus turdinus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Campylorhynchus_turdinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Campylorhynchus+turdinus",
+    "image_url": ""
+  },
+  "toctou1": {
+    "common_name": "Toco Toucan",
+    "scientific_name": "Ramphastos toco",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ramphastos_toco",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ramphastos+toco",
+    "image_url": ""
+  },
+  "trokin": {
+    "common_name": "Tropical Kingbird",
+    "scientific_name": "Tyrannus melancholicus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tyrannus_melancholicus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyrannus+melancholicus",
+    "image_url": ""
+  },
+  "trsowl": {
+    "common_name": "Tropical Screech Owl",
+    "scientific_name": "Megascops choliba",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Megascops_choliba",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megascops+choliba",
+    "image_url": ""
+  },
+  "undtin1": {
+    "common_name": "Undulated Tinamou",
+    "scientific_name": "Crypturellus undulatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Crypturellus_undulatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus+undulatus",
+    "image_url": ""
+  },
+  "varant1": {
+    "common_name": "Variable Antshrike",
+    "scientific_name": "Thamnophilus caerulescens",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Thamnophilus_caerulescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus+caerulescens",
+    "image_url": ""
+  },
+  "watjac1": {
+    "common_name": "Wattled Jacana",
+    "scientific_name": "Jacana jacana",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jacana_jacana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Jacana+jacana",
+    "image_url": ""
+  },
+  "wesfie1": {
+    "common_name": "Western Fire-eye",
+    "scientific_name": "Pyriglena maura",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Pyriglena_maura",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pyriglena+maura",
+    "image_url": ""
+  },
+  "wfwduc1": {
+    "common_name": "White-faced Whistling Duck",
+    "scientific_name": "Dendrocygna viduata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dendrocygna_viduata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendrocygna+viduata",
+    "image_url": ""
+  },
+  "whbant2": {
+    "common_name": "White-bearded Antshrike",
+    "scientific_name": "Biatas nigropectus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Biatas_nigropectus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Biatas+nigropectus",
+    "image_url": ""
+  },
+  "whbwar2": {
+    "common_name": "White-browed Warbler",
+    "scientific_name": "Myiothlypis leucoblephara",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Myiothlypis_leucoblephara",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis+leucoblephara",
+    "image_url": ""
+  },
+  "whiwoo1": {
+    "common_name": "White Woodpecker",
+    "scientific_name": "Melanerpes candidus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Melanerpes_candidus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Melanerpes+candidus",
+    "image_url": ""
+  },
+  "whlspi1": {
+    "common_name": "White-lored Spinetail",
+    "scientific_name": "Synallaxis albilora",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_albilora",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+albilora",
+    "image_url": ""
+  },
+  "whnjay1": {
+    "common_name": "White-naped Jay",
+    "scientific_name": "Cyanocorax cyanopogon",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Cyanocorax_cyanopogon",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax+cyanopogon",
+    "image_url": ""
+  },
+  "whtdov": {
+    "common_name": "White-tipped Dove",
+    "scientific_name": "Leptotila verreauxi",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Leptotila_verreauxi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptotila+verreauxi",
+    "image_url": ""
+  },
+  "whwpic1": {
+    "common_name": "White-wedged Piculet",
+    "scientific_name": "Picumnus albosquamatus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Picumnus_albosquamatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Picumnus+albosquamatus",
+    "image_url": ""
+  },
+  "y00678": {
+    "common_name": "Crested Caracara",
+    "scientific_name": "Caracara plancus",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Caracara_plancus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Caracara+plancus",
+    "image_url": ""
+  },
+  "yebcar": {
+    "common_name": "Yellow-billed Cardinal",
+    "scientific_name": "Paroaria capitata",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Paroaria_capitata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Paroaria+capitata",
+    "image_url": ""
+  },
+  "yebela1": {
+    "common_name": "Yellow-bellied Elaenia",
+    "scientific_name": "Elaenia flavogaster",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Elaenia_flavogaster",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia+flavogaster",
+    "image_url": ""
+  },
+  "yecmac": {
+    "common_name": "Golden-collared Macaw",
+    "scientific_name": "Primolius auricollis",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Primolius_auricollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Primolius+auricollis",
+    "image_url": ""
+  },
+  "yecpar": {
+    "common_name": "Yellow-chevroned Parakeet",
+    "scientific_name": "Brotogeris chiriri",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brotogeris_chiriri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Brotogeris+chiriri",
+    "image_url": ""
+  },
+  "yehcar1": {
+    "common_name": "Yellow-headed Caracara",
+    "scientific_name": "Daptrius chimachima",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Daptrius_chimachima",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Daptrius+chimachima",
+    "image_url": ""
+  },
+  "yeofly1": {
+    "common_name": "Yellow-olive Flatbill",
+    "scientific_name": "Tolmomyias sulphurescens",
+    "taxon": "Aves",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tolmomyias_sulphurescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tolmomyias+sulphurescens",
+    "image_url": ""
+  }
+}

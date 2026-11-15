@@ -23,3 +23,24 @@ uploads/
 # OS
 .DS_Store
 Thumbs.db
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Node
+node_modules/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Archives
+*.zip
+
+# Logs
+*.log

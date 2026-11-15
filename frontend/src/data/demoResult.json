@@ -1,0 +1,50 @@
+{
+  "real_duration_sec": 60.0,
+  "n_windows": 12,
+  "n_classes": 234,
+  "valid_windows": 12,
+  "waveform_peaks": [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5, 0.45, 0.4, 0.35, 0.3, 0.25, 0.2, 0.15, 0.1, 0.05, 0.0],
+  "windows": [
+    {"index": 0, "start_sec": 0, "end_sec": 5, "is_padding": false, "top_k": [{"code": "amcro", "common_name": "American Crow", "scientific_name": "Corvus brachyrhynchos", "taxon": "Aves", "score": 0.92}]},
+    {"index": 1, "start_sec": 5, "end_sec": 10, "is_padding": false, "top_k": [{"code": "bljay", "common_name": "Blue Jay", "scientific_name": "Cyanocitta cristata", "taxon": "Aves", "score": 0.95}]},
+    {"index": 2, "start_sec": 10, "end_sec": 15, "is_padding": false, "top_k": [{"code": "carwre", "common_name": "Carolina Wren", "scientific_name": "Thryothorus ludovicianus", "taxon": "Aves", "score": 0.87}]},
+    {"index": 3, "start_sec": 15, "end_sec": 20, "is_padding": false, "top_k": [{"code": "moudov", "common_name": "Mourning Dove", "scientific_name": "Zenaida macroura", "taxon": "Aves", "score": 0.84}]},
+    {"index": 4, "start_sec": 20, "end_sec": 25, "is_padding": false, "top_k": [{"code": "brnowl", "common_name": "Barn Owl", "scientific_name": "Tyto alba", "taxon": "Aves", "score": 0.86}]},
+    {"index": 5, "start_sec": 25, "end_sec": 30, "is_padding": false, "top_k": [{"code": "amcro", "common_name": "American Crow", "scientific_name": "Corvus brachyrhynchos", "taxon": "Aves", "score": 0.88}]},
+    {"index": 6, "start_sec": 30, "end_sec": 35, "is_padding": false, "top_k": [{"code": "bljay", "common_name": "Blue Jay", "scientific_name": "Cyanocitta cristata", "taxon": "Aves", "score": 0.90}]},
+    {"index": 7, "start_sec": 35, "end_sec": 40, "is_padding": false, "top_k": [{"code": "carwre", "common_name": "Carolina Wren", "scientific_name": "Thryothorus ludovicianus", "taxon": "Aves", "score": 0.85}]},
+    {"index": 8, "start_sec": 40, "end_sec": 45, "is_padding": false, "top_k": [{"code": "moudov", "common_name": "Mourning Dove", "scientific_name": "Zenaida macroura", "taxon": "Aves", "score": 0.89}]},
+    {"index": 9, "start_sec": 45, "end_sec": 50, "is_padding": false, "top_k": [{"code": "brnowl", "common_name": "Barn Owl", "scientific_name": "Tyto alba", "taxon": "Aves", "score": 0.92}]},
+    {"index": 10, "start_sec": 50, "end_sec": 55, "is_padding": false, "top_k": [{"code": "amcro", "common_name": "American Crow", "scientific_name": "Corvus brachyrhynchos", "taxon": "Aves", "score": 0.85}]},
+    {"index": 11, "start_sec": 55, "end_sec": 60, "is_padding": false, "top_k": [{"code": "bljay", "common_name": "Blue Jay", "scientific_name": "Cyanocitta cristata", "taxon": "Aves", "score": 0.81}]}
+  ],
+  "top_species": [
+    {"rank": 1, "code": "bljay", "common_name": "Blue Jay", "scientific_name": "Cyanocitta cristata", "taxon": "Aves", "max_score": 0.95, "mean_score": 0.885, "windows_detected": 3, "seconds_present": 15},
+    {"rank": 2, "code": "brnowl", "common_name": "Barn Owl", "scientific_name": "Tyto alba", "taxon": "Aves", "max_score": 0.92, "mean_score": 0.89, "windows_detected": 2, "seconds_present": 10},
+    {"rank": 3, "code": "amcro", "common_name": "American Crow", "scientific_name": "Corvus brachyrhynchos", "taxon": "Aves", "max_score": 0.92, "mean_score": 0.883, "windows_detected": 3, "seconds_present": 15},
+    {"rank": 4, "code": "carwre", "common_name": "Carolina Wren", "scientific_name": "Thryothorus ludovicianus", "taxon": "Aves", "max_score": 0.87, "mean_score": 0.86, "windows_detected": 2, "seconds_present": 10},
+    {"rank": 5, "code": "moudov", "common_name": "Mourning Dove", "scientific_name": "Zenaida macroura", "taxon": "Aves", "max_score": 0.89, "mean_score": 0.865, "windows_detected": 2, "seconds_present": 10}
+  ],
+  "heatmap": {
+    "species": [
+      {"code": "amcro", "common_name": "American Crow", "scientific_name": "Corvus brachyrhynchos", "taxon": "Aves"},
+      {"code": "bljay", "common_name": "Blue Jay", "scientific_name": "Cyanocitta cristata", "taxon": "Aves"},
+      {"code": "carwre", "common_name": "Carolina Wren", "scientific_name": "Thryothorus ludovicianus", "taxon": "Aves"},
+      {"code": "moudov", "common_name": "Mourning Dove", "scientific_name": "Zenaida macroura", "taxon": "Aves"},
+      {"code": "brnowl", "common_name": "Barn Owl", "scientific_name": "Tyto alba", "taxon": "Aves"}
+    ],
+    "matrix": [
+      [0.92, 0.88, 0.65, 0.72, 0.62, 0.75, 0.50, 0.55, 0.48, 0.68, 0.63, 0.85],
+      [0.78, 0.82, 0.95, 0.93, 0.79, 0.68, 0.71, 0.73, 0.68, 0.74, 0.74, 0.81],
+      [0.65, 0.61, 0.68, 0.76, 0.87, 0.91, 0.77, 0.73, 0.64, 0.58, 0.62, 0.66],
+      [0.45, 0.52, 0.55, 0.62, 0.58, 0.71, 0.84, 0.89, 0.71, 0.55, 0.58, 0.62],
+      [0.65, 0.71, 0.72, 0.68, 0.75, 0.62, 0.59, 0.86, 0.92, 0.88, 0.79, 0.88]
+    ]
+  },
+  "branch_scores": {
+    "proto": [0.78, 0.82, 0.95, 0.93, 0.79, 0.68, 0.71, 0.73, 0.68, 0.74, 0.74, 0.65],
+    "sed": [0.75, 0.79, 0.92, 0.90, 0.76, 0.65, 0.68, 0.70, 0.65, 0.71, 0.71, 0.62],
+    "final": [0.78, 0.82, 0.95, 0.93, 0.79, 0.68, 0.71, 0.73, 0.68, 0.74, 0.74, 0.65],
+    "species_indices": [1, 0, 2, 4, 3]
+  }
+}
