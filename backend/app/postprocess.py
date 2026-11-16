@@ -26,7 +26,10 @@ N_CLASSES = 234
 # LOAD ARTIFACTS
 # ============================================================
 
-print("\nLoading post-processing artifacts...")
+print("\n[POSTPROCESS] Loading post-processing artifacts...")
+print(f"[POSTPROCESS] Models directory: {MODELS_DIR}")
+print(f"[POSTPROCESS] Temperatures file exists: {TEMPERATURES_PATH.exists()}")
+print(f"[POSTPROCESS] Thresholds file exists: {THRESHOLDS_PATH.exists()}")
 
 temperatures = np.load(
     TEMPERATURES_PATH
@@ -36,17 +39,21 @@ per_class_thresholds = np.load(
     THRESHOLDS_PATH
 ).astype(np.float32)
 
-
 print(
-    "  temperatures:",
-    temperatures.shape
+    "[POSTPROCESS] temperatures:",
+    temperatures.shape,
+    f"dtype={temperatures.dtype}",
+    f"min={temperatures.min():.6f}",
+    f"max={temperatures.max():.6f}",
 )
 
 print(
-    "  thresholds:",
-    per_class_thresholds.shape
+    "[POSTPROCESS] thresholds:",
+    per_class_thresholds.shape,
+    f"dtype={per_class_thresholds.dtype}",
+    f"min={per_class_thresholds.min():.6f}",
+    f"max={per_class_thresholds.max():.6f}",
 )
-
 
 if temperatures.shape != (N_CLASSES,):
     raise ValueError(
@@ -54,12 +61,13 @@ if temperatures.shape != (N_CLASSES,):
         f"({N_CLASSES},), got {temperatures.shape}"
     )
 
-
 if per_class_thresholds.shape != (N_CLASSES,):
     raise ValueError(
         f"Expected thresholds shape "
         f"({N_CLASSES},), got {per_class_thresholds.shape}"
     )
+
+print("[POSTPROCESS] Artifact shapes validated successfully.")
 
 
 # ============================================================
@@ -67,15 +75,26 @@ if per_class_thresholds.shape != (N_CLASSES,):
 # ============================================================
 
 def sigmoid(x):
+    print(
+        f"[POSTPROCESS][sigmoid] Input shape={np.shape(x)}, "
+        f"dtype={getattr(x, 'dtype', type(x).__name__)}"
+    )
+
     x = np.clip(
         x,
         -30.0,
         30.0,
     )
 
-    return 1.0 / (
+    result = 1.0 / (
         1.0 + np.exp(-x)
     )
+
+    print(
+        f"[POSTPROCESS][sigmoid] Output shape={result.shape}, "
+        f"min={result.min():.6f}, max={result.max():.6f}"
+    )
+    return result
 
 
 # ============================================================
@@ -92,15 +111,25 @@ def apply_temperature_scaling(
         (12, 234)
     """
 
+    print(
+        f"[POSTPROCESS][temperature] Input shape={np.shape(scores)}"
+    )
+
     scores = np.asarray(
         scores,
         dtype=np.float32,
     )
 
-    return (
+    result = (
         scores
         / temperatures[None, :]
     ).astype(np.float32)
+
+    print(
+        f"[POSTPROCESS][temperature] Output shape={result.shape}, "
+        f"min={result.min():.6f}, max={result.max():.6f}"
+    )
+    return result
 
 
 # ============================================================
@@ -115,6 +144,10 @@ def apply_rank_scaling(
 
     Higher ranked detections receive stronger weight.
     """
+
+    print(
+        f"[POSTPROCESS][rank_scaling] Input shape={np.shape(probs)}"
+    )
 
     probs = np.asarray(
         probs,
@@ -137,9 +170,16 @@ def apply_rank_scaling(
     # Keep the scaling gentle.
     scale = 0.85 + 0.30 * rank_norm
 
-    return (
+    result = (
         probs * scale
     ).astype(np.float32)
+
+    print(
+        f"[POSTPROCESS][rank_scaling] Output shape={result.shape}, "
+        f"scale range=({scale.min():.6f}, {scale.max():.6f}), "
+        f"output range=({result.min():.6f}, {result.max():.6f})"
+    )
+    return result
 
 
 # ============================================================
@@ -153,6 +193,10 @@ def apply_file_confidence_scaling(
     Increase consistency for classes that appear
     across multiple windows.
     """
+
+    print(
+        f"[POSTPROCESS][file_confidence] Input shape={np.shape(probs)}"
+    )
 
     probs = np.asarray(
         probs,
@@ -172,9 +216,16 @@ def apply_file_confidence_scaling(
         + 0.30 * file_fraction
     )
 
-    return (
+    result = (
         probs * scale[None, :]
     ).astype(np.float32)
+
+    print(
+        f"[POSTPROCESS][file_confidence] Output shape={result.shape}, "
+        f"classes present in any window={int(np.count_nonzero(file_fraction))}/{file_fraction.size}, "
+        f"scale range=({scale.min():.6f}, {scale.max():.6f})"
+    )
+    return result
 
 
 # ============================================================
@@ -191,12 +242,20 @@ def adaptive_delta_smoothing(
     original temporal structure.
     """
 
+    print(
+        f"[POSTPROCESS][smoothing] Input shape={np.shape(probs)}"
+    )
+
     probs = np.asarray(
         probs,
         dtype=np.float32,
     )
 
     if probs.shape[0] <= 1:
+        print(
+            "[POSTPROCESS][smoothing] One or fewer windows; "
+            "returning an unchanged copy."
+        )
         return probs.copy()
 
     prev = np.concatenate(
@@ -241,11 +300,19 @@ def adaptive_delta_smoothing(
         + 0.15 * smooth_weight * nxt
     )
 
-    return np.clip(
+    result = np.clip(
         smoothed,
         0.0,
         1.0,
     ).astype(np.float32)
+
+    print(
+        f"[POSTPROCESS][smoothing] Output shape={result.shape}, "
+        f"mean neighbor delta={delta.mean():.6f}, "
+        f"smooth-weight range=({smooth_weight.min():.6f}, "
+        f"{smooth_weight.max():.6f})"
+    )
+    return result
 
 
 # ============================================================
@@ -261,6 +328,10 @@ def apply_per_class_thresholds(
     Values below a class's threshold are suppressed.
     """
 
+    print(
+        f"[POSTPROCESS][thresholds] Input shape={np.shape(probs)}"
+    )
+
     probs = np.asarray(
         probs,
         dtype=np.float32,
@@ -273,8 +344,15 @@ def apply_per_class_thresholds(
         < per_class_thresholds[None, :]
     )
 
+    suppressed_count = int(np.count_nonzero(mask))
+    total_count = int(mask.size)
     result[mask] = 0.0
 
+    print(
+        f"[POSTPROCESS][thresholds] Suppressed {suppressed_count}/{total_count} "
+        f"values ({(suppressed_count / total_count * 100.0) if total_count else 0.0:.2f}%), "
+        f"remaining non-zero={int(np.count_nonzero(result))}"
+    )
     return result.astype(np.float32)
 
 
@@ -295,9 +373,21 @@ def postprocess_proto_scores(
         probabilities: (12, 234)
     """
 
+    print("\n[POSTPROCESS][proto] Starting Proto post-processing.")
+    print(
+        f"[POSTPROCESS][proto] Received scores shape={np.shape(corrected_scores)}, "
+        f"dtype={getattr(corrected_scores, 'dtype', type(corrected_scores).__name__)}"
+    )
+
     corrected_scores = np.asarray(
         corrected_scores,
         dtype=np.float32,
+    )
+
+    print(
+        f"[POSTPROCESS][proto] Converted scores to float32; "
+        f"shape={corrected_scores.shape}, "
+        f"min={corrected_scores.min():.6f}, max={corrected_scores.max():.6f}"
     )
 
     if corrected_scores.shape != (
@@ -309,6 +399,8 @@ def postprocess_proto_scores(
             f"shape ({N_WINDOWS}, {N_CLASSES}), "
             f"got {corrected_scores.shape}"
         )
+
+    print("[POSTPROCESS][proto] Input shape validated.")
 
     # --------------------------------------------------------
     # 1. Temperature scaling
@@ -362,6 +454,10 @@ def postprocess_proto_scores(
     # 6. Clip
     # --------------------------------------------------------
 
+    print(
+        f"[POSTPROCESS][proto] Before final clip: "
+        f"min={probs.min():.6f}, max={probs.max():.6f}"
+    )
     probs = np.clip(
         probs,
         0.0,
@@ -378,6 +474,14 @@ def postprocess_proto_scores(
         )
     )
 
-    return probs.astype(
+    result = probs.astype(
         np.float32
     )
+
+    print(
+        f"[POSTPROCESS][proto] Completed. "
+        f"Output shape={result.shape}, dtype={result.dtype}, "
+        f"min={result.min():.6f}, max={result.max():.6f}, "
+        f"non-zero={int(np.count_nonzero(result))}/{result.size}"
+    )
+    return result

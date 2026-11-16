@@ -201,17 +201,34 @@ def process_inference_background(
             
             with log_stage("Audio Pipeline Execution", recording_id=recording_id):
                 logger.info(f"[BG_TASK] Recording {recording_id} - Starting pipeline...")
-                result = predict_pipeline(
-                    audio_path=str(full_path),
-                    site_id=site_id,
-                    hour_id=hour,
-                    progress_callback=progress_callback,
-                    recording_id=recording_id,
-                )
-                logger.info(f"[BG_TASK] Recording {recording_id} - Pipeline complete")
+                try:
+                    result = predict_pipeline(
+                        audio_path=str(full_path),
+                        site_id=site_id,
+                        hour_id=hour,
+                        progress_callback=progress_callback,
+                        recording_id=recording_id,
+                    )
+                    logger.info(f"[BG_TASK] Recording {recording_id} - Pipeline complete")
+                except Exception as pipeline_error:
+                    logger.exception(f"[BG_TASK_ERROR] Recording {recording_id} - Pipeline crashed: {type(pipeline_error).__name__}")
+                    # Update status immediately
+                    try:
+                        recording.status = "failed"
+                        recording.progress_stage = last_stage or "Audio Pipeline"
+                        recording.error_message = f"Pipeline error: {type(pipeline_error).__name__}: {str(pipeline_error)[:400]}"
+                        db.commit()
+                        logger.error(f"[BG_TASK] Recording {recording_id} - Status updated to FAILED: {recording.error_message[:100]}")
+                    except Exception as update_err:
+                        logger.error(f"[BG_TASK] Recording {recording_id} - Failed to update status: {update_err}")
+                        db.rollback()
+                    raise
             
             # Wrap persistence in its own try/except to isolate save failures
             try:
+                if not result or not isinstance(result, dict):
+                    raise ValueError("Pipeline returned invalid or empty result")
+
                 with log_stage("Prediction Database Persistence", recording_id=recording_id):
                     logger.info(f"[BG_TASK] Recording {recording_id} - Sanitizing result dict...")
                     result = to_jsonable(result)

@@ -8,6 +8,7 @@ export default function Analyze() {
   const { uploadRecording, pollStatus, error: uploadError } = useRecordingUpload()
 
   const [file, setFile] = useState(null)
+  const [timedOut, setTimedOut] = useState(false)
   const [siteId, setSiteId] = useState(0)
   const [hour, setHour] = useState(12)
   const [lat, setLat] = useState('')
@@ -95,30 +96,35 @@ export default function Analyze() {
 
       // Start polling for status
       let pollCount = 0
-      const interval = setInterval(async () => {
-        pollCount++
-        try {
-          console.log(`[Analyze] Polling attempt #${pollCount}`)
-          const statusResult = await pollStatus(result.id)
-          console.log(`[Analyze] Poll #${pollCount} response:`, { status: statusResult.status, progress_stage: statusResult.progress_stage, error_message: statusResult.error_message })
-          setStatus(statusResult)
+let failCount = 0
+const MAX_POLLS = 400 // 400 × 1.5 s = 10 minutes
+const interval = setInterval(async () => {
+  pollCount++
+  try {
+    const statusResult = await pollStatus(result.id)
+    failCount = 0
+    setStatus(statusResult)
 
-          // Stop polling when done or failed
-          if (statusResult.status === 'done') {
-            console.log(`[Analyze] Status DONE, stopping polling after ${pollCount} attempts`)
-            clearInterval(interval)
-            setPollInterval(null)
-          } else if (statusResult.status === 'failed') {
-            console.log(`[Analyze] Status FAILED, stopping polling. Error: ${statusResult.error_message}`)
-            clearInterval(interval)
-            setPollInterval(null)
-          }
-        } catch (err) {
-          console.error(`[Analyze] Poll error:`, err.message)
-          clearInterval(interval)
-          setPollInterval(null)
-        }
-      }, 1500) // Poll every 1.5 seconds
+    if (statusResult.status === 'done') {
+      clearInterval(interval); setPollInterval(null)
+    } else if (statusResult.status === 'failed') {
+      clearInterval(interval); setPollInterval(null)
+      setError(statusResult.error_message || 'Inference failed during processing')
+    } else if (pollCount >= MAX_POLLS) {
+      clearInterval(interval); setPollInterval(null)
+      setTimedOut(true)
+      setError('Still processing after 10 minutes. You can check again, or look in History.')
+    }
+  } catch (err) {
+    // tolerate brief network blips instead of giving up on the first error
+    failCount++
+    if (failCount >= 5) {
+      clearInterval(interval); setPollInterval(null)
+      setTimedOut(true)
+      setError('Lost contact with the server. You can check again.')
+    }
+  }
+}, 4000)
 
       setPollInterval(interval)
       console.log('[Analyze] Started polling')

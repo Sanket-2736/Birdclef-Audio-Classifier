@@ -197,7 +197,7 @@ export default function WaveformHover({
 
   // Legend
   const uniqueSpecies = []
-  const speciesSeen = new Set()
+  const speciesSeen = new Set();
   (prediction?.windows || []).forEach((w) => {
     if (!w.is_padding && w.top_k && w.top_k.length > 0) {
       const code = w.top_k[0].code

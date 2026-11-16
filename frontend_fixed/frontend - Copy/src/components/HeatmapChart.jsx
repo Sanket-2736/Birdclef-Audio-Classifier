@@ -9,9 +9,55 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
   const species = heatmapData.species || []
   const matrix = heatmapData.matrix || []
 
+  // Normalize species entries because the API may return either
+  // a species code string or a species metadata object.
+  const getSpeciesCode = (spec) => {
+    if (typeof spec === 'string' || typeof spec === 'number') {
+      return String(spec)
+    }
+
+    if (spec && typeof spec === 'object') {
+      return String(
+        spec.code ??
+        spec.species_code ??
+        spec.label ??
+        spec.name ??
+        spec.common_name ??
+        spec.scientific_name ??
+        ''
+      )
+    }
+
+    return ''
+  }
+
+  const getSpeciesLabel = (spec) => {
+    if (typeof spec === 'string' || typeof spec === 'number') {
+      return String(spec)
+    }
+
+    if (spec && typeof spec === 'object') {
+      return String(
+        spec.common_name ??
+        spec.name ??
+        spec.scientific_name ??
+        spec.label ??
+        spec.code ??
+        spec.species_code ??
+        ''
+      )
+    }
+
+    return ''
+  }
+
   // Filter species (show top 15)
-  const displaySpecies = species.slice(0, 15)
-  const displayMatrix = matrix.map((row) => row.slice(0, validWindows.length))
+  const displaySpecies = Array.isArray(species) ? species.slice(0, 15) : []
+  const displayMatrix = Array.isArray(matrix)
+    ? matrix.map((row) =>
+        Array.isArray(row) ? row.slice(0, validWindows.length) : []
+      )
+    : []
 
   const getColorForScore = (score) => {
     if (score === 0 || score === null || score === undefined) return '#fff8e8'
@@ -46,14 +92,14 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
               <div
                 key={idx}
                 className={`h-8 w-32 text-right pr-3 text-xs font-semibold flex items-center justify-end ${
-                  selectedSpecies === spec ? 'text-[#171717]' : 'text-[#514a40]'
+                  selectedSpecies === getSpeciesCode(spec) ? 'text-[#171717]' : 'text-[#514a40]'
                 }`}
                 style={{
                   backgroundColor:
-                    selectedSpecies === spec ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
+                    selectedSpecies === getSpeciesCode(spec) ? 'rgba(59, 130, 246, 0.1)' : 'transparent',
                 }}
               >
-                {spec.substring(0, 20)}
+                {getSpeciesLabel(spec).substring(0, 20)}
               </div>
             ))}
           </div>
@@ -87,7 +133,11 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
                       score > 0 && setHoveredCell({ rowIdx, colIdx, score })
                     }
                     onMouseLeave={() => setHoveredCell(null)}
-                    title={score > 0 ? `${displaySpecies[rowIdx]}: ${(score * 100).toFixed(1)}%` : ''}
+                    title={
+                      score > 0
+                        ? `${getSpeciesLabel(displaySpecies[rowIdx])}: ${(score * 100).toFixed(1)}%`
+                        : ''
+                    }
                   />
                 ))}
               </div>
@@ -99,7 +149,7 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
       {/* Tooltip */}
       {hoveredCell && (
         <div className="mt-4 p-3 bg-[#fff3d6] border border-[#171717] rounded-none text-sm text-[#302b24]">
-          <strong>{displaySpecies[hoveredCell.rowIdx]}</strong> at window{' '}
+          <strong>{getSpeciesLabel(displaySpecies[hoveredCell.rowIdx])}</strong> at window{' '}
           {hoveredCell.colIdx}: <strong>{(hoveredCell.score * 100).toFixed(1)}%</strong>
         </div>
       )}
