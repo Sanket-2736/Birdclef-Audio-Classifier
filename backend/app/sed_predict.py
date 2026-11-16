@@ -236,9 +236,16 @@ print("SED models ready")
 # SINGLE FILE SED PREDICTION
 # ============================================================
 
-def predict_sed(path):
+def predict_sed(path, recording_id=None):
     """
-    Run the complete 5-fold SED ensemble.
+    Run the complete 5-fold SED ensemble with performance logging.
+
+    Parameters
+    ----------
+    path : str or Path
+        Path to audio file
+    recording_id : str, optional
+        Recording ID for logging context
 
     Returns
     -------
@@ -247,6 +254,7 @@ def predict_sed(path):
     ends : np.ndarray
         End time of each 5-sec window.
     """
+    from .utils import log_stage
 
     path = Path(path)
 
@@ -265,25 +273,27 @@ def predict_sed(path):
     # Audio
     # --------------------------------------------------------
 
-    chunks, ends = file_to_sed_chunks(
-        path
-    )
+    with log_stage("SED Audio Chunk Creation", recording_id=recording_id):
+        chunks, ends = file_to_sed_chunks(
+            path
+        )
 
-    print(
-        "Chunks:",
-        chunks.shape,
-    )
+        print(
+            "Chunks:",
+            chunks.shape,
+        )
 
     # --------------------------------------------------------
     # Mel
     # --------------------------------------------------------
 
-    mel = audio_to_mel(chunks)
+    with log_stage("SED Mel Spectrogram Computation", recording_id=recording_id):
+        mel = audio_to_mel(chunks)
 
-    print(
-        "Mel:",
-        mel.shape,
-    )
+        print(
+            "Mel:",
+            mel.shape,
+        )
 
     # --------------------------------------------------------
     # 5-fold ensemble
@@ -300,74 +310,75 @@ def predict_sed(path):
     for fold_idx, sess in enumerate(
         sed_sessions
     ):
-
-        input_name = (
-            sess.get_inputs()[0].name
-        )
-
-        outs = sess.run(
-            None,
-            {
-                input_name: mel
-            },
-        )
-
-        # Exact notebook outputs
-        clip_logits = outs[0]
-        frame_max = outs[1].max(
-            axis=1
-        )
-
-        # 50% clip + 50% frame
-        fold_prob = (
-            0.5 * sigmoid_sed(
-                clip_logits
+        with log_stage(
+            f"SED Fold {fold_idx} Inference", 
+            recording_id=recording_id
+        ):
+            input_name = (
+                sess.get_inputs()[0].name
             )
-            +
-            0.5 * sigmoid_sed(
-                frame_max
+
+            outs = sess.run(
+                None,
+                {
+                    input_name: mel
+                },
             )
-        )
 
-        p_sum += fold_prob
+            # Exact notebook outputs
+            clip_logits = outs[0]
+            frame_max = outs[1].max(
+                axis=1
+            )
 
-        print(
-            f"  Fold {fold_idx}: "
-            f"{fold_prob.shape}"
-        )
+            # 50% clip + 50% frame
+            fold_prob = (
+                0.5 * sigmoid_sed(
+                    clip_logits
+                )
+                +
+                0.5 * sigmoid_sed(
+                    frame_max
+                )
+            )
 
-    # Average 5 folds
-    p_mean = (
-        p_sum
-        / len(sed_sessions)
-    )
+            p_sum += fold_prob
+
+            print(
+                f"  Fold {fold_idx}: "
+                f"{fold_prob.shape}"
+            )
 
     # --------------------------------------------------------
-    # Gaussian temporal smoothing
+    # Ensemble averaging and smoothing
     # --------------------------------------------------------
 
-    if len(p_mean) > 1:
+    with log_stage("SED Ensemble Aggregation", recording_id=recording_id):
+        # Average 5 folds
+        p_mean = (
+            p_sum
+            / len(sed_sessions)
+        )
 
-        p_mean = gaussian_filter1d(
+        # Gaussian temporal smoothing
+        if len(p_mean) > 1:
+            p_mean = gaussian_filter1d(
+                p_mean,
+                sigma=0.65,
+                axis=0,
+                mode="nearest",
+            ).astype(
+                np.float32
+            )
+
+        # Final clipping
+        p_mean = np.clip(
             p_mean,
-            sigma=0.65,
-            axis=0,
-            mode="nearest",
+            0.0,
+            1.0,
         ).astype(
             np.float32
         )
-
-    # --------------------------------------------------------
-    # Final clipping
-    # --------------------------------------------------------
-
-    p_mean = np.clip(
-        p_mean,
-        0.0,
-        1.0,
-    ).astype(
-        np.float32
-    )
 
     print(
         "\nSED output:",

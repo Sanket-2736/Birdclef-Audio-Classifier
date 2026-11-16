@@ -57,6 +57,7 @@ export default function Analyze() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(null)
+    console.log('[Analyze] Form submitted')
 
     if (!file) {
       setError('Please select a file')
@@ -71,6 +72,7 @@ export default function Analyze() {
     setUploading(true)
 
     try {
+      console.log('[Analyze] Uploading file:', { filename: file.name, size: file.size, siteId, hour })
       const result = await uploadRecording(
         file,
         parseInt(siteId),
@@ -78,35 +80,50 @@ export default function Analyze() {
         lat ? parseFloat(lat) : undefined,
         lng ? parseFloat(lng) : undefined
       )
+      console.log('[Analyze] Upload result:', result)
 
       // Check for duplicate
       if (result.duplicate) {
+        console.log('[Analyze] File is duplicate')
         setDuplicateDialog(result)
         return
       }
 
+      console.log('[Analyze] Upload successful, recording ID:', result.id, 'Status:', result.status)
       setRecordingId(result.id)
       setStatus(result.status)
 
       // Start polling for status
+      let pollCount = 0
       const interval = setInterval(async () => {
+        pollCount++
         try {
+          console.log(`[Analyze] Polling attempt #${pollCount}`)
           const statusResult = await pollStatus(result.id)
+          console.log(`[Analyze] Poll #${pollCount} response:`, { status: statusResult.status, progress_stage: statusResult.progress_stage, error_message: statusResult.error_message })
           setStatus(statusResult)
 
           // Stop polling when done or failed
-          if (statusResult.status === 'done' || statusResult.status === 'failed') {
+          if (statusResult.status === 'done') {
+            console.log(`[Analyze] Status DONE, stopping polling after ${pollCount} attempts`)
+            clearInterval(interval)
+            setPollInterval(null)
+          } else if (statusResult.status === 'failed') {
+            console.log(`[Analyze] Status FAILED, stopping polling. Error: ${statusResult.error_message}`)
             clearInterval(interval)
             setPollInterval(null)
           }
         } catch (err) {
+          console.error(`[Analyze] Poll error:`, err.message)
           clearInterval(interval)
           setPollInterval(null)
         }
       }, 1500) // Poll every 1.5 seconds
 
       setPollInterval(interval)
+      console.log('[Analyze] Started polling')
     } catch (err) {
+      console.error('[Analyze] Upload error:', err)
       setError(uploadError || err.message)
     } finally {
       setUploading(false)

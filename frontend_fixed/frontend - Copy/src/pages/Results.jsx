@@ -29,18 +29,24 @@ export default function Results() {
   useEffect(() => {
     const fetchRecording = async () => {
       try {
+        console.log(`[Results] Initial fetch for recording: ${id}`)
         setLoading(true)
         const response = await axios.get(`${API_URL}/recordings/${id}`)
+        console.log('[Results] Initial fetch response:', { status: response.data.status, has_prediction: !!response.data.prediction, progress_stage: response.data.progress_stage, error_message: response.data.error_message })
         setRecording(response.data)
 
         // Check if still processing
         if (response.data.status !== 'done') {
+          console.log(`[Results] Status is "${response.data.status}", starting polling...`)
           setIsProcessing(true)
+        } else {
+          console.log('[Results] Status is "done", no polling needed')
         }
 
         // Load feedback
         await loadFeedback()
       } catch (err) {
+        console.error('[Results] Initial fetch error:', err)
         setError(err.response?.data?.detail || 'Failed to load results')
       } finally {
         setLoading(false)
@@ -52,26 +58,45 @@ export default function Results() {
 
   // Poll for completion if processing
   useEffect(() => {
-    if (!isProcessing || !id) return
+    if (!isProcessing || !id) {
+      console.log(`[Results] Polling disabled: isProcessing=${isProcessing}, id=${id}`)
+      return
+    }
+
+    console.log(`[Results] Starting polling loop for recording: ${id}`)
+    let pollCount = 0
 
     const interval = setInterval(async () => {
+      pollCount++
       try {
+        console.log(`[Results] Poll attempt #${pollCount}`)
         const response = await axios.get(`${API_URL}/recordings/${id}`)
+        console.log(`[Results] Poll #${pollCount} response:`, { status: response.data.status, progress_stage: response.data.progress_stage, error_message: response.data.error_message, has_prediction: !!response.data.prediction })
         setRecording(response.data)
 
         if (response.data.status === 'done') {
+          console.log(`[Results] Status is DONE, stopping polling after ${pollCount} attempts`)
+          setIsProcessing(false)
+          clearInterval(interval)
+          setPollInterval(null)
+        } else if (response.data.status === 'failed') {
+          console.log(`[Results] Status is FAILED, stopping polling. Error: ${response.data.error_message}`)
+          setError(response.data.error_message || 'Processing failed')
           setIsProcessing(false)
           clearInterval(interval)
           setPollInterval(null)
         }
       } catch (err) {
-        console.error('Poll error:', err)
+        console.error(`[Results] Poll #${pollCount} error:`, err.message)
       }
     }, 2000)
 
     setPollInterval(interval)
 
-    return () => clearInterval(interval)
+    return () => {
+      console.log(`[Results] Cleaning up polling interval after ${pollCount} attempts`)
+      clearInterval(interval)
+    }
   }, [isProcessing, id])
 
   const loadFeedback = async () => {

@@ -455,88 +455,103 @@ def apply_residual_correction(
     first_pass,
     site_id=0,
     hour_id=12,
+    recording_id=None,
 ):
     """
-    Apply trained ResidualSSM correction.
+    Apply trained ResidualSSM correction with performance logging.
 
-    embeddings:
-        (12, 1536)
+    Parameters
+    ----------
+    embeddings : np.ndarray
+        Shape (12, 1536)
+    first_pass : np.ndarray
+        Shape (12, 234)
+    site_id : int
+        Site ID
+    hour_id : int
+        Hour of day
+    recording_id : str, optional
+        Recording ID for logging context
 
-    first_pass:
-        (12, 234)
-
-    returns:
-        corrected_scores: (12, 234)
-        residual_correction: (12, 234)
+    Returns
+    -------
+    corrected_scores : np.ndarray
+        Shape (12, 234)
+    residual_correction : np.ndarray
+        Shape (12, 234)
     """
+    from .utils import log_stage
 
-    embeddings = np.asarray(
-        embeddings,
-        dtype=np.float32,
-    )
-
-    first_pass = np.asarray(
-        first_pass,
-        dtype=np.float32,
-    )
-
-    if embeddings.shape != (
-        N_WINDOWS,
-        EMBEDDING_DIM,
-    ):
-        raise ValueError(
-            f"Unexpected embeddings shape: "
-            f"{embeddings.shape}"
+    with log_stage("Residual Input Preparation", recording_id=recording_id):
+        embeddings = np.asarray(
+            embeddings,
+            dtype=np.float32,
         )
 
-    if first_pass.shape != (
-        N_WINDOWS,
-        N_CLASSES,
-    ):
-        raise ValueError(
-            f"Unexpected first_pass shape: "
-            f"{first_pass.shape}"
+        first_pass = np.asarray(
+            first_pass,
+            dtype=np.float32,
         )
 
-    emb_tensor = torch.from_numpy(
-        embeddings
-    ).float().unsqueeze(0)
+        if embeddings.shape != (
+            N_WINDOWS,
+            EMBEDDING_DIM,
+        ):
+            raise ValueError(
+                f"Unexpected embeddings shape: "
+                f"{embeddings.shape}"
+            )
 
-    first_pass_tensor = torch.from_numpy(
-        first_pass
-    ).float().unsqueeze(0)
+        if first_pass.shape != (
+            N_WINDOWS,
+            N_CLASSES,
+        ):
+            raise ValueError(
+                f"Unexpected first_pass shape: "
+                f"{first_pass.shape}"
+            )
 
-    site_tensor = torch.tensor(
-        [site_id],
-        dtype=torch.long,
-    )
+    with log_stage("Residual Tensor Conversion", recording_id=recording_id):
+        emb_tensor = torch.from_numpy(
+            embeddings
+        ).float().unsqueeze(0)
 
-    hour_tensor = torch.tensor(
-        [hour_id % 24],
-        dtype=torch.long,
-    )
+        first_pass_tensor = torch.from_numpy(
+            first_pass
+        ).float().unsqueeze(0)
 
-    with torch.no_grad():
-
-        correction = residual_model(
-            emb_tensor,
-            first_pass_tensor,
-            site_ids=site_tensor,
-            hours=hour_tensor,
+        site_tensor = torch.tensor(
+            [site_id],
+            dtype=torch.long,
         )
 
-    correction = (
-        correction
-        .squeeze(0)
-        .cpu()
-        .numpy()
-        .astype(np.float32)
-    )
+        hour_tensor = torch.tensor(
+            [hour_id % 24],
+            dtype=torch.long,
+        )
 
-    corrected_scores = (
-        first_pass
-        + CORRECTION_WEIGHT * correction
-    )
+    with log_stage("ResidualSSM Forward Pass", recording_id=recording_id):
+        with torch.no_grad():
+            correction = residual_model(
+                emb_tensor,
+                first_pass_tensor,
+                site_ids=site_tensor,
+                hours=hour_tensor,
+            )
+
+    with log_stage("Residual Post-processing", recording_id=recording_id):
+        correction = (
+            correction
+            .squeeze(0)
+            .cpu()
+            .numpy()
+            .astype(np.float32)
+        )
+
+        corrected_scores = (
+            first_pass
+            + CORRECTION_WEIGHT * correction
+        )
 
     return (
         corrected_scores.astype(np.float32),

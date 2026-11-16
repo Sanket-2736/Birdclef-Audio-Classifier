@@ -28,6 +28,7 @@ class Settings(BaseSettings):
     
     # App
     DEBUG: bool = True
+    INFERENCE_TIMEOUT_SEC: int = 900  # 15 minutes max for inference
     
     class Config:
         env_file = ".env"

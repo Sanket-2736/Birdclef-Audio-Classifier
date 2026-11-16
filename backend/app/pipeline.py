@@ -11,6 +11,7 @@ from .first_pass_predict import predict_first_pass
 from .sed_predict import predict_sed
 from .final_blend import final_rank_blend
 from .postprocess import per_class_thresholds
+from .utils import log_stage
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -194,9 +195,10 @@ def predict_pipeline(
     site_id=0,
     hour_id=12,
     progress_callback: Optional[Callable[[str], None]] = None,
+    recording_id: Optional[str] = None,
 ):
     """
-    Complete BirdCLEF pipeline with progress tracking.
+    Complete BirdCLEF pipeline with progress tracking and performance logging.
 
     Parameters
     ----------
@@ -208,6 +210,8 @@ def predict_pipeline(
         Hour of day (0-23)
     progress_callback : callable, optional
         Callback function(stage_name) called at each stage
+    recording_id : str, optional
+        Recording ID for performance logging context
 
     Returns
     -------
@@ -224,80 +228,87 @@ def predict_pipeline(
     # LOAD AUDIO WITH REAL DURATION
     # --------------------------------------------------------
     
-    progress("Loading audio")
-    audio, real_duration_sec = load_audio_with_duration(audio_path)
-    valid_windows = compute_valid_windows(real_duration_sec)
+    with log_stage("Audio Loading", recording_id=recording_id):
+        progress("Loading audio")
+        audio, real_duration_sec = load_audio_with_duration(audio_path)
+        valid_windows = compute_valid_windows(real_duration_sec)
 
     # --------------------------------------------------------
     # PROTO BRANCH
     # --------------------------------------------------------
 
-    progress("Perch embeddings")
-    proto_result = predict_first_pass(
-        audio_path=audio_path,
-        site_id=site_id,
-        hour_id=hour_id,
-    )
+    with log_stage("Perch Embeddings", recording_id=recording_id):
+        progress("Perch embeddings")
+        proto_result = predict_first_pass(
+            audio_path=audio_path,
+            site_id=site_id,
+            hour_id=hour_id,
+            recording_id=recording_id,
+        )
 
-    proto_probs = np.asarray(
-        proto_result["proto_probs"],
-        dtype=np.float32,
-    )
+    with log_stage("Proto Result Processing", recording_id=recording_id):
+        proto_probs = np.asarray(
+            proto_result["proto_probs"],
+            dtype=np.float32,
+        )
 
     # --------------------------------------------------------
     # SED BRANCH
     # --------------------------------------------------------
 
-    progress("SED detection")
-    sed_result = predict_sed(audio_path)
+    with log_stage("SED Detection", recording_id=recording_id):
+        progress("SED detection")
+        sed_result = predict_sed(audio_path, recording_id=recording_id)
 
-    if isinstance(sed_result, tuple):
-        sed_probs = sed_result[0]
-    else:
-        sed_probs = sed_result
+    with log_stage("SED Result Processing", recording_id=recording_id):
+        if isinstance(sed_result, tuple):
+            sed_probs = sed_result[0]
+        else:
+            sed_probs = sed_result
 
-    sed_probs = np.asarray(
-        sed_probs,
-        dtype=np.float32,
-    )
+        sed_probs = np.asarray(
+            sed_probs,
+            dtype=np.float32,
+        )
 
     # --------------------------------------------------------
     # FINAL BLEND
     # --------------------------------------------------------
 
-    progress("Blending results")
-    final_probs = final_rank_blend(
-        proto_probs,
-        sed_probs,
-    )
+    with log_stage("Score Blending", recording_id=recording_id):
+        progress("Blending results")
+        final_probs = final_rank_blend(
+            proto_probs,
+            sed_probs,
+        )
 
-    final_probs = np.asarray(
-        final_probs,
-        dtype=np.float32,
-    )
+        final_probs = np.asarray(
+            final_probs,
+            dtype=np.float32,
+        )
 
     # --------------------------------------------------------
     # MASK PADDING WINDOWS
     # --------------------------------------------------------
     
-    final_probs = mask_padding_windows(final_probs, valid_windows)
+    with log_stage("Padding Mask Application", recording_id=recording_id):
+        final_probs = mask_padding_windows(final_probs, valid_windows)
 
     # --------------------------------------------------------
     # POST-PROCESSING
     # --------------------------------------------------------
     
-    progress("Post-processing")
-    
-    # Get waveform peaks from real audio only
-    real_audio_samples = int(real_duration_sec * 32000)
-    waveform_peaks = get_waveform_peaks(audio[:real_audio_samples])
-    
-    top_species = rank_species(final_probs, valid_windows, real_duration_sec)
-    windows = build_windows_response(final_probs, valid_windows, real_duration_sec)
-    heatmap = build_heatmap(final_probs, valid_windows)
-    branch_scores = build_branch_scores(proto_result, sed_result, final_probs, valid_windows)
-    
-    progress("Completed")
+    with log_stage("Post-processing", recording_id=recording_id):
+        progress("Post-processing")
+        
+        # Get waveform peaks from real audio only
+        real_audio_samples = int(real_duration_sec * 32000)
+        waveform_peaks = get_waveform_peaks(audio[:real_audio_samples])
+        
+        top_species = rank_species(final_probs, valid_windows, real_duration_sec)
+        windows = build_windows_response(final_probs, valid_windows, real_duration_sec)
+        heatmap = build_heatmap(final_probs, valid_windows)
+        branch_scores = build_branch_scores(proto_result, sed_result, final_probs, valid_windows)
     
     return {
         "real_duration_sec": float(real_duration_sec),

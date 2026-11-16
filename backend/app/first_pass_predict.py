@@ -353,9 +353,10 @@ def predict_first_pass(
     audio_path,
     site_id=0,
     hour_id=12,
+    recording_id=None,
 ):
     """
-    Complete first-pass pipeline:
+    Complete first-pass pipeline with performance logging:
 
         Audio
           ↓
@@ -368,10 +369,27 @@ def predict_first_pass(
         ProtoSSM TTA
           ↓
         0.5 Proto + 0.5 MLP
+        
+        ↓
+        ResidualSSM
+        ↓
+        Post-processing
+
+    Parameters
+    ----------
+    audio_path : str
+        Path to audio file
+    site_id : int
+        Site ID
+    hour_id : int
+        Hour of day
+    recording_id : str, optional
+        Recording ID for logging context
 
     Returns:
         dict
     """
+    from .utils import log_stage
 
     print("\n" + "=" * 60)
     print("FIRST-PASS PIPELINE")
@@ -385,44 +403,47 @@ def predict_first_pass(
     # --------------------------------------------------------
 
     print("\nRunning Perch...")
+    
+    with log_stage("Perch Model Initialization", recording_id=recording_id):
+        perch = PerchModel()
 
-    perch = PerchModel()
-
-    perch_result = perch.predict(
-        audio_path
-    )
-
-    embeddings = np.asarray(
-        perch_result["embeddings"],
-        dtype=np.float32
-    )
-
-    perch_scores = np.asarray(
-        perch_result["scores"],
-        dtype=np.float32
-    )
-
-    if embeddings.shape != (
-        N_WINDOWS,
-        EMBEDDING_DIM
-    ):
-        raise ValueError(
-            f"Unexpected embeddings shape: "
-            f"{embeddings.shape}"
+    with log_stage("Perch Inference", recording_id=recording_id):
+        perch_result = perch.predict(
+            audio_path
         )
 
-    if perch_scores.shape != (
-        N_WINDOWS,
-        N_CLASSES
-    ):
-        raise ValueError(
-            f"Unexpected Perch scores shape: "
-            f"{perch_scores.shape}"
+    with log_stage("Perch Result Processing", recording_id=recording_id):
+        embeddings = np.asarray(
+            perch_result["embeddings"],
+            dtype=np.float32
         )
 
-    print("Perch:")
-    print("  embeddings:", embeddings.shape)
-    print("  scores:", perch_scores.shape)
+        perch_scores = np.asarray(
+            perch_result["scores"],
+            dtype=np.float32
+        )
+
+        if embeddings.shape != (
+            N_WINDOWS,
+            EMBEDDING_DIM
+        ):
+            raise ValueError(
+                f"Unexpected embeddings shape: "
+                f"{embeddings.shape}"
+            )
+
+        if perch_scores.shape != (
+            N_WINDOWS,
+            N_CLASSES
+        ):
+            raise ValueError(
+                f"Unexpected Perch scores shape: "
+                f"{perch_scores.shape}"
+            )
+
+        print("Perch:")
+        print("  embeddings:", embeddings.shape)
+        print("  scores:", perch_scores.shape)
 
     # --------------------------------------------------------
     # PRIOR
@@ -430,22 +451,23 @@ def predict_first_pass(
 
     print("\nApplying prior adjustment...")
 
-    adjusted_scores = apply_prior(
-        perch_scores,
-        sites=np.array(
-            [site_id] * N_WINDOWS
-        ),
-        hours=np.array(
-            [hour_id] * N_WINDOWS
-        ),
-        tables=prior_tables,
-        lambda_prior=LAMBDA_PRIOR,
-    )
+    with log_stage("Prior Adjustment", recording_id=recording_id):
+        adjusted_scores = apply_prior(
+            perch_scores,
+            sites=np.array(
+                [site_id] * N_WINDOWS
+            ),
+            hours=np.array(
+                [hour_id] * N_WINDOWS
+            ),
+            tables=prior_tables,
+            lambda_prior=LAMBDA_PRIOR,
+        )
 
-    print(
-        "  adjusted scores:",
-        adjusted_scores.shape
-    )
+        print(
+            "  adjusted scores:",
+            adjusted_scores.shape
+        )
 
     # --------------------------------------------------------
     # MLP
@@ -453,17 +475,18 @@ def predict_first_pass(
 
     print("\nRunning MLP probes...")
 
-    mlp_scores = apply_mlp_probes_vectorized(
-        embeddings,
-        adjusted_scores,
-        mlp_artifacts,
-        alpha_blend=mlp_alpha
-    )
+    with log_stage("MLP Probes Inference", recording_id=recording_id):
+        mlp_scores = apply_mlp_probes_vectorized(
+            embeddings,
+            adjusted_scores,
+            mlp_artifacts,
+            alpha_blend=mlp_alpha
+        )
 
-    print(
-        "  MLP output:",
-        mlp_scores.shape
-    )
+        print(
+            "  MLP output:",
+            mlp_scores.shape
+        )
 
     # --------------------------------------------------------
     # METADATA
@@ -487,38 +510,40 @@ def predict_first_pass(
         "\nRunning ProtoSSM TTA..."
     )
 
-    proto_scores = run_tta_proto(
-        proto_model,
-        embeddings,
-        perch_scores,
-        site_ids,
-        hour_ids
-    )
+    with log_stage("ProtoSSM TTA Inference", recording_id=recording_id):
+        proto_scores = run_tta_proto(
+            proto_model,
+            embeddings,
+            perch_scores,
+            site_ids,
+            hour_ids
+        )
 
-    print(
-        "  ProtoSSM output:",
-        proto_scores.shape
-    )
+        print(
+            "  ProtoSSM output:",
+            proto_scores.shape
+        )
 
     # --------------------------------------------------------
     # FINAL FIRST PASS
     # --------------------------------------------------------
 
-    first_pass = (
-        ENSEMBLE_WEIGHT * proto_scores
-        + (1.0 - ENSEMBLE_WEIGHT) * mlp_scores
-    )
+    with log_stage("First Pass Ensemble", recording_id=recording_id):
+        first_pass = (
+            ENSEMBLE_WEIGHT * proto_scores
+            + (1.0 - ENSEMBLE_WEIGHT) * mlp_scores
+        )
 
-    first_pass = np.asarray(
-        first_pass,
-        dtype=np.float32
-    )
+        first_pass = np.asarray(
+            first_pass,
+            dtype=np.float32
+        )
 
-    print("\nFirst-pass output:")
-    print("  shape:", first_pass.shape)
-    print("  min:", first_pass.min())
-    print("  max:", first_pass.max())
-    print("  mean:", first_pass.mean())
+        print("\nFirst-pass output:")
+        print("  shape:", first_pass.shape)
+        print("  min:", first_pass.min())
+        print("  max:", first_pass.max())
+        print("  mean:", first_pass.mean())
 
     # --------------------------------------------------------
     # RESIDUAL SSM
@@ -526,44 +551,46 @@ def predict_first_pass(
 
     print("\nRunning ResidualSSM...")
 
-    corrected_scores, residual_correction = (
-        apply_residual_correction(
-            embeddings=embeddings,
-            first_pass=first_pass,
-            site_id=site_id,
-            hour_id=hour_id,
+    with log_stage("ResidualSSM Inference", recording_id=recording_id):
+        corrected_scores, residual_correction = (
+            apply_residual_correction(
+                embeddings=embeddings,
+                first_pass=first_pass,
+                site_id=site_id,
+                hour_id=hour_id,
+                recording_id=recording_id,
+            )
         )
-    )
 
-    print(
-        "  residual correction:",
-        residual_correction.shape
-    )
+        print(
+            "  residual correction:",
+            residual_correction.shape
+        )
 
-    print(
-        "  corrected scores:",
-        corrected_scores.shape
-    )
+        print(
+            "  corrected scores:",
+            corrected_scores.shape
+        )
 
-    print(
-        "  correction min:",
-        residual_correction.min()
-    )
+        print(
+            "  correction min:",
+            residual_correction.min()
+        )
 
-    print(
-        "  correction max:",
-        residual_correction.max()
-    )
+        print(
+            "  correction max:",
+            residual_correction.max()
+        )
 
-    print(
-        "  corrected min:",
-        corrected_scores.min()
-    )
+        print(
+            "  corrected min:",
+            corrected_scores.min()
+        )
 
-    print(
-        "  corrected max:",
-        corrected_scores.max()
-    )
+        print(
+            "  corrected max:",
+            corrected_scores.max()
+        )
 
     # --------------------------------------------------------
     # POST-PROCESSING
@@ -571,29 +598,30 @@ def predict_first_pass(
 
     print("\nRunning Proto post-processing...")
 
-    proto_probs = postprocess_proto_scores(
-        corrected_scores
-    )
+    with log_stage("Proto Score Post-processing", recording_id=recording_id):
+        proto_probs = postprocess_proto_scores(
+            corrected_scores
+        )
 
-    print(
-        "  Proto probabilities:",
-        proto_probs.shape
-    )
+        print(
+            "  Proto probabilities:",
+            proto_probs.shape
+        )
 
-    print(
-        "  probability min:",
-        proto_probs.min()
-    )
+        print(
+            "  probability min:",
+            proto_probs.min()
+        )
 
-    print(
-        "  probability max:",
-        proto_probs.max()
-    )
+        print(
+            "  probability max:",
+            proto_probs.max()
+        )
 
-    print(
-        "  probability mean:",
-        proto_probs.mean()
-    )
+        print(
+            "  probability mean:",
+            proto_probs.mean()
+        )
 
     # --------------------------------------------------------
     # TOP CLASSES

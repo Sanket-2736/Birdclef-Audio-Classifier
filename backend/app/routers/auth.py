@@ -80,34 +80,36 @@ class TokenResponse(BaseModel):
 
 
 def get_current_user(
-    token: str = None,
+    authorization: str = Header(None),
     db: Session = Depends(get_db),
 ) -> User:
     """
-    Get current authenticated user from JWT token.
+    Get current authenticated user from JWT token in Authorization header.
     
-    Can be used as a dependency for protected routes:
+    Dependency for protected routes:
     
         @app.get("/profile")
         def get_profile(current_user: User = Depends(get_current_user)):
             return current_user
     """
-    from fastapi import Header
     
-    # Extract token from Authorization header
-    if token is None:
-        # Try to get from header
-        # This is a bit of a workaround; normally done via Header
+    if not authorization:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Missing authorization token",
+            detail="Missing authorization header",
             headers={"WWW-Authenticate": "Bearer"},
         )
     
-    # Remove "Bearer " prefix if present
-    if token.startswith("Bearer "):
-        token = token[7:]
+    # Parse "Bearer <token>" format
+    parts = authorization.split()
+    if len(parts) != 2 or parts[0].lower() != "bearer":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authorization header format",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
     
+    token = parts[1]
     user_id = decode_token(token)
     
     if user_id is None:

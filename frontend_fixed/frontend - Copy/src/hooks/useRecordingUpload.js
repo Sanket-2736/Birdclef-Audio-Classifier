@@ -55,10 +55,13 @@ export function useRecordingUpload() {
 
   const pollStatus = useCallback(async (recordingId) => {
     try {
+      console.log(`[pollStatus] Fetching status for recording: ${recordingId}`)
       const response = await axios.get(`${API_URL}/recordings/${recordingId}/status`)
+      console.log(`[pollStatus] Response for ${recordingId}:`, { status: response.data.status, progress_stage: response.data.progress_stage, error_message: response.data.error_message })
       setStatus(response.data)
       return response.data
     } catch (err) {
+      console.error(`[pollStatus] Error fetching status:`, err.message)
       if (err.response?.status === 404) {
         setError('Recording not found')
       } else {

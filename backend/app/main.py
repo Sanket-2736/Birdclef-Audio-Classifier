@@ -1,4 +1,5 @@
 from pathlib import Path
+import time
 
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.staticfiles import StaticFiles
@@ -9,42 +10,68 @@ from .pipeline import predict_pipeline
 from .config import get_settings
 from .db import init_db
 from .routers import auth, recordings, stats
+from .utils import get_perf_logger, log_stage
 
+
+# Initialize performance logger for startup
+perf_logger = get_perf_logger()
+
+# Log startup
+startup_start = time.perf_counter()
+perf_logger.info("="*60)
+perf_logger.info("BIRDCLEF BACKEND STARTUP")
+perf_logger.info("="*60)
 
 # Initialize settings
-settings = get_settings()
+with log_stage("Settings Initialization"):
+    settings = get_settings()
 
 # Initialize database
-init_db()
+with log_stage("Database Initialization"):
+    init_db()
 
 # Create app
-app = FastAPI(
-    title="BirdCLEF Audio Classifier",
-    version="1.0.0",
-)
+with log_stage("FastAPI App Creation"):
+    app = FastAPI(
+        title="BirdCLEF Audio Classifier",
+        version="1.0.0",
+    )
 
 # Add CORS middleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[settings.FRONTEND_ORIGIN, "http://localhost:3000", "http://localhost:5173"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+with log_stage("CORS Middleware Setup"):
+    # CORS middleware
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=[
+            "http://localhost:5173",
+            "http://localhost:5174",
+            "http://127.0.0.1:5173",
+            "http://127.0.0.1:5174",
+            "http://localhost:3000",
+        ],
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 # Include routers
-app.include_router(auth.router)
-app.include_router(recordings.router)
-app.include_router(stats.router)
+with log_stage("Router Registration"):
+    app.include_router(auth.router)
+    app.include_router(recordings.router)
+    app.include_router(stats.router)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+with log_stage("Static Files Mount"):
+    app.mount(
+        "/static",
+        StaticFiles(directory=BASE_DIR / "static"),
+        name="static",
+    )
 
-app.mount(
-    "/static",
-    StaticFiles(directory=BASE_DIR / "static"),
-    name="static",
-)
+startup_duration = time.perf_counter() - startup_start
+perf_logger.info(f"Startup completed in {startup_duration:.2f}s")
+perf_logger.info("="*60)
 
 
 @app.get("/")
