@@ -29,43 +29,80 @@ export default function WaveformHover({
   const containerRef = useRef(null)
   const canvasRef = useRef(null)
   const wavesurfer = useRef(null)
+  const mountedRef = useRef(true)
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const [tooltip, setTooltip] = useState(null)
   const [highlightedWindow, setHighlightedWindow] = useState(null)
+  const [audioError, setAudioError] = useState(null)
 
   // Initialize WaveSurfer
   useEffect(() => {
     if (!containerRef.current) return
 
-    wavesurfer.current = WaveSurfer.create({
-      container: containerRef.current,
-      waveColor: '#b9e7ff',
-      progressColor: '#4b9fc9',
-      cursorColor: '#171717',
-      barWidth: 2,
-      barRadius: 3,
-      barGap: 1,
-      height: 100,
-      normalize: true,
-      responsive: true,
-      backend: 'WebAudio',
-    })
+    mountedRef.current = true
 
-    wavesurfer.current.load(audioUrl)
+    try {
+      wavesurfer.current = WaveSurfer.create({
+        container: containerRef.current,
+        waveColor: '#b9e7ff',
+        progressColor: '#4b9fc9',
+        cursorColor: '#171717',
+        barWidth: 2,
+        barRadius: 3,
+        barGap: 1,
+        height: 100,
+        normalize: true,
+        responsive: true,
+        backend: 'WebAudio',
+      })
 
-    wavesurfer.current.on('ready', () => {
-      setCurrentTime(0)
-    })
+      wavesurfer.current.load(audioUrl)
 
-    wavesurfer.current.on('play', () => setIsPlaying(true))
-    wavesurfer.current.on('pause', () => setIsPlaying(false))
-    wavesurfer.current.on('timeupdate', (time) => {
-      setCurrentTime(time)
-      onTimeChange?.(time)
-    })
+      wavesurfer.current.on('ready', () => {
+        if (mountedRef.current) {
+          setCurrentTime(0)
+          setAudioError(null)
+        }
+      })
+
+      wavesurfer.current.on('play', () => {
+        if (mountedRef.current) setIsPlaying(true)
+      })
+
+      wavesurfer.current.on('pause', () => {
+        if (mountedRef.current) setIsPlaying(false)
+      })
+
+      wavesurfer.current.on('timeupdate', (time) => {
+        if (mountedRef.current) {
+          setCurrentTime(time)
+          onTimeChange?.(time)
+        }
+      })
+
+      wavesurfer.current.on('error', (error) => {
+        console.error('[WaveformHover] WaveSurfer error:', error)
+        if (mountedRef.current) {
+          setAudioError(error?.message || 'Failed to load audio')
+        }
+      })
+
+      wavesurfer.current.on('decode-error', (error) => {
+        console.error('[WaveformHover] Audio decode error:', error)
+        if (mountedRef.current) {
+          setAudioError('Failed to decode audio file')
+        }
+      })
+    } catch (err) {
+      console.error('[WaveformHover] Failed to initialize WaveSurfer:', err)
+      if (mountedRef.current) {
+        setAudioError('Failed to initialize audio player')
+      }
+    }
 
     return () => {
+      mountedRef.current = false
       wavesurfer.current?.destroy()
     }
   }, [audioUrl, onTimeChange])
@@ -117,15 +154,17 @@ export default function WaveformHover({
         }
       } else if (window && window.top_k && window.top_k.length > 0) {
         // Color by top species in window
-        const topCode = window.top_k[0].code
-        const color = getSpeciesColor(topCode)
-        ctx.fillStyle = color + '33' // 20% opacity
-        ctx.fillRect(x1, 0, w, height)
+        const topCode = window?.top_k?.[0]?.code
+        if (topCode) {
+          const color = getSpeciesColor(topCode)
+          ctx.fillStyle = color + '33' // 20% opacity
+          ctx.fillRect(x1, 0, w, height)
 
-        // Border
-        ctx.strokeStyle = color + 'aa'
-        ctx.lineWidth = 1
-        ctx.strokeRect(x1, 0, w, height)
+          // Border
+          ctx.strokeStyle = color + 'aa'
+          ctx.lineWidth = 1
+          ctx.strokeRect(x1, 0, w, height)
+        }
       }
     }
 
@@ -148,6 +187,7 @@ export default function WaveformHover({
 
   // Handle canvas mouse move for tooltip
   const handleCanvasMouseMove = (e) => {
+    if (!mountedRef.current) return
     if (!canvasRef.current || !containerRef.current) return
 
     const rect = canvasRef.current.getBoundingClientRect()
@@ -159,7 +199,7 @@ export default function WaveformHover({
     const windows = prediction?.windows || []
     const window = windows[windowIndex]
 
-    if (window && !window.is_padding) {
+    if (window && !window.is_padding && window.top_k && window.top_k.length > 0) {
       const top3 = (window.top_k || []).slice(0, 3)
       setTooltip({
         x: e.clientX - rect.left,
@@ -182,6 +222,7 @@ export default function WaveformHover({
   }
 
   const handleCanvasClick = (e) => {
+    if (!mountedRef.current) return
     if (!canvasRef.current) return
 
     const rect = canvasRef.current.getBoundingClientRect()
@@ -200,13 +241,23 @@ export default function WaveformHover({
   const speciesSeen = new Set();
   (prediction?.windows || []).forEach((w) => {
     if (!w.is_padding && w.top_k && w.top_k.length > 0) {
-      const code = w.top_k[0].code
-      if (!speciesSeen.has(code)) {
+      const code = w?.top_k?.[0]?.code
+      if (code && !speciesSeen.has(code)) {
         speciesSeen.add(code)
         uniqueSpecies.push(code)
       }
     }
   })
+
+  const handlePlayPause = () => {
+    if (!mountedRef.current) return
+
+    if (isPlaying) {
+      wavesurfer.current?.pause()
+    } else {
+      wavesurfer.current?.play()
+    }
+  }
 
   return (
     <div className="bg-white rounded-none-none p-6 border-2 border-[#171717] shadow-[5px_5px_0_#171717] mb-8">
@@ -216,6 +267,13 @@ export default function WaveformHover({
           {currentTime.toFixed(1)}s / {duration.toFixed(1)}s
         </div>
       </div>
+
+      {/* Error message */}
+      {audioError && (
+        <div className="mb-4 p-3 bg-[#ffcfdb] border-2 border-[#dc2626] rounded-none text-sm text-[#dc2626] font-semibold">
+          ⚠ {audioError}
+        </div>
+      )}
 
       <div className="mb-4 cursor-pointer" ref={containerRef} />
 
@@ -232,7 +290,7 @@ export default function WaveformHover({
         {/* Tooltip */}
         {tooltip && (
           <div
-            className="fixed bg-[#fff3d6] border border-[#171717] rounded-none-none p-3 text-sm text-[#302b24] z-50 pointer-events-none"
+            className="absolute bg-[#fff3d6] border border-[#171717] rounded-none-none p-3 text-sm text-[#302b24] z-50 pointer-events-none"
             style={{
               left: `${tooltip.x}px`,
               top: `${tooltip.y - 120}px`,
@@ -247,12 +305,12 @@ export default function WaveformHover({
                   <div
                     className="w-3 h-3 rounded-none"
                     style={{
-                      backgroundColor: getSpeciesColor(sp.code),
+                      backgroundColor: getSpeciesColor(sp?.code || ''),
                       opacity: 0.8,
                     }}
                   />
                   <span className="text-xs">
-                    {sp.name} ({(sp.score * 100).toFixed(0)}%)
+                    {sp?.name || sp?.code || 'Unknown'} ({((sp?.score ?? 0) * 100).toFixed(0)}%)
                   </span>
                 </div>
               ))}
@@ -262,7 +320,7 @@ export default function WaveformHover({
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap gap-3 text-sm">
+      <div className="flex flex-wrap gap-3 text-sm mb-6">
         {uniqueSpecies.slice(0, 12).map((code) => (
           <div key={code} className="flex items-center gap-2">
             <div
@@ -278,15 +336,9 @@ export default function WaveformHover({
       </div>
 
       {/* Play/Pause */}
-      <div className="flex gap-4 mt-6">
+      <div className="flex gap-4">
         <button
-          onClick={() => {
-            if (isPlaying) {
-              wavesurfer.current?.pause()
-            } else {
-              wavesurfer.current?.play()
-            }
-          }}
+          onClick={handlePlayPause}
           className="flex-1 py-2 px-4 bg-[#b9e7ff] hover:bg-[#a4dcf7] text-[#171717] rounded-none font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
         >
           {isPlaying ? '⏸ Pause' : '▶ Play'}

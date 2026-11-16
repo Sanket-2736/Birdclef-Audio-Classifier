@@ -157,23 +157,23 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
       {/* Legend */}
       <div className="mt-6 flex gap-6 flex-wrap">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-none bg-[#d9f4d2] opacity-80"></div>
+          <div className="w-6 h-6 rounded-none bg-[#059669] opacity-80"></div>
           <span className="text-sm text-[#514a40]">&gt;80%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-none bg-[#f4c542] opacity-80"></div>
+          <div className="w-6 h-6 rounded-none bg-[#d97706] opacity-80"></div>
           <span className="text-sm text-[#514a40]">60-80%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-none bg-[#f4c542] opacity-80"></div>
+          <div className="w-6 h-6 rounded-none bg-[#f97316] opacity-80"></div>
           <span className="text-sm text-[#514a40]">40-60%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-none bg-[#ffcfdb] opacity-80"></div>
+          <div className="w-6 h-6 rounded-none bg-[#dc2626] opacity-80"></div>
           <span className="text-sm text-[#514a40]">20-40%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-none bg-[#d9d0ff] opacity-80"></div>
+          <div className="w-6 h-6 rounded-none bg-[#7c3aed] opacity-80"></div>
           <span className="text-sm text-[#514a40]">&lt;20%</span>
         </div>
       </div>

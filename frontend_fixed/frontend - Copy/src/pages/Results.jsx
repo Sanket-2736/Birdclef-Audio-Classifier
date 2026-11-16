@@ -24,6 +24,7 @@ export default function Results() {
   const [isProcessing, setIsProcessing] = useState(false)
   const [pollInterval, setPollInterval] = useState(null)
   const [taxonFilter, setTaxonFilter] = useState('all')
+  const [activeTab, setActiveTab] = useState('overview')
 
   // Fetch recording
   useEffect(() => {
@@ -199,131 +200,210 @@ export default function Results() {
   return (
     <div className="min-h-screen bg-[#fff8e8] text-[#171717]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
-        {/* Header */}
-        <div className="mb-8">
+        {/* Header Section */}
+        <div className="mb-10">
           <div className="inline-flex items-center gap-2 border-2 border-black bg-[#b9e7ff] px-3 py-1.5 shadow-[3px_3px_0_#171717] mb-5">
             <span className="h-2 w-2 rounded-full bg-[#171717]" />
             <span className="font-mono text-xs font-bold uppercase tracking-widest">WildEcho / Analysis Report</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
             Analysis <span className="bg-[#f4c542] px-1">Results</span>
           </h1>
-          <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm text-[#625d53]">
-            <span className="font-semibold text-[#171717]">{recording.original_filename}</span>
-            <span aria-hidden="true">•</span>
-            <span>{recording.duration_sec?.toFixed(1)}s</span>
-            <span aria-hidden="true">•</span>
-            <span>Site {recording.site_id}</span>
-            <span aria-hidden="true">•</span>
-            <span>Hour {recording.hour}:00</span>
-            {recording.lat && recording.lng && (
-              <>
-                <span aria-hidden="true">•</span>
-                <span>{recording.lat.toFixed(2)}, {recording.lng.toFixed(2)}</span>
-              </>
-            )}
-          </div>
-        </div>
-
-        {/* Taxon Filter */}
-        {taxons.length > 1 && (
-          <div className="mb-7 border-2 border-black bg-white p-4 shadow-[4px_4px_0_#171717]">
-            <div className="font-mono text-xs font-bold uppercase tracking-wider mb-3">Filter by taxon</div>
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setTaxonFilter('all')}
-                className={`px-4 py-2 border-2 border-black text-sm font-extrabold uppercase tracking-wide transition ${
-                  taxonFilter === 'all'
-                    ? 'bg-[#f4c542] shadow-[2px_2px_0_#171717]'
-                    : 'bg-[#fff8e8] hover:bg-[#f4eddd]'
-                }`}
-              >
-                All
-              </button>
-              {taxons.map((taxon) => (
-                <button
-                  key={taxon}
-                  onClick={() => setTaxonFilter(taxon)}
-                  className={`px-4 py-2 border-2 border-black text-sm font-extrabold uppercase tracking-wide transition ${
-                    taxonFilter === taxon
-                      ? 'bg-[#b9e7ff] shadow-[2px_2px_0_#171717]'
-                      : 'bg-[#fff8e8] hover:bg-[#f4eddd]'
-                  }`}
-                >
-                  {taxon}
-                </button>
-              ))}
+          
+          {/* Recording Info Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div className="bg-white border-2 border-black p-4 shadow-[3px_3px_0_#171717]">
+              <div className="text-xs font-mono uppercase text-[#766d5e] mb-1">File</div>
+              <div className="font-bold text-sm text-[#171717] truncate">{recording.original_filename}</div>
+            </div>
+            <div className="bg-white border-2 border-black p-4 shadow-[3px_3px_0_#171717]">
+              <div className="text-xs font-mono uppercase text-[#766d5e] mb-1">Duration</div>
+              <div className="font-bold text-sm text-[#171717]">{recording.duration_sec?.toFixed(1)}s</div>
+            </div>
+            <div className="bg-white border-2 border-black p-4 shadow-[3px_3px_0_#171717]">
+              <div className="text-xs font-mono uppercase text-[#766d5e] mb-1">Site & Hour</div>
+              <div className="font-bold text-sm text-[#171717]">Site {recording.site_id} • {recording.hour}:00</div>
+            </div>
+            <div className="bg-white border-2 border-black p-4 shadow-[3px_3px_0_#171717]">
+              <div className="text-xs font-mono uppercase text-[#766d5e] mb-1">Location</div>
+              <div className="font-bold text-sm text-[#171717]">
+                {recording.lat && recording.lng ? `${recording.lat.toFixed(2)}, ${recording.lng.toFixed(2)}` : 'N/A'}
+              </div>
             </div>
           </div>
-        )}
-
-        {/* Waveform */}
-        <div className="mb-8">
-          <WaveformHover
-            audioUrl={`${API_URL}/recordings/${id}/audio`}
-            waveformPeaks={pred.waveform_peaks}
-            duration={pred.real_duration_sec}
-            prediction={pred}
-            onWindowClick={(idx) => console.log('Clicked window', idx)}
-            onTimeChange={setCurrentTime}
-            selectedSpecies={selectedSpecies}
-          />
         </div>
 
-        {/* Top Species Cards */}
-        {topSpecies.length > 0 && (
+        {/* Tab Navigation */}
+        <div className="mb-8">
+          <div className="flex gap-2 border-b-2 border-[#171717] pb-4">
+            <button
+              onClick={() => setActiveTab('overview')}
+              className={`px-4 py-2 font-bold uppercase tracking-wide border-2 border-black transition ${
+                activeTab === 'overview'
+                  ? 'bg-[#b9e7ff] shadow-[2px_2px_0_#171717]'
+                  : 'bg-white hover:bg-[#f4eddd]'
+              }`}
+            >
+              Overview
+            </button>
+            <button
+              onClick={() => setActiveTab('details')}
+              className={`px-4 py-2 font-bold uppercase tracking-wide border-2 border-black transition ${
+                activeTab === 'details'
+                  ? 'bg-[#b9e7ff] shadow-[2px_2px_0_#171717]'
+                  : 'bg-white hover:bg-[#f4eddd]'
+              }`}
+            >
+              Detailed Analysis
+            </button>
+            <button
+              onClick={() => setActiveTab('export')}
+              className={`px-4 py-2 font-bold uppercase tracking-wide border-2 border-black transition ${
+                activeTab === 'export'
+                  ? 'bg-[#b9e7ff] shadow-[2px_2px_0_#171717]'
+                  : 'bg-white hover:bg-[#f4eddd]'
+              }`}
+            >
+              Export & Reports
+            </button>
+          </div>
+        </div>
+
+        {/* Overview Tab */}
+        {activeTab === 'overview' && (
+          <>
+            {/* Waveform with Audio Player */}
+            <div className="mb-8">
+              <WaveformHover
+                audioUrl={`${API_URL}/recordings/${id}/audio`}
+                waveformPeaks={pred.waveform_peaks}
+                duration={pred.real_duration_sec}
+                prediction={pred}
+                onWindowClick={(idx) => console.log('Clicked window', idx)}
+                onTimeChange={setCurrentTime}
+                selectedSpecies={selectedSpecies}
+              />
+            </div>
+
+            {/* Top Species Cards */}
+            {topSpecies.length > 0 && (
+              <div className="mb-8">
+                <div className="mb-4">
+                  <h2 className="text-2xl font-black tracking-tight text-[#171717] mb-4">
+                    Top Detections
+                  </h2>
+                </div>
+                <TopSpeciesCards
+                  topSpecies={topSpecies}
+                  selectedSpecies={selectedSpecies}
+                  onSelect={setSelectedSpecies}
+                  feedback={feedback}
+                  onFeedback={handleFeedback}
+                />
+              </div>
+            )}
+
+            {/* Taxon Filter */}
+            {taxons.length > 1 && (
+              <div className="mb-8 border-2 border-black bg-white p-4 shadow-[4px_4px_0_#171717]">
+                <div className="font-mono text-xs font-bold uppercase tracking-wider mb-3">Filter by taxon</div>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => setTaxonFilter('all')}
+                    className={`px-4 py-2 border-2 border-black text-sm font-extrabold uppercase tracking-wide transition ${
+                      taxonFilter === 'all'
+                        ? 'bg-[#f4c542] shadow-[2px_2px_0_#171717]'
+                        : 'bg-[#fff8e8] hover:bg-[#f4eddd]'
+                    }`}
+                  >
+                    All
+                  </button>
+                  {taxons.map((taxon) => (
+                    <button
+                      key={taxon}
+                      onClick={() => setTaxonFilter(taxon)}
+                      className={`px-4 py-2 border-2 border-black text-sm font-extrabold uppercase tracking-wide transition ${
+                        taxonFilter === taxon
+                          ? 'bg-[#b9e7ff] shadow-[2px_2px_0_#171717]'
+                          : 'bg-[#fff8e8] hover:bg-[#f4eddd]'
+                      }`}
+                    >
+                      {taxon}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Summary Stats */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+              <div className="bg-white border-2 border-black p-5 shadow-[4px_4px_0_#171717]">
+                <div className="text-xs font-mono uppercase text-[#766d5e] mb-2">Species Detected</div>
+                <div className="text-3xl font-black text-[#171717]">{topSpecies.length}</div>
+              </div>
+              <div className="bg-white border-2 border-black p-5 shadow-[4px_4px_0_#171717]">
+                <div className="text-xs font-mono uppercase text-[#766d5e] mb-2">Valid Windows</div>
+                <div className="text-3xl font-black text-[#171717]">{pred.valid_windows || 0}</div>
+              </div>
+              <div className="bg-white border-2 border-black p-5 shadow-[4px_4px_0_#171717]">
+                <div className="text-xs font-mono uppercase text-[#766d5e] mb-2">Top Confidence</div>
+                <div className="text-3xl font-black text-[#171717]">
+                  {topSpecies.length > 0 ? `${(topSpecies[0].max_score * 100).toFixed(0)}%` : 'N/A'}
+                </div>
+              </div>
+            </div>
+
+            {/* Heatmap */}
+            <div className="mb-8">
+              <HeatmapChart prediction={pred} selectedSpecies={selectedSpecies} />
+            </div>
+          </>
+        )}
+
+        {/* Details Tab */}
+        {activeTab === 'details' && (
+          <>
+            {/* Detections Table */}
+            <div className="mb-8">
+              <DetectionsTable prediction={pred} selectedSpecies={selectedSpecies} />
+            </div>
+
+            {/* Charts */}
+            <div id="results-chart" className="space-y-8 mb-8">
+              <ScoreChart prediction={pred} selectedSpecies={selectedSpecies} />
+            </div>
+
+            {/* Spectrogram */}
+            <div className="mb-8">
+              <Spectrogram
+                recordingId={id}
+                currentTime={currentTime}
+                duration={pred.real_duration_sec}
+              />
+            </div>
+          </>
+        )}
+
+        {/* Export Tab */}
+        {activeTab === 'export' && (
           <div className="mb-8">
-            <TopSpeciesCards
-              topSpecies={topSpecies}
-              selectedSpecies={selectedSpecies}
-              onSelect={setSelectedSpecies}
-              feedback={feedback}
-              onFeedback={handleFeedback}
-            />
+            <ExportBar recording={recording} prediction={pred} selectedChart="heatmap" />
           </div>
         )}
 
-        {/* Detections Table */}
-        <div className="mb-8">
-          <DetectionsTable prediction={pred} selectedSpecies={selectedSpecies} />
-        </div>
-
-        {/* Charts Container */}
-        <div id="results-chart" className="space-y-8 mb-8">
-          {/* Heatmap */}
-          <HeatmapChart prediction={pred} selectedSpecies={selectedSpecies} />
-
-          {/* Score Chart */}
-          <ScoreChart prediction={pred} selectedSpecies={selectedSpecies} />
-        </div>
-
-        {/* Spectrogram */}
-        <div className="mb-8">
-          <Spectrogram
-            recordingId={id}
-            currentTime={currentTime}
-            duration={pred.real_duration_sec}
-          />
-        </div>
-
-        {/* Export */}
-        <div className="mb-10">
-          <ExportBar recording={recording} prediction={pred} selectedChart="heatmap" />
-        </div>
-
-        {/* Navigation buttons */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        {/* Navigation Footer */}
+        <div className="border-t-2 border-black pt-8 flex flex-col sm:flex-row gap-4">
           <button
             onClick={() => navigate('/analyze')}
             className="px-6 py-3 bg-[#f4c542] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
           >
-            Analyze Another
+            ← Analyze Another
           </button>
           <button
             onClick={() => navigate('/history')}
             className="px-6 py-3 bg-[#b9e7ff] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
           >
-            View History
+            View History →
           </button>
         </div>
       </div>
