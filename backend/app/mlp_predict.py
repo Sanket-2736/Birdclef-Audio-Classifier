@@ -1,4 +1,4 @@
-import pickle
+
 from pathlib import Path
 
 import numpy as np
@@ -7,126 +7,132 @@ import torch.nn as nn
 
 
 MODELS_DIR = Path(__file__).resolve().parent.parent / "models"
+MLP_PATH = MODELS_DIR / "mlp_artifacts_compatible.npz"
 
 
 class VectorizedMLPProbes(nn.Module):
-    def __init__(self, probe_models):
+    """
+    Runs all trained MLP probes together using batched matrix
+    multiplication.
+
+    Architecture: 70 -> 128 -> 64 -> 1
+    """
+
+    def __init__(self, artifacts):
         super().__init__()
 
-        self.n_models = len(probe_models)
-
-        if self.n_models == 0:
-            return
-
-        models = [probe_models[k] for k in sorted(probe_models.keys())]
-
-        # Hidden layer 1
-        self.W1 = nn.Parameter(
-            torch.tensor(
-                np.stack([m.coefs_[0] for m in models]),
-                dtype=torch.float32
-            ),
-            requires_grad=False,
+        self.register_buffer(
+            "W1", torch.from_numpy(artifacts["W1"].copy())
         )
-
-        self.b1 = nn.Parameter(
-            torch.tensor(
-                np.stack([m.intercepts_[0] for m in models]),
-                dtype=torch.float32
-            ),
-            requires_grad=False,
+        self.register_buffer(
+            "b1", torch.from_numpy(artifacts["b1"].copy())
         )
-
-        # Hidden layer 2
-        self.W2 = nn.Parameter(
-            torch.tensor(
-                np.stack([m.coefs_[1] for m in models]),
-                dtype=torch.float32
-            ),
-            requires_grad=False,
+        self.register_buffer(
+            "W2", torch.from_numpy(artifacts["W2"].copy())
         )
-
-        self.b2 = nn.Parameter(
-            torch.tensor(
-                np.stack([m.intercepts_[1] for m in models]),
-                dtype=torch.float32
-            ),
-            requires_grad=False,
+        self.register_buffer(
+            "b2", torch.from_numpy(artifacts["b2"].copy())
         )
-
-        # Output layer
-        self.W3 = nn.Parameter(
-            torch.tensor(
-                np.stack([m.coefs_[2] for m in models]),
-                dtype=torch.float32
-            ),
-            requires_grad=False,
+        self.register_buffer(
+            "W3", torch.from_numpy(artifacts["W3"].copy())
         )
-
-        self.b3 = nn.Parameter(
-            torch.tensor(
-                np.stack([m.intercepts_[2] for m in models]),
-                dtype=torch.float32
-            ),
-            requires_grad=False,
+        self.register_buffer(
+            "b3", torch.from_numpy(artifacts["b3"].copy())
         )
 
     def forward(self, x):
-        """
-        x:
-            (V, N, F)
-
-        Trained MLP:
-            70 -> 128 -> 64 -> 1
-
-        Returns:
-            (V, N)
-        """
-
         # Layer 1: 70 -> 128
-        h = torch.bmm(
-            x,
-            self.W1
-        )
-
+        h = torch.bmm(x, self.W1)
         h = h + self.b1[:, None, :]
         h = torch.relu(h)
 
         # Layer 2: 128 -> 64
-        h = torch.bmm(
-            h,
-            self.W2
-        )
-
+        h = torch.bmm(h, self.W2)
         h = h + self.b2[:, None, :]
         h = torch.relu(h)
 
         # Layer 3: 64 -> 1
-        h = torch.bmm(
-            h,
-            self.W3
-        )
-
+        h = torch.bmm(h, self.W3)
         h = h + self.b3[:, None, :]
 
         return h.squeeze(-1)
 
+
+def load_mlp_artifacts():
+    """
+    Load compatible MLP weights and preprocessing parameters.
+
+    No sklearn pickle deserialization is required.
+    """
+
+    print("Loading MLP artifacts...")
+
+    if not MLP_PATH.exists():
+        raise FileNotFoundError(
+            f"Compatible MLP artifact not found: {MLP_PATH}"
+        )
+
+    with np.load(MLP_PATH, allow_pickle=False) as data:
+        artifacts = {
+            key: data[key].copy()
+            for key in data.files
+        }
+
+    expected_shapes = {
+        "class_ids": (58,),
+        "W1": (58, 70, 128),
+        "b1": (58, 128),
+        "W2": (58, 128, 64),
+        "b2": (58, 64),
+        "W3": (58, 64, 1),
+        "b3": (58, 1),
+        "scaler_mean": (1536,),
+        "scaler_scale": (1536,),
+        "pca_mean": (1536,),
+        "pca_components": (64, 1536),
+    }
+
+    for key, expected_shape in expected_shapes.items():
+        if key not in artifacts:
+            raise KeyError(f"Missing MLP artifact: {key}")
+
+        if artifacts[key].shape != expected_shape:
+            raise ValueError(
+                f"Invalid shape for {key}: "
+                f"{artifacts[key].shape}; "
+                f"expected {expected_shape}"
+            )
+
+    if not np.all(np.isfinite(artifacts["scaler_scale"])):
+        raise ValueError("Scaler contains non-finite values")
+
+    if np.any(artifacts["scaler_scale"] == 0):
+        raise ValueError("Scaler contains zero scale values")
+
+    artifacts["alpha_blend"] = float(
+        artifacts["alpha_blend"].item()
+    )
+
+    print("MLP artifacts loaded")
+    print("  Probe models:", len(artifacts["class_ids"]))
+    print("  PCA components:", artifacts["pca_components"].shape[0])
+    print("  Alpha blend:", artifacts["alpha_blend"])
+
+    return artifacts
+
+
 def build_sequential_features(scores_col, n_windows=12):
     """
-    Build the exact sequential features used while training
-    the MLP probes.
-
-    Returns:
-        prev
-        next
-        mean
-        max
-        std
+    Build the sequential features used during MLP training.
     """
 
     N = len(scores_col)
 
-    assert N % n_windows == 0
+    if N % n_windows != 0:
+        raise ValueError(
+            f"Number of scores ({N}) must be divisible "
+            f"by n_windows ({n_windows})"
+        )
 
     x = scores_col.reshape(-1, n_windows)
 
@@ -164,46 +170,15 @@ def build_sequential_features(scores_col, n_windows=12):
     )
 
 
-def load_mlp_artifacts():
-    """
-    Load the trained MLP probes and preprocessing artifacts.
-    """
-
-    path = MODELS_DIR / "mlp_artifacts.pkl"
-
-    print("Loading MLP artifacts...")
-
-    with open(path, "rb") as f:
-        artifacts = pickle.load(f)
-
-    probe_models = artifacts["probe_models"]
-    scaler = artifacts["scaler"]
-    pca = artifacts["pca"]
-    alpha_blend = artifacts["alpha_blend"]
-
-    print("MLP artifacts loaded")
-    print(f"  Probe models: {len(probe_models)}")
-    print(f"  PCA components: {pca.n_components_}")
-    print(f"  Alpha blend: {alpha_blend}")
-
-    return (
-        probe_models,
-        scaler,
-        pca,
-        alpha_blend
-    )
-
-
 def apply_mlp_probes_vectorized(
     emb_test,
     scores_test,
-    probe_models,
-    scaler,
-    pca,
-    alpha_blend=0.4,
+    mlp_artifacts,
+    alpha_blend=None,
 ):
     """
-    Exact vectorized MLP inference used by the notebook.
+    Apply the 58 trained MLP probes using compatible NumPy
+    artifacts and vectorized PyTorch inference.
 
     emb_test:
         (N, 1536)
@@ -215,41 +190,79 @@ def apply_mlp_probes_vectorized(
         (N, 234)
     """
 
-    if len(probe_models) == 0:
+    class_ids = mlp_artifacts["class_ids"].astype(np.int64)
+
+    if len(class_ids) == 0:
         return scores_test.copy()
 
-    # ---------------------------------------------------------
-    # PCA features
-    # ---------------------------------------------------------
+    emb_test = np.asarray(emb_test)
+    scores_test = np.asarray(scores_test)
 
-    emb_s = scaler.transform(emb_test)
+    if emb_test.ndim != 2 or emb_test.shape[1] != 1536:
+        raise ValueError(
+            f"Expected embeddings shape (N, 1536), "
+            f"received {emb_test.shape}"
+        )
 
-    Z_test = pca.transform(
-        emb_s
-    ).astype(np.float32)
+    if scores_test.ndim != 2:
+        raise ValueError(
+            f"Expected 2D scores, received {scores_test.shape}"
+        )
 
-    # ---------------------------------------------------------
-    # Valid probe classes
-    # ---------------------------------------------------------
+    if emb_test.shape[0] != scores_test.shape[0]:
+        raise ValueError(
+            "Embedding and score sample counts do not match"
+        )
 
-    valid_classes = sorted(
-        probe_models.keys()
-    )
-
-    V = len(valid_classes)
     N = len(scores_test)
+
+    if N % 12 != 0:
+        raise ValueError(
+            f"Expected scores in groups of 12 windows; received {N}"
+        )
+
+    if np.any(class_ids < 0) or np.any(class_ids >= scores_test.shape[1]):
+        raise ValueError("MLP class IDs are outside the score dimensions")
+
+    # ---------------------------------------------------------
+    # StandardScaler transformation
+    # ---------------------------------------------------------
+
+    scaler_mean = mlp_artifacts["scaler_mean"]
+    scaler_scale = mlp_artifacts["scaler_scale"]
+
+    # Preserve the input dtype and perform in-place operations,
+    # matching sklearn's dense StandardScaler behavior.
+    emb_s = np.array(emb_test, copy=True)
+
+    emb_s -= scaler_mean
+    emb_s /= scaler_scale
+
+    # ---------------------------------------------------------
+    # PCA transformation
+    # ---------------------------------------------------------
+
+    pca_mean = mlp_artifacts["pca_mean"]
+    pca_components = mlp_artifacts["pca_components"]
+
+    Z_test = emb_s @ pca_components.T
+    Z_test -= pca_mean @ pca_components.T
+
+    Z_test = Z_test.astype(np.float32, copy=False)
 
     # ---------------------------------------------------------
     # Raw class scores
     # ---------------------------------------------------------
 
-    raw = scores_test[:, valid_classes].T
+    valid_classes = class_ids.tolist()
 
-    n_files = N // 12
+    V = len(valid_classes)
+
+    raw = scores_test[:, valid_classes].T
 
     raw_view = raw.reshape(
         V,
-        n_files,
+        N // 12,
         12
     )
 
@@ -304,7 +317,7 @@ def apply_mlp_probes_vectorized(
     ).astype(np.float32)
 
     # ---------------------------------------------------------
-    # Expand PCA features for every probe
+    # Combine PCA and scalar features
     # ---------------------------------------------------------
 
     Z_expanded = np.broadcast_to(
@@ -316,7 +329,6 @@ def apply_mlp_probes_vectorized(
         )
     )
 
-    # 64 PCA + 6 scalar = 70 features
     X_all = np.concatenate(
         [
             Z_expanded.astype(np.float32),
@@ -329,32 +341,28 @@ def apply_mlp_probes_vectorized(
     # Vectorized MLP inference
     # ---------------------------------------------------------
 
-    vec_probe = VectorizedMLPProbes(
-        probe_models
-    )
-
+    vec_probe = VectorizedMLPProbes(mlp_artifacts)
     vec_probe.eval()
 
     with torch.no_grad():
         preds = vec_probe(
-            torch.tensor(X_all)
-        ).numpy()
+            torch.from_numpy(
+                np.ascontiguousarray(X_all, dtype=np.float32)
+            )
+        ).cpu().numpy()
 
     # ---------------------------------------------------------
     # Blend MLP predictions with original scores
     # ---------------------------------------------------------
 
+    if alpha_blend is None:
+        alpha_blend = mlp_artifacts["alpha_blend"]
+
     result = scores_test.copy()
 
-    base_valid = scores_test[
-        :,
-        valid_classes
-    ]
+    base_valid = scores_test[:, valid_classes]
 
-    result[
-        :,
-        valid_classes
-    ] = (
+    result[:, valid_classes] = (
         (1.0 - alpha_blend) * base_valid
         +
         alpha_blend * preds.T

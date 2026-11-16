@@ -31,9 +31,9 @@ export default function Spectrogram({ recordingId, currentTime, duration }) {
 
   if (error) {
     return (
-      <div className="bg-navy-800 rounded-lg p-6 border border-navy-700 mb-8">
-        <h2 className="text-2xl font-bold text-white mb-4">Mel Spectrogram</h2>
-        <div className="text-navy-400">{error}</div>
+      <div className="bg-white rounded-none-none p-6 border-2 border-[#171717] shadow-[5px_5px_0_#171717] mb-8">
+        <h2 className="text-2xl font-bold text-[#171717] mb-4">Mel Spectrogram</h2>
+        <div className="text-[#766d5e]">{error}</div>
       </div>
     )
   }
@@ -42,11 +42,11 @@ export default function Spectrogram({ recordingId, currentTime, duration }) {
   const playheadPercent = duration > 0 ? (currentTime / duration) * 100 : 0
 
   return (
-    <div className="bg-navy-800 rounded-lg p-6 border border-navy-700 mb-8">
-      <h2 className="text-2xl font-bold text-white mb-4">Mel Spectrogram</h2>
+    <div className="bg-white rounded-none-none p-6 border-2 border-[#171717] shadow-[5px_5px_0_#171717] mb-8">
+      <h2 className="text-2xl font-bold text-[#171717] mb-4">Mel Spectrogram</h2>
 
       {loading && (
-        <div className="bg-navy-900 rounded h-64 flex items-center justify-center text-navy-400">
+        <div className="bg-[#fff3d6] rounded-none h-64 flex items-center justify-center text-[#766d5e]">
           Loading spectrogram...
         </div>
       )}
@@ -54,7 +54,7 @@ export default function Spectrogram({ recordingId, currentTime, duration }) {
       {spectrogramUrl && !loading && (
         <div
           ref={containerRef}
-          className="relative bg-navy-900 rounded overflow-hidden"
+          className="relative bg-[#fff3d6] rounded-none overflow-hidden"
           style={{ aspectRatio: '16 / 4' }}
         >
           <img
@@ -75,7 +75,7 @@ export default function Spectrogram({ recordingId, currentTime, duration }) {
 
           {/* Time tooltip */}
           <div
-            className="absolute top-2 text-xs text-white bg-black bg-opacity-50 px-2 py-1 rounded pointer-events-none"
+            className="absolute top-2 text-xs text-[#171717] bg-black bg-opacity-50 px-2 py-1 rounded-none pointer-events-none"
             style={{ left: `${playheadPercent}%`, transform: 'translateX(-50%)' }}
           >
             {currentTime.toFixed(1)}s
@@ -83,7 +83,7 @@ export default function Spectrogram({ recordingId, currentTime, duration }) {
         </div>
       )}
 
-      <p className="text-navy-400 text-xs mt-4">
+      <p className="text-[#766d5e] text-xs mt-4">
         Frequency vs Time representation. Blue line shows current playback position.
       </p>
     </div>

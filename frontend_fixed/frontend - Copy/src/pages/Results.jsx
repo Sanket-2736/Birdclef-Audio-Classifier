@@ -105,10 +105,12 @@ export default function Results() {
   // Loading state
   if (loading) {
     return (
-      <div className="min-h-screen bg-navy-900 flex items-center justify-center">
+      <div className="min-h-screen bg-[#fff8e8] flex items-center justify-center px-4">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
-          <div className="text-white">Loading results...</div>
+          <div className="inline-block animate-spin h-12 w-12 border-4 border-black border-t-[#f4c542] mb-4" />
+          <div className="font-mono text-sm font-bold uppercase tracking-wider text-[#625d53]">
+            Loading results...
+          </div>
         </div>
       </div>
     )
@@ -117,14 +119,14 @@ export default function Results() {
   // Error state
   if (error) {
     return (
-      <div className="min-h-screen bg-navy-900">
+      <div className="min-h-screen bg-[#fff8e8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="bg-red-900 border border-red-700 text-red-100 p-6 rounded-lg mb-6">
+          <div className="bg-[#ffcfdb] border-2 border-black text-[#171717] p-6 mb-6 shadow-[5px_5px_0_#171717] font-semibold">
             {error}
           </div>
           <button
             onClick={() => navigate('/analyze')}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded"
+            className="px-5 py-3 bg-[#f4c542] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
           >
             Back to Analyze
           </button>
@@ -136,21 +138,23 @@ export default function Results() {
   // No prediction state
   if (!recording || !recording.prediction) {
     return (
-      <div className="min-h-screen bg-navy-900">
+      <div className="min-h-screen bg-[#fff8e8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {isProcessing ? (
-            <div className="bg-blue-900 border border-blue-700 text-blue-100 p-6 rounded-lg mb-6">
-              <div className="flex items-center gap-3">
-                <div className="inline-block animate-spin rounded-full h-5 w-5 border-b-2 border-blue-300"></div>
+            <div className="bg-[#b9e7ff] border-2 border-black text-[#171717] p-6 mb-6 shadow-[5px_5px_0_#171717]">
+              <div className="flex items-center gap-3 font-semibold">
+                <div className="inline-block animate-spin h-5 w-5 border-2 border-black border-t-transparent shrink-0" />
                 <span>Processing audio... This may take a few minutes.</span>
               </div>
             </div>
           ) : (
-            <div className="text-navy-300">No prediction available</div>
+            <div className="bg-white border-2 border-black p-6 shadow-[5px_5px_0_#171717] text-[#625d53]">
+              No prediction available
+            </div>
           )}
           <button
             onClick={() => navigate('/analyze')}
-            className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded"
+            className="mt-4 px-5 py-3 bg-[#f4c542] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
           >
             Back to Analyze
           </button>
@@ -168,22 +172,28 @@ export default function Results() {
   const taxons = Array.from(new Set(pred.top_species?.map((sp) => sp.taxon) || []))
 
   return (
-    <div className="min-h-screen bg-navy-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-[#fff8e8] text-[#171717]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">Analysis Results</h1>
-          <div className="flex flex-wrap gap-4 text-navy-300">
-            <span>{recording.original_filename}</span>
-            <span>•</span>
+          <div className="inline-flex items-center gap-2 border-2 border-black bg-[#b9e7ff] px-3 py-1.5 shadow-[3px_3px_0_#171717] mb-5">
+            <span className="h-2 w-2 rounded-full bg-[#171717]" />
+            <span className="font-mono text-xs font-bold uppercase tracking-widest">WildEcho / Analysis Report</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">
+            Analysis <span className="bg-[#f4c542] px-1">Results</span>
+          </h1>
+          <div className="flex flex-wrap gap-x-3 gap-y-2 text-sm text-[#625d53]">
+            <span className="font-semibold text-[#171717]">{recording.original_filename}</span>
+            <span aria-hidden="true">•</span>
             <span>{recording.duration_sec?.toFixed(1)}s</span>
-            <span>•</span>
+            <span aria-hidden="true">•</span>
             <span>Site {recording.site_id}</span>
-            <span>•</span>
+            <span aria-hidden="true">•</span>
             <span>Hour {recording.hour}:00</span>
             {recording.lat && recording.lng && (
               <>
-                <span>•</span>
+                <span aria-hidden="true">•</span>
                 <span>{recording.lat.toFixed(2)}, {recording.lng.toFixed(2)}</span>
               </>
             )}
@@ -192,60 +202,69 @@ export default function Results() {
 
         {/* Taxon Filter */}
         {taxons.length > 1 && (
-          <div className="mb-6 flex flex-wrap gap-2">
-            <button
-              onClick={() => setTaxonFilter('all')}
-              className={`px-3 py-1 rounded-full text-sm font-medium transition ${
-                taxonFilter === 'all'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-navy-700 text-navy-300 hover:bg-navy-600'
-              }`}
-            >
-              All
-            </button>
-            {taxons.map((taxon) => (
+          <div className="mb-7 border-2 border-black bg-white p-4 shadow-[4px_4px_0_#171717]">
+            <div className="font-mono text-xs font-bold uppercase tracking-wider mb-3">Filter by taxon</div>
+            <div className="flex flex-wrap gap-2">
               <button
-                key={taxon}
-                onClick={() => setTaxonFilter(taxon)}
-                className={`px-3 py-1 rounded-full text-sm font-medium transition ${
-                  taxonFilter === taxon
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-navy-700 text-navy-300 hover:bg-navy-600'
+                onClick={() => setTaxonFilter('all')}
+                className={`px-4 py-2 border-2 border-black text-sm font-extrabold uppercase tracking-wide transition ${
+                  taxonFilter === 'all'
+                    ? 'bg-[#f4c542] shadow-[2px_2px_0_#171717]'
+                    : 'bg-[#fff8e8] hover:bg-[#f4eddd]'
                 }`}
               >
-                {taxon}
+                All
               </button>
-            ))}
+              {taxons.map((taxon) => (
+                <button
+                  key={taxon}
+                  onClick={() => setTaxonFilter(taxon)}
+                  className={`px-4 py-2 border-2 border-black text-sm font-extrabold uppercase tracking-wide transition ${
+                    taxonFilter === taxon
+                      ? 'bg-[#b9e7ff] shadow-[2px_2px_0_#171717]'
+                      : 'bg-[#fff8e8] hover:bg-[#f4eddd]'
+                  }`}
+                >
+                  {taxon}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
         {/* Waveform */}
-        <WaveformHover
-          audioUrl={`${API_URL}/recordings/${id}/audio`}
-          waveformPeaks={pred.waveform_peaks}
-          duration={pred.real_duration_sec}
-          prediction={pred}
-          onWindowClick={(idx) => console.log('Clicked window', idx)}
-          onTimeChange={setCurrentTime}
-          selectedSpecies={selectedSpecies}
-        />
+        <div className="mb-8">
+          <WaveformHover
+            audioUrl={`${API_URL}/recordings/${id}/audio`}
+            waveformPeaks={pred.waveform_peaks}
+            duration={pred.real_duration_sec}
+            prediction={pred}
+            onWindowClick={(idx) => console.log('Clicked window', idx)}
+            onTimeChange={setCurrentTime}
+            selectedSpecies={selectedSpecies}
+          />
+        </div>
 
         {/* Top Species Cards */}
         {topSpecies.length > 0 && (
-          <TopSpeciesCards
-            topSpecies={topSpecies}
-            selectedSpecies={selectedSpecies}
-            onSelect={setSelectedSpecies}
-            feedback={feedback}
-            onFeedback={handleFeedback}
-          />
+          <div className="mb-8">
+            <TopSpeciesCards
+              topSpecies={topSpecies}
+              selectedSpecies={selectedSpecies}
+              onSelect={setSelectedSpecies}
+              feedback={feedback}
+              onFeedback={handleFeedback}
+            />
+          </div>
         )}
 
         {/* Detections Table */}
-        <DetectionsTable prediction={pred} selectedSpecies={selectedSpecies} />
+        <div className="mb-8">
+          <DetectionsTable prediction={pred} selectedSpecies={selectedSpecies} />
+        </div>
 
         {/* Charts Container */}
-        <div id="results-chart" className="space-y-8">
+        <div id="results-chart" className="space-y-8 mb-8">
           {/* Heatmap */}
           <HeatmapChart prediction={pred} selectedSpecies={selectedSpecies} />
 
@@ -254,26 +273,30 @@ export default function Results() {
         </div>
 
         {/* Spectrogram */}
-        <Spectrogram
-          recordingId={id}
-          currentTime={currentTime}
-          duration={pred.real_duration_sec}
-        />
+        <div className="mb-8">
+          <Spectrogram
+            recordingId={id}
+            currentTime={currentTime}
+            duration={pred.real_duration_sec}
+          />
+        </div>
 
         {/* Export */}
-        <ExportBar recording={recording} prediction={pred} selectedChart="heatmap" />
+        <div className="mb-10">
+          <ExportBar recording={recording} prediction={pred} selectedChart="heatmap" />
+        </div>
 
         {/* Navigation buttons */}
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-4">
           <button
             onClick={() => navigate('/analyze')}
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
+            className="px-6 py-3 bg-[#f4c542] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
           >
             Analyze Another
           </button>
           <button
             onClick={() => navigate('/history')}
-            className="px-6 py-3 bg-navy-800 hover:bg-navy-700 text-white rounded-lg font-semibold border border-navy-600 transition"
+            className="px-6 py-3 bg-[#b9e7ff] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
           >
             View History
           </button>

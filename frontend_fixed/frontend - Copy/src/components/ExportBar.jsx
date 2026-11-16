@@ -87,7 +87,7 @@ export default function ExportBar({ recording, prediction, selectedChart }) {
         yPosition += 10
 
         const canvas = await html2canvas(chartElement, {
-          backgroundColor: '#1e293b',
+          backgroundColor: '#fff8e8',
           scale: 1,
         })
         const imgData = canvas.toDataURL('image/png')
@@ -108,26 +108,26 @@ export default function ExportBar({ recording, prediction, selectedChart }) {
   }
 
   return (
-    <div className="bg-navy-800 rounded-lg p-6 border border-navy-700 mb-8">
-      <h2 className="text-xl font-bold text-white mb-4">Export Results</h2>
+    <div className="bg-white rounded-none-none p-6 border-2 border-[#171717] shadow-[5px_5px_0_#171717] mb-8">
+      <h2 className="text-xl font-black tracking-tight text-[#171717] mb-4">Export Results</h2>
 
       <div className="flex flex-wrap gap-4">
         <button
           onClick={handleDownloadCSV}
-          className="flex items-center gap-2 py-2 px-4 bg-green-600 hover:bg-green-700 text-white rounded font-medium transition"
+          className="flex items-center gap-2 py-2 px-4 bg-[#d9f4d2] hover:bg-[#c6e9be] text-[#171717] rounded-none font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
         >
           <span>📊</span> Download CSV
         </button>
 
         <button
           onClick={handleDownloadPDF}
-          className="flex items-center gap-2 py-2 px-4 bg-red-600 hover:bg-red-700 text-white rounded font-medium transition"
+          className="flex items-center gap-2 py-2 px-4 bg-[#ffcfdb] hover:bg-[#ffb8ca] text-[#171717] rounded-none font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
         >
           <span>📄</span> Download PDF Report
         </button>
       </div>
 
-      <p className="text-navy-400 text-sm mt-3">
+      <p className="text-[#766d5e] text-sm mt-3">
         CSV includes window-by-window detections and species summary. PDF includes report with top species and heatmap.
       </p>
     </div>

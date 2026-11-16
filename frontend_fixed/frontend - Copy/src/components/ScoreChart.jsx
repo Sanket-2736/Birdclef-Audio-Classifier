@@ -31,7 +31,7 @@ export default function ScoreChart({ prediction, selectedSpecies }) {
   const topSpecies = Array.from(allSpecies).slice(0, 5)
 
   const colors = [
-    '#3b82f6',
+    '#4b9fc9',
     '#ef4444',
     '#10b981',
     '#f59e0b',
@@ -39,10 +39,10 @@ export default function ScoreChart({ prediction, selectedSpecies }) {
   ]
 
   return (
-    <div className="bg-navy-800 rounded-lg p-6 border border-navy-700 mb-8">
-      <h2 className="text-2xl font-bold text-white mb-6">Detection Score Over Time</h2>
+    <div className="bg-white rounded-none-none p-6 border-2 border-[#171717] shadow-[5px_5px_0_#171717] mb-8">
+      <h2 className="text-2xl font-black tracking-tight text-[#171717] mb-6">Detection Score Over Time</h2>
 
-      <div className="h-80 bg-navy-900 rounded-lg">
+      <div className="h-80 bg-[#fff3d6] rounded-none-none">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 10 }}>
             <defs>
@@ -61,35 +61,35 @@ export default function ScoreChart({ prediction, selectedSpecies }) {
               ))}
             </defs>
 
-            <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
+            <CartesianGrid strokeDasharray="3 3" stroke="#171717" vertical={false} />
 
             <XAxis
               dataKey="time"
-              stroke="#94a3b8"
+              stroke="#514a40"
               tick={{ fontSize: 12 }}
-              axisLine={{ stroke: '#334155' }}
+              axisLine={{ stroke: '#171717' }}
             />
 
             <YAxis
-              stroke="#94a3b8"
+              stroke="#514a40"
               tick={{ fontSize: 12 }}
               domain={[0, 1]}
               label={{
                 value: 'Confidence',
                 angle: -90,
                 position: 'insideLeft',
-                fill: '#94a3b8',
+                fill: '#514a40',
               }}
-              axisLine={{ stroke: '#334155' }}
+              axisLine={{ stroke: '#171717' }}
             />
 
             <Tooltip
               contentStyle={{
-                backgroundColor: '#1e293b',
-                border: '1px solid #475569',
+                backgroundColor: '#fff8e8',
+                border: '1px solid #171717',
                 borderRadius: '0.5rem',
               }}
-              labelStyle={{ color: '#e2e8f0' }}
+              labelStyle={{ color: '#171717' }}
               formatter={(value) => (value ? (value * 100).toFixed(1) + '%' : '-')}
             />
 
@@ -111,7 +111,7 @@ export default function ScoreChart({ prediction, selectedSpecies }) {
         </ResponsiveContainer>
       </div>
 
-      <p className="text-navy-400 text-xs mt-4">
+      <p className="text-[#766d5e] text-xs mt-4">
         Showing top 5 species. Non-padding windows only (each 5 seconds).
       </p>
     </div>

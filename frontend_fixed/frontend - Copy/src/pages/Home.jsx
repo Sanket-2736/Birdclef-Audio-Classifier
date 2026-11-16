@@ -5,7 +5,7 @@ export default function Home() {
   const navigate = useNavigate()
 
   return (
-    <div className="min-h-screen bg-navy-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-[#fff8e8] text-[#171717] overflow-hidden">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
         <motion.div
@@ -14,39 +14,53 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-5xl sm:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-            Identify Birds by Sound
+          <div className="inline-flex items-center gap-2 border-2 border-black bg-[#b9e7ff] px-3 py-1.5 shadow-[3px_3px_0_#171717] mb-7">
+            <span className="h-2 w-2 rounded-full bg-[#171717]" />
+            <span className="font-mono text-xs font-bold uppercase tracking-widest">WildEcho / Bird Audio Intelligence</span>
+          </div>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 leading-[0.98]">
+            Identify Birds
+            <br />
+            <span className="bg-[#f4c542] px-2 box-decoration-clone">by Sound.</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-navy-300 mb-12 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-2xl text-[#625d53] mb-12 max-w-3xl mx-auto leading-relaxed">
             Advanced AI-powered audio classification for bird species detection. Used in the BirdCLEF 2026 competition.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center mb-16">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ y: -3, x: -2 }}
+              whileTap={{ scale: 0.97 }}
               onClick={() => navigate('/how-it-works')}
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-lg transition"
+              className="px-8 py-4 bg-[#f4c542] border-2 border-black shadow-[5px_5px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[3px] hover:translate-y-[3px] font-extrabold text-lg uppercase tracking-wide transition"
             >
               Try the Demo
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ y: -3, x: -2 }}
+              whileTap={{ scale: 0.97 }}
               onClick={() => navigate('/about')}
-              className="px-8 py-4 bg-navy-800 border border-navy-600 hover:border-blue-500 rounded-lg font-semibold text-lg transition"
+              className="px-8 py-4 bg-white border-2 border-black shadow-[5px_5px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[3px] hover:translate-y-[3px] font-extrabold text-lg uppercase tracking-wide transition"
             >
               Learn More
             </motion.button>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            <span className="border-2 border-black bg-[#d9f4d2] px-3 py-1.5 font-mono text-xs font-bold uppercase">234 Species</span>
+            <span className="border-2 border-black bg-[#ffcfdb] px-3 py-1.5 font-mono text-xs font-bold uppercase">AI-Powered Detection</span>
+            <span className="border-2 border-black bg-white px-3 py-1.5 font-mono text-xs font-bold uppercase">ONNX Inference</span>
           </div>
         </motion.div>
       </section>
 
       {/* Features Section */}
-      <section className="bg-navy-800 bg-opacity-50 border-y border-navy-700 py-20">
+      <section className="bg-[#f4eddd] border-y-2 border-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-16">Why BirdCLEF?</h2>
+          <div className="text-center mb-14">
+            <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#777168]">Built for field recordings</span>
+            <h2 className="text-4xl sm:text-5xl font-extrabold mt-3">Why BirdCLEF?</h2>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -72,11 +86,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-navy-900 border border-navy-600 rounded-lg p-8 hover:border-blue-500 transition"
+                className={`border-2 border-black p-8 shadow-[6px_6px_0_#171717] hover:-translate-y-1 transition-transform ${
+                  idx === 0 ? 'bg-[#b9e7ff]' : idx === 1 ? 'bg-[#ffcfdb]' : 'bg-[#d9f4d2]'
+                }`}
               >
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-navy-300">{feature.description}</p>
+                <div className="text-5xl mb-5">{feature.icon}</div>
+                <h3 className="text-xl font-extrabold mb-3">{feature.title}</h3>
+                <p className="text-[#45413a] leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -85,39 +101,42 @@ export default function Home() {
 
       {/* How It Works Preview */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h2 className="text-4xl font-bold mb-12 text-center">The Pipeline</h2>
+        <div className="text-center mb-12">
+          <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#777168]">From raw audio to insight</span>
+          <h2 className="text-4xl sm:text-5xl font-extrabold mt-3">The Pipeline</h2>
+        </div>
 
-        <div className="bg-navy-800 border border-navy-600 rounded-lg p-8 mb-8">
-          <div className="space-y-4">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-bold">1</div>
+        <div className="bg-white border-2 border-black p-6 sm:p-9 mb-8 shadow-[7px_7px_0_#171717]">
+          <div className="space-y-0">
+            <div className="flex items-start gap-4 py-5 border-b-2 border-dashed border-[#c9c1b2]">
+              <div className="w-12 h-12 shrink-0 border-2 border-black bg-[#f4c542] flex items-center justify-center font-mono text-xl font-extrabold shadow-[3px_3px_0_#171717]">1</div>
               <div>
-                <h3 className="font-semibold text-lg">Audio Preprocessing</h3>
-                <p className="text-navy-300">Normalize to 32 kHz, split into 12 consecutive 5-second windows</p>
+                <h3 className="font-extrabold text-lg sm:text-xl mb-1">Audio Preprocessing</h3>
+                <p className="text-[#625d53]">Normalize to 32 kHz, split into 12 consecutive 5-second windows</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-bold">2</div>
+            <div className="flex items-start gap-4 py-5 border-b-2 border-dashed border-[#c9c1b2]">
+              <div className="w-12 h-12 shrink-0 border-2 border-black bg-[#b9e7ff] flex items-center justify-center font-mono text-xl font-extrabold shadow-[3px_3px_0_#171717]">2</div>
               <div>
-                <h3 className="font-semibold text-lg">Multi-Branch Detection</h3>
-                <p className="text-navy-300">Perch embeddings + ProtoSSM + MLP + Residual correction + SED ensemble</p>
+                <h3 className="font-extrabold text-lg sm:text-xl mb-1">Multi-Branch Detection</h3>
+                <p className="text-[#625d53]">Perch embeddings + ProtoSSM + MLP + Residual correction + SED ensemble</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-bold">3</div>
+            <div className="flex items-start gap-4 py-5 border-b-2 border-dashed border-[#c9c1b2]">
+              <div className="w-12 h-12 shrink-0 border-2 border-black bg-[#ffcfdb] flex items-center justify-center font-mono text-xl font-extrabold shadow-[3px_3px_0_#171717]">3</div>
               <div>
-                <h3 className="font-semibold text-lg">Rank-Aware Blending</h3>
-                <p className="text-navy-300">Blend scores (0.6 Proto + 0.4 SED), apply thresholds, smooth over time</p>
+                <h3 className="font-extrabold text-lg sm:text-xl mb-1">Rank-Aware Blending</h3>
+                <p className="text-[#625d53]">Blend scores (0.6 Proto + 0.4 SED), apply thresholds, smooth over time</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center font-bold">4</div>
+            <div className="flex items-start gap-4 py-5">
+              <div className="w-12 h-12 shrink-0 border-2 border-black bg-[#d9f4d2] flex items-center justify-center font-mono text-xl font-extrabold shadow-[3px_3px_0_#171717]">4</div>
               <div>
-                <h3 className="font-semibold text-lg">Results</h3>
-                <p className="text-navy-300">Per-window and aggregate species predictions with confidence scores</p>
+                <h3 className="font-extrabold text-lg sm:text-xl mb-1">Results</h3>
+                <p className="text-[#625d53]">Per-window and aggregate species predictions with confidence scores</p>
               </div>
             </div>
           </div>
@@ -125,10 +144,10 @@ export default function Home() {
 
         <div className="text-center">
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ y: -2, x: -2 }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => navigate('/how-it-works')}
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition"
+            className="px-6 py-3 bg-[#b9e7ff] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
           >
             Explore Interactive Pipeline →
           </motion.button>
@@ -136,53 +155,56 @@ export default function Home() {
       </section>
 
       {/* Sample Result Preview */}
-      <section className="bg-navy-800 bg-opacity-50 border-y border-navy-700 py-20">
+      <section className="bg-[#f4eddd] border-y-2 border-black py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center">Sample Results</h2>
+          <div className="text-center mb-12">
+            <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#777168]">A glimpse at the output</span>
+            <h2 className="text-4xl sm:text-5xl font-extrabold mt-3">Sample Results</h2>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-navy-900 border border-navy-600 rounded-lg p-8">
-              <h3 className="text-xl font-semibold mb-4">Top Detected Species</h3>
-              <div className="space-y-3">
+            <div className="bg-white border-2 border-black p-8 shadow-[6px_6px_0_#171717]">
+              <h3 className="text-xl font-extrabold mb-6">Top Detected Species</h3>
+              <div className="space-y-5">
                 {[
                   { name: 'American Crow', score: 0.92, windows: 10 },
                   { name: 'Blue Jay', score: 0.95, windows: 8 },
                   { name: 'Carolina Wren', score: 0.91, windows: 7 }
                 ].map((sp, idx) => (
-                  <div key={idx} className="flex items-center justify-between">
-                    <span className="text-navy-300">{sp.name}</span>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-2 bg-navy-700 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-blue-500 to-blue-400"
-                          style={{ width: `${sp.score * 100}%` }}
-                        />
-                      </div>
-                      <span className="text-sm font-semibold w-12">{(sp.score * 100).toFixed(0)}%</span>
+                  <div key={idx}>
+                    <div className="flex items-center justify-between gap-3 mb-2">
+                      <span className="font-semibold">{sp.name}</span>
+                      <span className="font-mono text-sm font-extrabold">{(sp.score * 100).toFixed(0)}%</span>
+                    </div>
+                    <div className="w-full h-3 bg-[#eee8d9] border-2 border-black overflow-hidden">
+                      <div
+                        className="h-full bg-[#f4c542] border-r-2 border-black"
+                        style={{ width: `${sp.score * 100}%` }}
+                      />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-navy-900 border border-navy-600 rounded-lg p-8">
-              <h3 className="text-xl font-semibold mb-4">Recording Details</h3>
-              <div className="space-y-2 text-sm text-navy-300">
-                <p><span className="font-semibold">Duration:</span> 60 seconds</p>
-                <p><span className="font-semibold">Sample Rate:</span> 32 kHz</p>
-                <p><span className="font-semibold">Windows:</span> 12 × 5 seconds</p>
-                <p><span className="font-semibold">Location:</span> New York, USA</p>
-                <p><span className="font-semibold">Time:</span> 2:30 PM</p>
+            <div className="bg-[#b9e7ff] border-2 border-black p-8 shadow-[6px_6px_0_#171717]">
+              <h3 className="text-xl font-extrabold mb-6">Recording Details</h3>
+              <div className="space-y-0 text-sm">
+                <p className="flex justify-between gap-4 py-3 border-b border-black/30"><span className="font-mono font-bold uppercase text-xs">Duration</span><span className="font-bold">60 seconds</span></p>
+                <p className="flex justify-between gap-4 py-3 border-b border-black/30"><span className="font-mono font-bold uppercase text-xs">Sample Rate</span><span className="font-bold">32 kHz</span></p>
+                <p className="flex justify-between gap-4 py-3 border-b border-black/30"><span className="font-mono font-bold uppercase text-xs">Windows</span><span className="font-bold">12 × 5 seconds</span></p>
+                <p className="flex justify-between gap-4 py-3 border-b border-black/30"><span className="font-mono font-bold uppercase text-xs">Location</span><span className="font-bold">New York, USA</span></p>
+                <p className="flex justify-between gap-4 py-3"><span className="font-mono font-bold uppercase text-xs">Time</span><span className="font-bold">2:30 PM</span></p>
               </div>
             </div>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ y: -2, x: -2 }}
+              whileTap={{ scale: 0.97 }}
               onClick={() => navigate('/how-it-works')}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition"
+              className="px-6 py-3 bg-[#ffcfdb] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] font-extrabold uppercase tracking-wide transition"
             >
               View Full Demo →
             </motion.button>
@@ -192,18 +214,21 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h2 className="text-4xl font-bold mb-6">Ready to Explore?</h2>
-        <p className="text-xl text-navy-300 mb-8 max-w-2xl mx-auto">
-          Walk through the interactive pipeline, experiment with parameters, and see how bird species are classified.
-        </p>
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => navigate('/how-it-works')}
-          className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-lg transition"
-        >
-          Take the Interactive Tour
-        </motion.button>
+        <div className="max-w-4xl mx-auto bg-[#f4c542] border-2 border-black p-8 sm:p-12 shadow-[8px_8px_0_#171717]">
+          <span className="font-mono text-xs font-bold uppercase tracking-[0.25em]">Your next discovery starts here</span>
+          <h2 className="text-4xl sm:text-5xl font-extrabold mt-4 mb-6">Ready to Explore?</h2>
+          <p className="text-lg sm:text-xl text-[#45413a] mb-8 max-w-2xl mx-auto">
+            Walk through the interactive pipeline, experiment with parameters, and see how bird species are classified.
+          </p>
+          <motion.button
+            whileHover={{ y: -3, x: -2 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => navigate('/how-it-works')}
+            className="px-8 py-4 bg-white border-2 border-black shadow-[5px_5px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[3px] hover:translate-y-[3px] font-extrabold text-lg uppercase tracking-wide transition"
+          >
+            Take the Interactive Tour
+          </motion.button>
+        </div>
       </section>
     </div>
   )

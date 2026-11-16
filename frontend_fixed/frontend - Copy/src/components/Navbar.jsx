@@ -11,62 +11,62 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-navy-900 border-b border-navy-700">
+    <nav className="bg-[#fff3d6] border-b border-[#171717]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold text-blue-400">🐦 BirdCLEF</span>
+            <span className="text-2xl font-bold text-[#171717]">🐦 WildEcho</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
             {/* Public Pages */}
             <Link
               to="/how-it-works"
-              className="text-navy-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition"
+              className="text-[#302b24] hover:text-[#171717] px-3 py-2 rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
             >
               How It Works
             </Link>
             <Link
               to="/about"
-              className="text-navy-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition"
+              className="text-[#302b24] hover:text-[#171717] px-3 py-2 rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="text-navy-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition"
+              className="text-[#302b24] hover:text-[#171717] px-3 py-2 rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
             >
               Contact
             </Link>
 
             {isAuthenticated ? (
               <>
-                <div className="border-l border-navy-700 pl-6 flex items-center gap-4">
+                <div className="border-l border-[#171717] pl-6 flex items-center gap-4">
                   <Link
                     to="/analyze"
-                    className="text-navy-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition"
+                    className="text-[#302b24] hover:text-[#171717] px-3 py-2 rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
                   >
                     Analyze
                   </Link>
                   <Link
                     to="/history"
-                    className="text-navy-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition"
+                    className="text-[#302b24] hover:text-[#171717] px-3 py-2 rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
                   >
                     History
                   </Link>
                   <Link
                     to="/dashboard"
-                    className="text-navy-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition"
+                    className="text-[#302b24] hover:text-[#171717] px-3 py-2 rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
                   >
                     Dashboard
                   </Link>
                 </div>
 
-                <div className="flex items-center gap-3 pl-4 border-l border-navy-700">
-                  <span className="text-navy-200 text-sm">{user?.name}</span>
+                <div className="flex items-center gap-3 pl-4 border-l border-[#171717]">
+                  <span className="text-[#302b24] text-sm">{user?.name}</span>
                   <button
                     onClick={handleLogout}
-                    className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded text-sm font-medium transition"
+                    className="px-3 py-1 bg-[#ffcfdb] hover:bg-[#ffb8ca] text-[#171717] rounded-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
                   >
                     Logout
                   </button>
@@ -74,16 +74,16 @@ export default function Navbar() {
               </>
             ) : (
               <>
-                <div className="border-l border-navy-700 pl-6 flex items-center gap-3">
+                <div className="border-l border-[#171717] pl-6 flex items-center gap-3">
                   <Link
                     to="/login"
-                    className="text-navy-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition"
+                    className="text-[#302b24] hover:text-[#171717] px-3 py-2 rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
                   >
                     Login
                   </Link>
                   <Link
                     to="/register"
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition"
+                    className="px-4 py-2 bg-[#b9e7ff] hover:bg-[#a4dcf7] text-[#171717] rounded-none-none text-sm font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
                   >
                     Sign Up
                   </Link>

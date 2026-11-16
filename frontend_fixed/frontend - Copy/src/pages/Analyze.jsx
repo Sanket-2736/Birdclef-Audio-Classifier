@@ -29,7 +29,7 @@ export default function Analyze() {
     const maxSizeMB = 100
     const maxSizeBytes = maxSizeMB * 1024 * 1024
     const allowedExt = ['wav', 'ogg', 'mp3', 'flac']
-    
+
     const ext = selectedFile.name.split('.').pop().toLowerCase()
     if (!allowedExt.includes(ext)) {
       setError(`Invalid format. Allowed: ${allowedExt.join(', ')}`)
@@ -131,21 +131,32 @@ export default function Analyze() {
   }, [pollInterval])
 
   return (
-    <div className="min-h-screen bg-navy-900">
+    <div className="min-h-screen bg-[#fff8e8] text-[#171717]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-white mb-2">Analyze Audio</h1>
-        <p className="text-navy-300 mb-8">Upload an audio file to classify bird species</p>
+        <div className="mb-10">
+          <div className="inline-flex items-center gap-2 border-2 border-black bg-[#b9e7ff] px-3 py-1.5 shadow-[3px_3px_0_#171717] mb-5">
+            <span className="h-2 w-2 rounded-full bg-[#171717]" />
+            <span className="font-mono text-xs font-bold uppercase tracking-widest">WildEcho / Audio Lab</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">Analyze Audio<span className="text-[#f4c542]">.</span></h1>
+          <p className="text-[#55514a] text-base sm:text-lg">Upload an audio file to classify bird species</p>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Upload Form */}
-          <div className="bg-navy-800 rounded-lg p-8 border border-navy-700 h-fit">
+          <div className="bg-white border-2 border-black p-6 sm:p-8 h-fit shadow-[7px_7px_0_#171717]">
+            <div className="flex items-center justify-between gap-3 mb-7">
+              <h2 className="text-xl font-extrabold">Upload recording</h2>
+              <span className="bg-[#f4c542] border-2 border-black px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-wider">01 / Input</span>
+            </div>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* File Input */}
               <div>
-                <label className="block text-sm font-medium text-navy-200 mb-3">
+                <label className="block text-sm font-bold mb-3">
                   Audio File
                 </label>
-                <div className="border-2 border-dashed border-navy-600 rounded-lg p-6 text-center hover:border-blue-500 transition cursor-pointer">
+                <div className="border-2 border-dashed border-black bg-[#fff8e8] p-6 text-center hover:bg-[#fff1c2] transition cursor-pointer">
                   <input
                     type="file"
                     accept=".wav,.ogg,.mp3,.flac"
@@ -155,11 +166,11 @@ export default function Analyze() {
                     id="file-input"
                   />
                   <label htmlFor="file-input" className="cursor-pointer">
-                    <div className="text-4xl mb-2">📁</div>
-                    <p className="text-navy-200 font-medium">
+                    <div className="text-4xl mb-3">📁</div>
+                    <p className="font-bold break-all">
                       {file ? file.name : 'Click to upload'}
                     </p>
-                    <p className="text-navy-400 text-sm mt-1">
+                    <p className="text-[#777168] text-xs font-mono mt-2">
                       WAV, OGG, MP3, or FLAC up to 100 MB
                     </p>
                   </label>
@@ -169,7 +180,7 @@ export default function Analyze() {
               {/* Site & Hour */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="site" className="block text-sm font-medium text-navy-200 mb-1">
+                  <label htmlFor="site" className="block text-sm font-bold mb-2">
                     Site ID (0-19)
                   </label>
                   <input
@@ -180,11 +191,11 @@ export default function Analyze() {
                     value={siteId}
                     onChange={(e) => setSiteId(e.target.value)}
                     disabled={uploading || recordingId}
-                    className="w-full px-3 py-2 bg-navy-700 border border-navy-600 rounded text-white focus:border-blue-500 focus:outline-none"
+                    className="w-full px-3 py-3 bg-[#fff8e8] border-2 border-black text-[#171717] focus:outline-none focus:ring-2 focus:ring-[#f4c542] disabled:opacity-50"
                   />
                 </div>
                 <div>
-                  <label htmlFor="hour" className="block text-sm font-medium text-navy-200 mb-1">
+                  <label htmlFor="hour" className="block text-sm font-bold mb-2">
                     Hour (0-23)
                   </label>
                   <input
@@ -195,15 +206,15 @@ export default function Analyze() {
                     value={hour}
                     onChange={(e) => setHour(e.target.value)}
                     disabled={uploading || recordingId}
-                    className="w-full px-3 py-2 bg-navy-700 border border-navy-600 rounded text-white focus:border-blue-500 focus:outline-none"
+                    className="w-full px-3 py-3 bg-[#fff8e8] border-2 border-black text-[#171717] focus:outline-none focus:ring-2 focus:ring-[#f4c542] disabled:opacity-50"
                   />
                 </div>
               </div>
 
               {/* Location */}
               <div>
-                <div className="flex justify-between items-center mb-3">
-                  <label className="text-sm font-medium text-navy-200">Location (optional)</label>
+                <div className="flex justify-between items-center gap-3 mb-3">
+                  <label className="text-sm font-bold">Location (optional)</label>
                   <button
                     type="button"
                     onClick={() => {
@@ -219,14 +230,14 @@ export default function Analyze() {
                       }
                     }}
                     disabled={uploading || recordingId}
-                    className="text-xs px-2 py-1 bg-navy-700 hover:bg-navy-600 text-blue-400 hover:text-blue-300 rounded transition disabled:opacity-50"
+                    className="text-xs px-3 py-2 bg-[#b9e7ff] border-2 border-black font-bold hover:bg-[#91d8fa] transition disabled:opacity-50"
                   >
                     📍 Use My Location
                   </button>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="lat" className="block text-xs text-navy-400 mb-1">
+                    <label htmlFor="lat" className="block text-xs font-mono font-bold text-[#777168] mb-2">
                       Latitude
                     </label>
                     <input
@@ -237,11 +248,11 @@ export default function Analyze() {
                       value={lat}
                       onChange={(e) => setLat(e.target.value)}
                       disabled={uploading || recordingId}
-                      className="w-full px-3 py-2 bg-navy-700 border border-navy-600 rounded text-white placeholder-navy-400 focus:border-blue-500 focus:outline-none"
+                      className="w-full px-3 py-3 bg-[#fff8e8] border-2 border-black text-[#171717] placeholder-[#aaa398] focus:outline-none focus:ring-2 focus:ring-[#f4c542] disabled:opacity-50"
                     />
                   </div>
                   <div>
-                    <label htmlFor="lng" className="block text-xs text-navy-400 mb-1">
+                    <label htmlFor="lng" className="block text-xs font-mono font-bold text-[#777168] mb-2">
                       Longitude
                     </label>
                     <input
@@ -252,7 +263,7 @@ export default function Analyze() {
                       value={lng}
                       onChange={(e) => setLng(e.target.value)}
                       disabled={uploading || recordingId}
-                      className="w-full px-3 py-2 bg-navy-700 border border-navy-600 rounded text-white placeholder-navy-400 focus:border-blue-500 focus:outline-none"
+                      className="w-full px-3 py-3 bg-[#fff8e8] border-2 border-black text-[#171717] placeholder-[#aaa398] focus:outline-none focus:ring-2 focus:ring-[#f4c542] disabled:opacity-50"
                     />
                   </div>
                 </div>
@@ -260,7 +271,7 @@ export default function Analyze() {
 
               {/* Error Message */}
               {error && (
-                <div className="p-4 bg-red-900 border border-red-700 text-red-100 rounded">
+                <div className="p-4 bg-[#ffe0df] border-2 border-black text-[#9f2424] font-semibold shadow-[3px_3px_0_#171717]">
                   {error}
                 </div>
               )}
@@ -269,7 +280,7 @@ export default function Analyze() {
               <button
                 type="submit"
                 disabled={!file || uploading || recordingId}
-                className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-900 text-white font-semibold rounded-lg transition"
+                className="w-full py-4 px-4 bg-[#f4c542] border-2 border-black text-[#171717] font-extrabold uppercase tracking-wide shadow-[4px_4px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#171717] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-[4px_4px_0_#171717] transition"
               >
                 {uploading ? 'Uploading...' : 'Analyze Audio'}
               </button>
@@ -277,10 +288,11 @@ export default function Analyze() {
 
             {/* Duplicate Dialog */}
             {duplicateDialog && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                <div className="bg-navy-800 border border-navy-700 rounded-lg p-6 max-w-md">
-                  <h2 className="text-xl font-bold text-white mb-3">File Already Uploaded</h2>
-                  <p className="text-navy-300 mb-6">
+              <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+                <div className="bg-[#fff8e8] border-2 border-black p-6 max-w-md w-full shadow-[8px_8px_0_#000]">
+                  <div className="inline-block bg-[#ffb6c8] border-2 border-black px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-wider mb-4">Duplicate detected</div>
+                  <h2 className="text-xl font-extrabold mb-3">File Already Uploaded</h2>
+                  <p className="text-[#55514a] mb-6">
                     You've already uploaded this file. Would you like to view the previous result?
                   </p>
                   <div className="flex gap-3">
@@ -289,13 +301,13 @@ export default function Analyze() {
                         setDuplicateDialog(null)
                         setFile(null)
                       }}
-                      className="flex-1 py-2 px-4 bg-navy-700 hover:bg-navy-600 text-white font-medium rounded transition"
+                      className="flex-1 py-3 px-4 bg-white border-2 border-black font-bold hover:bg-[#eee8d9] transition"
                     >
                       Upload Again
                     </button>
                     <button
                       onClick={() => navigate(`/results/${duplicateDialog.existing_id}`)}
-                      className="flex-1 py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded transition"
+                      className="flex-1 py-3 px-4 bg-[#b9e7ff] border-2 border-black font-bold hover:bg-[#91d8fa] transition"
                     >
                       View Results
                     </button>
@@ -318,4 +330,3 @@ export default function Analyze() {
     </div>
   )
 }
-

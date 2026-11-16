@@ -14,7 +14,7 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
   const displayMatrix = matrix.map((row) => row.slice(0, validWindows.length))
 
   const getColorForScore = (score) => {
-    if (score === 0 || score === null || score === undefined) return '#1e293b'
+    if (score === 0 || score === null || score === undefined) return '#fff8e8'
     if (score > 0.8) return '#059669'
     if (score > 0.6) return '#d97706'
     if (score > 0.4) return '#f97316'
@@ -34,8 +34,8 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
   }
 
   return (
-    <div className="bg-navy-800 rounded-lg p-6 border border-navy-700 mb-8">
-      <h2 className="text-2xl font-bold text-white mb-6">Species × Time Heatmap</h2>
+    <div className="bg-white rounded-none-none p-6 border-2 border-[#171717] shadow-[5px_5px_0_#171717] mb-8">
+      <h2 className="text-2xl font-black tracking-tight text-[#171717] mb-6">Species × Time Heatmap</h2>
 
       <div className="overflow-x-auto">
         <div className="flex gap-4">
@@ -46,7 +46,7 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
               <div
                 key={idx}
                 className={`h-8 w-32 text-right pr-3 text-xs font-semibold flex items-center justify-end ${
-                  selectedSpecies === spec ? 'text-blue-400' : 'text-navy-300'
+                  selectedSpecies === spec ? 'text-[#171717]' : 'text-[#514a40]'
                 }`}
                 style={{
                   backgroundColor:
@@ -59,7 +59,7 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
           </div>
 
           {/* Heatmap */}
-          <div className="flex flex-col gap-0 border border-navy-600 rounded overflow-hidden">
+          <div className="flex flex-col gap-0 border border-[#171717] rounded-none overflow-hidden">
             {/* X-axis (time) */}
             <div className="flex gap-0">
               {validWindows.map((_, colIdx) => {
@@ -67,7 +67,7 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
                 return (
                   <div
                     key={`time-${colIdx}`}
-                    className="w-12 h-8 flex items-center justify-center text-xs text-navy-400 font-semibold border-r border-navy-700 bg-navy-900"
+                    className="w-12 h-8 flex items-center justify-center text-xs text-[#766d5e] font-semibold border-r border-[#171717] bg-[#fff3d6]"
                   >
                     {time}s
                   </div>
@@ -81,7 +81,7 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
                 {row.map((score, colIdx) => (
                   <div
                     key={`cell-${rowIdx}-${colIdx}`}
-                    className="w-12 h-12 border-r border-b border-navy-700 cursor-pointer hover:opacity-100 transition-opacity"
+                    className="w-12 h-12 border-r border-b border-[#171717] cursor-pointer hover:opacity-100 transition-opacity"
                     style={getCellStyle(rowIdx, colIdx)}
                     onMouseEnter={() =>
                       score > 0 && setHoveredCell({ rowIdx, colIdx, score })
@@ -98,7 +98,7 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
 
       {/* Tooltip */}
       {hoveredCell && (
-        <div className="mt-4 p-3 bg-navy-900 border border-navy-600 rounded text-sm text-navy-200">
+        <div className="mt-4 p-3 bg-[#fff3d6] border border-[#171717] rounded-none text-sm text-[#302b24]">
           <strong>{displaySpecies[hoveredCell.rowIdx]}</strong> at window{' '}
           {hoveredCell.colIdx}: <strong>{(hoveredCell.score * 100).toFixed(1)}%</strong>
         </div>
@@ -107,24 +107,24 @@ export default function HeatmapChart({ prediction, selectedSpecies }) {
       {/* Legend */}
       <div className="mt-6 flex gap-6 flex-wrap">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-green-600 opacity-80"></div>
-          <span className="text-sm text-navy-300">&gt;80%</span>
+          <div className="w-6 h-6 rounded-none bg-[#d9f4d2] opacity-80"></div>
+          <span className="text-sm text-[#514a40]">&gt;80%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-amber-600 opacity-80"></div>
-          <span className="text-sm text-navy-300">60-80%</span>
+          <div className="w-6 h-6 rounded-none bg-[#f4c542] opacity-80"></div>
+          <span className="text-sm text-[#514a40]">60-80%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-orange-600 opacity-80"></div>
-          <span className="text-sm text-navy-300">40-60%</span>
+          <div className="w-6 h-6 rounded-none bg-[#f4c542] opacity-80"></div>
+          <span className="text-sm text-[#514a40]">40-60%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-red-600 opacity-80"></div>
-          <span className="text-sm text-navy-300">20-40%</span>
+          <div className="w-6 h-6 rounded-none bg-[#ffcfdb] opacity-80"></div>
+          <span className="text-sm text-[#514a40]">20-40%</span>
         </div>
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded bg-purple-600 opacity-80"></div>
-          <span className="text-sm text-navy-300">&lt;20%</span>
+          <div className="w-6 h-6 rounded-none bg-[#d9d0ff] opacity-80"></div>
+          <span className="text-sm text-[#514a40]">&lt;20%</span>
         </div>
       </div>
     </div>

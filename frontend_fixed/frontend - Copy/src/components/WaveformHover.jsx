@@ -3,7 +3,7 @@ import WaveSurfer from 'wavesurfer.js'
 
 const WINDOW_SIZE = 5 // seconds
 const COLORS = [
-  '#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899',
+  '#4b9fc9', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899',
   '#06b6d4', '#f97316', '#6366f1', '#84cc16', '#0891b2', '#d946ef',
 ]
 
@@ -40,9 +40,9 @@ export default function WaveformHover({
 
     wavesurfer.current = WaveSurfer.create({
       container: containerRef.current,
-      waveColor: '#60a5fa',
-      progressColor: '#3b82f6',
-      cursorColor: '#ffffff',
+      waveColor: '#b9e7ff',
+      progressColor: '#4b9fc9',
+      cursorColor: '#171717',
       barWidth: 2,
       barRadius: 3,
       barGap: 1,
@@ -209,10 +209,10 @@ export default function WaveformHover({
   })
 
   return (
-    <div className="bg-navy-800 rounded-lg p-6 border border-navy-700 mb-8">
+    <div className="bg-white rounded-none-none p-6 border-2 border-[#171717] shadow-[5px_5px_0_#171717] mb-8">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-white">Audio Playback</h2>
-        <div className="text-sm text-navy-400">
+        <h2 className="text-xl font-black tracking-tight text-[#171717]">Audio Playback</h2>
+        <div className="text-sm text-[#766d5e]">
           {currentTime.toFixed(1)}s / {duration.toFixed(1)}s
         </div>
       </div>
@@ -232,20 +232,20 @@ export default function WaveformHover({
         {/* Tooltip */}
         {tooltip && (
           <div
-            className="fixed bg-navy-900 border border-navy-600 rounded-lg p-3 text-sm text-navy-200 z-50 pointer-events-none"
+            className="fixed bg-[#fff3d6] border border-[#171717] rounded-none-none p-3 text-sm text-[#302b24] z-50 pointer-events-none"
             style={{
               left: `${tooltip.x}px`,
               top: `${tooltip.y - 120}px`,
             }}
           >
-            <div className="font-semibold text-white mb-2">
+            <div className="font-semibold text-[#171717] mb-2">
               {tooltip.time.toFixed(1)}s ({tooltip.windowStart.toFixed(0)}-{tooltip.windowEnd.toFixed(0)}s)
             </div>
             <div className="space-y-1">
               {tooltip.species.map((sp, idx) => (
                 <div key={idx} className="flex items-center gap-2">
                   <div
-                    className="w-3 h-3 rounded"
+                    className="w-3 h-3 rounded-none"
                     style={{
                       backgroundColor: getSpeciesColor(sp.code),
                       opacity: 0.8,
@@ -266,14 +266,14 @@ export default function WaveformHover({
         {uniqueSpecies.slice(0, 12).map((code) => (
           <div key={code} className="flex items-center gap-2">
             <div
-              className="w-3 h-3 rounded"
+              className="w-3 h-3 rounded-none"
               style={{ backgroundColor: getSpeciesColor(code) }}
             />
-            <span className="text-navy-300">{code}</span>
+            <span className="text-[#514a40]">{code}</span>
           </div>
         ))}
         {uniqueSpecies.length > 12 && (
-          <span className="text-navy-400">+{uniqueSpecies.length - 12} more</span>
+          <span className="text-[#766d5e]">+{uniqueSpecies.length - 12} more</span>
         )}
       </div>
 
@@ -287,7 +287,7 @@ export default function WaveformHover({
               wavesurfer.current?.play()
             }
           }}
-          className="flex-1 py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded font-medium transition"
+          className="flex-1 py-2 px-4 bg-[#b9e7ff] hover:bg-[#a4dcf7] text-[#171717] rounded-none font-bold border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px]"
         >
           {isPlaying ? '⏸ Pause' : '▶ Play'}
         </button>

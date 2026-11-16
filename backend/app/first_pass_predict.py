@@ -8,13 +8,56 @@ import torch
 
 from .perch import PerchModel
 from .proto_predict import LightProtoSSM
-from .mlp_predict import apply_mlp_probes_vectorized
-
-from .perch import PerchModel
-from .proto_predict import LightProtoSSM
-from .mlp_predict import apply_mlp_probes_vectorized
+from .mlp_predict import (
+    load_mlp_artifacts,
+    apply_mlp_probes_vectorized,
+)
 from .residual_predict import apply_residual_correction
 from .postprocess import postprocess_proto_scores
+
+
+# ============================================================
+# NUMPY 1.x / 2.x PICKLE COMPATIBILITY
+# ============================================================
+
+class CompatibleUnpickler(pickle.Unpickler):
+    """
+    Load pickle files containing NumPy 2.x module paths while
+    running with NumPy 1.x.
+
+    NumPy 2.x uses numpy._core; NumPy 1.x uses numpy.core.
+    """
+
+    def find_class(self, module, name):
+        # NumPy 2.x renamed numpy.core to numpy._core.
+        # Map those references when loading under NumPy 1.x.
+        if module.startswith("numpy._core"):
+            module = module.replace("numpy._core", "numpy.core", 1)
+
+        resolved = super().find_class(module, name)
+
+        # Some serialized NumPy random-state objects pass the
+        # BitGenerator class itself, while older NumPy expects
+        # its registered name (for example, "MT19937").
+        if (
+            module == "numpy.random._pickle"
+            and name == "__bit_generator_ctor"
+        ):
+            original_ctor = resolved
+
+            def compatible_bit_generator_ctor(bit_generator):
+                if isinstance(bit_generator, type):
+                    bit_generator = bit_generator.__name__
+                return original_ctor(bit_generator)
+
+            return compatible_bit_generator_ctor
+
+        return resolved
+
+
+def load_compatible_pickle(file_path):
+    with open(file_path, "rb") as file:
+        return CompatibleUnpickler(file).load()
 
 
 # ============================================================
@@ -25,7 +68,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 MODELS_DIR = BASE_DIR / "models"
 
 PROTO_PATH = MODELS_DIR / "proto_model.pt"
-MLP_PATH = MODELS_DIR / "mlp_artifacts.pkl"
+MLP_PATH = MODELS_DIR / "mlp_artifacts_compatible.npz"
 PRIOR_PATH = MODELS_DIR / "prior_tables.pkl"
 CLASSES_PATH = MODELS_DIR / "classes.json"
 
@@ -55,8 +98,8 @@ TTA_SHIFTS = [0, 1, -1, 2, -2]
 
 print("Loading classes...")
 
-with open(CLASSES_PATH, "r") as f:
-    classes = json.load(f)
+with open(CLASSES_PATH, "r", encoding="utf-8") as file:
+    classes = json.load(file)
 
 print("  Number of classes:", len(classes))
 
@@ -67,110 +110,7 @@ print("  Number of classes:", len(classes))
 
 print("\nLoading prior tables...")
 
-with open(PRIOR_PATH, "rb") as f:
-    prior_tables = pickle.load(f)
-
-print("Prior tables loaded")
-
-
-# ============================================================
-# LOAD MLP ARTIFACTS
-# ============================================================
-
-print("\nLoading MLP artifacts...")
-
-with open(MLP_PATH, "rb") as f:
-    mlp_artifacts = pickle.load(f)
-
-probe_models = mlp_artifacts["probe_models"]
-mlp_scaler = mlp_artifacts["scaler"]
-mlp_pca = mlp_artifacts["pca"]
-mlp_alpha = mlp_artifacts["alpha_blend"]
-
-print("MLP artifacts loaded")
-print("  probe models:", len(probe_models))
-print("  PCA components:", mlp_pca.n_components)
-print("  alpha blend:", mlp_alpha)
-
-from pathlib import Path
-import json
-import pickle
-import sys
-
-import numpy as np
-import torch
-
-from .perch import PerchModel
-from .proto_predict import LightProtoSSM
-from .mlp_predict import apply_mlp_probes_vectorized
-
-
-# ============================================================
-# PATHS
-# ============================================================
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-MODELS_DIR = BASE_DIR / "models"
-
-
-# ============================================================
-# CONFIG
-# ============================================================
-
-SR = 32000
-WINDOW_SEC = 5
-WINDOW_SAMPLES = 160000
-FILE_SAMPLES = 60 * SR
-N_WINDOWS = 12
-N_CLASSES = 234
-EMBEDDING_DIM = 1536
-
-ENSEMBLE_WEIGHT = 0.5
-LAMBDA_PRIOR = 0.4
-
-TTA_SHIFTS = [0, 1, -1, 2, -2]
-
-
-# ============================================================
-# LOAD PRIOR TABLES
-# ============================================================
-
-print("Loading prior tables...")
-
-with open(MODELS_DIR / "prior_tables.pkl", "rb") as f:
-    prior_tables = pickle.load(f)
-
-print("Prior tables loaded")
-
-
-# ============================================================
-# LOAD MLP ARTIFACTS
-# ============================================================
-
-print("\nLoading MLP artifacts...")
-
-with open(MLP_PATH, "rb") as f:
-    mlp_artifacts = pickle.load(f)
-
-probe_models = mlp_artifacts["probe_models"]
-mlp_scaler = mlp_artifacts["scaler"]
-mlp_pca = mlp_artifacts["pca"]
-mlp_alpha = mlp_artifacts["alpha_blend"]
-
-print("MLP artifacts loaded")
-print("  probe models:", len(probe_models))
-print("  PCA components:", mlp_pca.n_components)
-print("  alpha blend:", mlp_alpha)
-
-
-# ============================================================
-# LOAD PRIOR TABLES
-# ============================================================
-
-print("\nLoading prior tables...")
-
-with open(PRIOR_PATH, "rb") as f:
-    prior_tables = pickle.load(f)
+prior_tables = load_compatible_pickle(PRIOR_PATH)
 
 print("Prior tables loaded")
 
@@ -178,6 +118,18 @@ if isinstance(prior_tables, dict):
     print("  keys:", list(prior_tables.keys()))
 else:
     print("  type:", type(prior_tables))
+
+
+# ============================================================
+# LOAD MLP ARTIFACTS
+# ============================================================
+
+print("\nLoading MLP artifacts...")
+
+mlp_artifacts = load_mlp_artifacts()
+mlp_alpha = mlp_artifacts["alpha_blend"]
+
+print("MLP artifacts ready")
 
 
 # ============================================================
@@ -256,6 +208,8 @@ def apply_prior(
     out += lambda_prior * logit_prior
 
     return out.astype(np.float32)
+
+
 # ============================================================
 # TTA WINDOW SHIFT
 # ============================================================
@@ -308,7 +262,6 @@ def run_tta_proto(
     all_outputs = []
 
     for shift in TTA_SHIFTS:
-
         emb_shifted, scores_shifted = shift_windows(
             embeddings,
             perch_scores,
@@ -324,7 +277,6 @@ def run_tta_proto(
         ).float().unsqueeze(0)
 
         with torch.no_grad():
-
             output = model(
                 emb_tensor,
                 perch_logits=scores_tensor,
@@ -342,7 +294,6 @@ def run_tta_proto(
         # Undo the input shift so each prediction corresponds
         # to the original window position.
         if shift != 0:
-
             output = np.roll(
                 output,
                 -shift,
@@ -416,7 +367,7 @@ def predict_first_pass(
           ↓
         ProtoSSM TTA
           ↓
-        0.5 Proto + 0.5 adjusted Perch
+        0.5 Proto + 0.5 MLP
 
     Returns:
         dict
@@ -505,9 +456,7 @@ def predict_first_pass(
     mlp_scores = apply_mlp_probes_vectorized(
         embeddings,
         adjusted_scores,
-        probe_models,
-        mlp_scaler,
-        mlp_pca,
+        mlp_artifacts,
         alpha_blend=mlp_alpha
     )
 
@@ -653,7 +602,6 @@ def predict_first_pass(
     print("\nTop classes per window:")
 
     for window_idx in range(N_WINDOWS):
-
         top_indices = np.argsort(
             first_pass[window_idx]
         )[-5:][::-1]
@@ -663,7 +611,6 @@ def predict_first_pass(
         )
 
         for class_idx in top_indices:
-
             print(
                 f"  {classes[class_idx]} "
                 f"(class {class_idx}): "
@@ -692,22 +639,14 @@ def predict_first_pass(
 # ============================================================
 
 if __name__ == "__main__":
-
     if len(sys.argv) != 2:
-
-        print(
-            "\nUsage:"
-        )
-
+        print("\nUsage:")
         print(
             "  python -m app.first_pass_predict "
             "<path-to-audio>"
         )
 
-        print(
-            "\nExample:"
-        )
-
+        print("\nExample:")
         print(
             "  python -m app.first_pass_predict test.ogg"
         )

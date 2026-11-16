@@ -56,23 +56,29 @@ export default function Register() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-navy-900 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#fff8e8] px-4 py-10 text-[#171717]">
       <div className="w-full max-w-md">
-        <div className="bg-navy-800 rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-white mb-2 text-center">
-            Create Account
-          </h1>
-          <p className="text-navy-300 text-center mb-8">Join BirdCLEF Classifier</p>
+        <div className="bg-white border-2 border-black p-8 shadow-[8px_8px_0_#171717]">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 border-2 border-black bg-[#ffcfdb] px-3 py-1.5 shadow-[3px_3px_0_#171717] mb-6">
+              <span className="h-2 w-2 rounded-full bg-[#171717]" />
+              <span className="font-mono text-xs font-bold uppercase tracking-widest">WildEcho / Create Account</span>
+            </div>
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">
+              Create <span className="bg-[#f4c542] px-1">Account</span>
+            </h1>
+            <p className="text-[#625d53]">Join BirdCLEF Classifier</p>
+          </div>
 
           {errors.submit && (
-            <div className="bg-red-900 border border-red-700 text-red-100 px-4 py-3 rounded mb-6">
+            <div className="bg-[#ffcfdb] border-2 border-black text-[#171717] px-4 py-3 mb-6 font-semibold text-sm shadow-[3px_3px_0_#171717]">
               {errors.submit}
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-navy-200 mb-1">
+              <label htmlFor="name" className="block font-mono text-xs font-bold uppercase tracking-wider mb-2">
                 Full Name
               </label>
               <input
@@ -81,19 +87,19 @@ export default function Register() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="John Doe"
-                className={`w-full px-4 py-2 bg-navy-700 border rounded text-white placeholder-navy-400 focus:outline-none focus:ring-1 transition ${
+                className={`w-full px-4 py-3 bg-[#fffdf7] border-2 text-[#171717] placeholder-[#9a9387] focus:outline-none focus:ring-2 focus:ring-[#f4c542] focus:ring-offset-2 transition ${
                   errors.name
-                    ? 'border-red-500 focus:border-red-600 focus:ring-red-500'
-                    : 'border-navy-600 focus:border-blue-500 focus:ring-blue-500'
+                    ? 'border-[#c94b5b] focus:ring-[#c94b5b]'
+                    : 'border-black'
                 }`}
               />
               {errors.name && (
-                <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+                <p className="text-[#b42335] text-sm font-semibold mt-2">{errors.name}</p>
               )}
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-navy-200 mb-1">
+              <label htmlFor="email" className="block font-mono text-xs font-bold uppercase tracking-wider mb-2">
                 Email
               </label>
               <input
@@ -102,19 +108,19 @@ export default function Register() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className={`w-full px-4 py-2 bg-navy-700 border rounded text-white placeholder-navy-400 focus:outline-none focus:ring-1 transition ${
+                className={`w-full px-4 py-3 bg-[#fffdf7] border-2 text-[#171717] placeholder-[#9a9387] focus:outline-none focus:ring-2 focus:ring-[#f4c542] focus:ring-offset-2 transition ${
                   errors.email
-                    ? 'border-red-500 focus:border-red-600 focus:ring-red-500'
-                    : 'border-navy-600 focus:border-blue-500 focus:ring-blue-500'
+                    ? 'border-[#c94b5b] focus:ring-[#c94b5b]'
+                    : 'border-black'
                 }`}
               />
               {errors.email && (
-                <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                <p className="text-[#b42335] text-sm font-semibold mt-2">{errors.email}</p>
               )}
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-navy-200 mb-1">
+              <label htmlFor="password" className="block font-mono text-xs font-bold uppercase tracking-wider mb-2">
                 Password
               </label>
               <input
@@ -123,20 +129,20 @@ export default function Register() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className={`w-full px-4 py-2 bg-navy-700 border rounded text-white placeholder-navy-400 focus:outline-none focus:ring-1 transition ${
+                className={`w-full px-4 py-3 bg-[#fffdf7] border-2 text-[#171717] placeholder-[#9a9387] focus:outline-none focus:ring-2 focus:ring-[#f4c542] focus:ring-offset-2 transition ${
                   errors.password
-                    ? 'border-red-500 focus:border-red-600 focus:ring-red-500'
-                    : 'border-navy-600 focus:border-blue-500 focus:ring-blue-500'
+                    ? 'border-[#c94b5b] focus:ring-[#c94b5b]'
+                    : 'border-black'
                 }`}
               />
               {errors.password && (
-                <p className="text-red-400 text-sm mt-1">{errors.password}</p>
+                <p className="text-[#b42335] text-sm font-semibold mt-2">{errors.password}</p>
               )}
-              <p className="text-navy-400 text-xs mt-1">At least 8 characters</p>
+              <p className="text-[#8a8378] font-mono text-[10px] uppercase tracking-wider mt-2">At least 8 characters</p>
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-navy-200 mb-1">
+              <label htmlFor="confirmPassword" className="block font-mono text-xs font-bold uppercase tracking-wider mb-2">
                 Confirm Password
               </label>
               <input
@@ -145,33 +151,38 @@ export default function Register() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="••••••••"
-                className={`w-full px-4 py-2 bg-navy-700 border rounded text-white placeholder-navy-400 focus:outline-none focus:ring-1 transition ${
+                className={`w-full px-4 py-3 bg-[#fffdf7] border-2 text-[#171717] placeholder-[#9a9387] focus:outline-none focus:ring-2 focus:ring-[#f4c542] focus:ring-offset-2 transition ${
                   errors.confirmPassword
-                    ? 'border-red-500 focus:border-red-600 focus:ring-red-500'
-                    : 'border-navy-600 focus:border-blue-500 focus:ring-blue-500'
+                    ? 'border-[#c94b5b] focus:ring-[#c94b5b]'
+                    : 'border-black'
                 }`}
               />
               {errors.confirmPassword && (
-                <p className="text-red-400 text-sm mt-1">{errors.confirmPassword}</p>
+                <p className="text-[#b42335] text-sm font-semibold mt-2">{errors.confirmPassword}</p>
               )}
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-900 text-white font-semibold rounded transition duration-200"
+              className="w-full py-3 px-4 bg-[#f4c542] border-2 border-black shadow-[4px_4px_0_#171717] hover:shadow-[2px_2px_0_#171717] hover:translate-x-[2px] hover:translate-y-[2px] disabled:opacity-60 disabled:cursor-not-allowed font-extrabold uppercase tracking-wide transition duration-200"
             >
               {loading ? 'Creating account...' : 'Create Account'}
             </button>
           </form>
 
-          <p className="text-center text-navy-300 mt-6">
-            Already have an account?{' '}
-            <Link to="/login" className="text-blue-400 hover:text-blue-300">
-              Sign in
-            </Link>
-          </p>
+          <div className="mt-7 pt-6 border-t-2 border-dashed border-[#c9c1b2] text-center">
+            <p className="text-[#625d53]">
+              Already have an account?{' '}
+              <Link to="/login" className="font-extrabold text-[#171717] underline decoration-2 decoration-[#f4c542] underline-offset-4 hover:bg-[#f4c542] transition">
+                Sign in
+              </Link>
+            </p>
+          </div>
         </div>
+        <p className="text-center mt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-[#8a8378]">
+          WildEcho · Bird Audio Intelligence
+        </p>
       </div>
     </div>
   )

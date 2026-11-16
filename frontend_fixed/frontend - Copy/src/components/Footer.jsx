@@ -32,14 +32,14 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-navy-950 border-t border-navy-700 text-navy-300">
+    <footer className="bg-[#fff8e8] border-t border-[#171717] text-[#514a40]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold text-white mb-2">BirdCLEF</h2>
-            <p className="text-sm text-navy-400">
+            <h2 className="text-2xl font-bold text-[#171717] mb-2">WildEcho</h2>
+            <p className="text-sm text-[#766d5e]">
               Advanced audio classification for bird species detection.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
           {/* Links */}
           {footerLinks.map((section, idx) => (
             <div key={idx}>
-              <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
+              <h3 className="text-sm font-semibold text-[#171717] mb-4 uppercase tracking-wider">
                 {section.title}
               </h3>
               <ul className="space-y-2">
@@ -58,14 +58,14 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm hover:text-blue-400 transition"
+                        className="text-sm hover:text-[#171717] transition"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <button
                         onClick={link.onClick || (() => {})}
-                        className="text-sm hover:text-blue-400 transition text-left"
+                        className="text-sm hover:text-[#171717] border-2 border-[#171717] shadow-[3px_3px_0_#171717] transition hover:translate-x-[1px] hover:translate-y-[1px] text-left"
                       >
                         {link.label}
                       </button>
@@ -78,17 +78,17 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-navy-700 pt-8">
+        <div className="border-t border-[#171717] pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-navy-400">
-              &copy; {currentYear} BirdCLEF Audio Classifier. All rights reserved.
+            <p className="text-sm text-[#766d5e]">
+              &copy; {currentYear} WildEcho · Bird Audio Intelligence. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition"
+                className="hover:text-[#171717] transition"
               >
                 GitHub
               </a>
@@ -96,7 +96,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition"
+                className="hover:text-[#171717] transition"
               >
                 Twitter
               </a>
