@@ -11,7 +11,7 @@ from datetime import datetime
 from typing import Optional
 import numpy as np
 
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Depends, BackgroundTasks, Query
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Depends, BackgroundTasks, Query, Header
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 from sqlalchemy import and_, or_, desc
@@ -23,6 +23,67 @@ from ..db_models import User, Recording, Prediction, Detection, Feedback
 from ..config import get_settings
 from ..storage import get_storage
 from ..routers.auth import get_current_user
+from ..auth import decode_token
+
+
+# ============================================================
+# CUSTOM DEPENDENCIES FOR AUDIO ENDPOINT
+# ============================================================
+
+
+async def get_current_user_with_token_query(
+    token: Optional[str] = Query(None),
+    authorization: str = None,
+    db: Session = Depends(get_db),
+) -> User:
+    """
+    Custom dependency for audio endpoint that handles token query parameter.
+    Fallback logic: Authorization header > Query parameter
+    """
+    from fastapi import Header
+    
+    # Get authorization header
+    auth_header = authorization or Header(None)
+    
+    jwt_token = None
+    
+    # Try Authorization header first
+    if auth_header:
+        parts = auth_header.split() if isinstance(auth_header, str) else []
+        if len(parts) == 2 and parts[0].lower() == "bearer":
+            jwt_token = parts[1]
+        elif auth_header:
+            jwt_token = auth_header
+    
+    # Fall back to query parameter
+    if not jwt_token and token:
+        jwt_token = token
+    
+    if not jwt_token:
+        raise HTTPException(
+            status_code=401,
+            detail="Missing authentication token",
+        )
+    
+    # Decode token
+    user_id = decode_token(jwt_token)
+    
+    if not user_id:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or expired token",
+        )
+    
+    # Get user
+    user = db.query(User).filter(User.id == user_id).first()
+    
+    if not user:
+        raise HTTPException(
+            status_code=401,
+            detail="User not found",
+        )
+    
+    return user
 
 
 # ============================================================
@@ -644,16 +705,58 @@ async def delete_recording(
 @router.get("/{recording_id}/audio")
 async def get_audio(
     recording_id: str,
-    current_user: User = Depends(get_current_user),
+    token: Optional[str] = Query(None),
+    authorization: Optional[str] = Header(None),
     db: Session = Depends(get_db),
 ):
     """
     Get audio file with HTTP range request support.
+    Accepts token as query parameter for browser playback.
     
     Usage in browser:
-    <audio controls src="/recordings/{id}/audio?token={signed_token}"></audio>
+    <audio controls src="/recordings/{id}/audio?token={token}"></audio>
     """
     
+    # Manual authentication handling to support token query parameter
+    jwt_token = None
+    
+    # Try Authorization header first
+    if authorization:
+        parts = authorization.split()
+        if len(parts) == 2 and parts[0].lower() == "bearer":
+            jwt_token = parts[1]
+        else:
+            jwt_token = authorization
+    
+    # Fall back to query parameter
+    if not jwt_token and token:
+        jwt_token = token
+    
+    if not jwt_token:
+        raise HTTPException(
+            status_code=401,
+            detail="Missing authentication token",
+        )
+    
+    # Decode token
+    user_id = decode_token(jwt_token)
+    
+    if not user_id:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or expired token",
+        )
+    
+    # Get user
+    current_user = db.query(User).filter(User.id == user_id).first()
+    
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="User not found",
+        )
+    
+    # Get recording
     recording = db.query(Recording).filter(
         Recording.id == recording_id,
         Recording.user_id == current_user.id,
@@ -669,14 +772,19 @@ async def get_audio(
     # Determine media type
     media_type = recording.mime_type or "audio/wav"
     
-    return FileResponse(
+    response = FileResponse(
         full_path,
         media_type=media_type,
         headers={
             "Accept-Ranges": "bytes",
             "Cache-Control": "public, max-age=3600",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, OPTIONS",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
     )
+    
+    return response
 
 
 @router.get("/{recording_id}/spectrogram")

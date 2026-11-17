@@ -2,7 +2,7 @@
 Authentication routes: register, login, get current user.
 """
 
-from fastapi import APIRouter, Depends, HTTPException, status, Header
+from fastapi import APIRouter, Depends, HTTPException, status, Header, Query
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, EmailStr
 
@@ -81,10 +81,14 @@ class TokenResponse(BaseModel):
 
 def get_current_user(
     authorization: str = Header(None),
+    token: str = Query(None),
     db: Session = Depends(get_db),
 ) -> User:
     """
-    Get current authenticated user from JWT token in Authorization header.
+    Get current authenticated user from JWT token.
+    Checks both Authorization header and query parameter (for browser playback).
+    
+    Priority: Authorization header > Query parameter
     
     Dependency for protected routes:
     
@@ -93,24 +97,33 @@ def get_current_user(
             return current_user
     """
     
-    if not authorization:
+    # Extract JWT token from either Authorization header or query parameter
+    jwt_token = None
+    
+    # Try Authorization header first
+    if authorization:
+        print(f"[DEBUG] Authorization header found, length: {len(authorization)}")
+        # Handle "Bearer <token>" format
+        parts = authorization.split()
+        if len(parts) == 2 and parts[0].lower() == "bearer":
+            jwt_token = parts[1]
+        else:
+            jwt_token = authorization
+    
+    # Fall back to query parameter if header not present
+    if not jwt_token and token:
+        print(f"[DEBUG] Token query parameter found, length: {len(token)}")
+        jwt_token = token
+    
+    if not jwt_token:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Missing authorization header",
+            detail="Missing authentication token",
             headers={"WWW-Authenticate": "Bearer"},
         )
     
-    # Parse "Bearer <token>" format
-    parts = authorization.split()
-    if len(parts) != 2 or parts[0].lower() != "bearer":
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid authorization header format",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    
-    token = parts[1]
-    user_id = decode_token(token)
+    # Decode token to get user_id
+    user_id = decode_token(jwt_token)
     
     if user_id is None:
         raise HTTPException(
@@ -119,6 +132,7 @@ def get_current_user(
             headers={"WWW-Authenticate": "Bearer"},
         )
     
+    # Fetch user from database
     user = db.query(User).filter(User.id == user_id).first()
     
     if user is None:

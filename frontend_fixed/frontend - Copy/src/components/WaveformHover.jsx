@@ -57,7 +57,12 @@ export default function WaveformHover({
         backend: 'WebAudio',
       })
 
-      wavesurfer.current.load(audioUrl)
+      // Get token from localStorage and add to URL
+      const token = localStorage.getItem('token')
+      const urlWithToken = token ? `${audioUrl}?token=${token}` : audioUrl
+      
+      console.log('[WaveformHover] Loading audio URL:', audioUrl.substring(0, 50) + '...')
+      wavesurfer.current.load(urlWithToken)
 
       wavesurfer.current.on('ready', () => {
         if (mountedRef.current) {
