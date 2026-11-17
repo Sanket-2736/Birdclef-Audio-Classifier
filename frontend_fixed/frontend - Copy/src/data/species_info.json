@@ -4,7 +4,7 @@
     "scientific_name": "Guyalna cuta",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Guyalna_cuta",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Guyalna+cuta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Guyalna%20cuta",
     "image_url": ""
   },
   "116570": {
@@ -12,7 +12,7 @@
     "scientific_name": "Caiman yacare",
     "taxon": "Reptilia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Caiman_yacare",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Caiman+yacare",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Caiman%20yacare",
     "image_url": ""
   },
   "1176823": {
@@ -20,15 +20,15 @@
     "scientific_name": "Leptodactylus luctator",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_luctator",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+luctator",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20luctator",
     "image_url": ""
   },
   "1491113": {
-    "common_name": "Guaran\u00ed leaf-litter frog",
+    "common_name": "Guaraní leaf-litter frog",
     "scientific_name": "Adenomera guarani",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Adenomera_guarani",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Adenomera+guarani",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Adenomera%20guarani",
     "image_url": ""
   },
   "1595929": {
@@ -36,7 +36,7 @@
     "scientific_name": "Lysapsus limellum",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lysapsus_limellum",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lysapsus+limellum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lysapsus%20limellum",
     "image_url": ""
   },
   "209233": {
@@ -44,7 +44,7 @@
     "scientific_name": "Equus caballus",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Equus_caballus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Equus+caballus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Equus%20caballus",
     "image_url": ""
   },
   "22930": {
@@ -52,7 +52,7 @@
     "scientific_name": "Leptodactylus syphax",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_syphax",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+syphax",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20syphax",
     "image_url": ""
   },
   "22956": {
@@ -60,7 +60,7 @@
     "scientific_name": "Leptodactylus mystacinus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_mystacinus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+mystacinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20mystacinus",
     "image_url": ""
   },
   "22961": {
@@ -68,7 +68,7 @@
     "scientific_name": "Leptodactylus podicipinus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_podicipinus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+podicipinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20podicipinus",
     "image_url": ""
   },
   "22967": {
@@ -76,7 +76,7 @@
     "scientific_name": "Leptodactylus elenae",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_elenae",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+elenae",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20elenae",
     "image_url": ""
   },
   "22973": {
@@ -84,7 +84,7 @@
     "scientific_name": "Leptodactylus fuscus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_fuscus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+fuscus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20fuscus",
     "image_url": ""
   },
   "22983": {
@@ -92,7 +92,7 @@
     "scientific_name": "Leptodactylus labyrinthicus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_labyrinthicus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+labyrinthicus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20labyrinthicus",
     "image_url": ""
   },
   "22985": {
@@ -100,7 +100,7 @@
     "scientific_name": "Leptodactylus petersii",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_petersii",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+petersii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20petersii",
     "image_url": ""
   },
   "23150": {
@@ -108,7 +108,7 @@
     "scientific_name": "Physalaemus centralis",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_centralis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+centralis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus%20centralis",
     "image_url": ""
   },
   "23154": {
@@ -116,7 +116,7 @@
     "scientific_name": "Physalaemus albifrons",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_albifrons",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+albifrons",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus%20albifrons",
     "image_url": ""
   },
   "23158": {
@@ -124,7 +124,7 @@
     "scientific_name": "Physalaemus albonotatus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_albonotatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+albonotatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus%20albonotatus",
     "image_url": ""
   },
   "23176": {
@@ -132,7 +132,7 @@
     "scientific_name": "Pseudopaludicola mystacalis",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pseudopaludicola_mystacalis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudopaludicola+mystacalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudopaludicola%20mystacalis",
     "image_url": ""
   },
   "23724": {
@@ -140,7 +140,7 @@
     "scientific_name": "Phyllomedusa sauvagii",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Phyllomedusa_sauvagii",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phyllomedusa+sauvagii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phyllomedusa%20sauvagii",
     "image_url": ""
   },
   "24279": {
@@ -148,7 +148,7 @@
     "scientific_name": "Scinax nasicus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_nasicus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+nasicus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax%20nasicus",
     "image_url": ""
   },
   "24285": {
@@ -156,7 +156,7 @@
     "scientific_name": "Scinax fuscovarius",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_fuscovarius",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+fuscovarius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax%20fuscovarius",
     "image_url": ""
   },
   "24287": {
@@ -164,7 +164,7 @@
     "scientific_name": "Scinax fuscomarginatus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_fuscomarginatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+fuscomarginatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax%20fuscomarginatus",
     "image_url": ""
   },
   "24321": {
@@ -172,7 +172,7 @@
     "scientific_name": "Scinax acuminatus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Scinax_acuminatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax+acuminatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Scinax%20acuminatus",
     "image_url": ""
   },
   "244024": {
@@ -180,7 +180,7 @@
     "scientific_name": "Quesada gigas",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Quesada_gigas",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Quesada+gigas",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Quesada%20gigas",
     "image_url": ""
   },
   "25073": {
@@ -188,7 +188,7 @@
     "scientific_name": "Chiasmocleis mehelyi",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Chiasmocleis_mehelyi",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chiasmocleis+mehelyi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chiasmocleis%20mehelyi",
     "image_url": ""
   },
   "25092": {
@@ -196,7 +196,7 @@
     "scientific_name": "Elachistocleis bicolor",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Elachistocleis_bicolor",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elachistocleis+bicolor",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elachistocleis%20bicolor",
     "image_url": ""
   },
   "25214": {
@@ -204,7 +204,7 @@
     "scientific_name": "Dermatonotus muelleri",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dermatonotus_muelleri",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dermatonotus+muelleri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dermatonotus%20muelleri",
     "image_url": ""
   },
   "326272": {
@@ -212,7 +212,7 @@
     "scientific_name": "Physalaemus biligonigerus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_biligonigerus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+biligonigerus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus%20biligonigerus",
     "image_url": ""
   },
   "41970": {
@@ -220,7 +220,7 @@
     "scientific_name": "Panthera onca",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Panthera_onca",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Panthera+onca",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Panthera%20onca",
     "image_url": ""
   },
   "43435": {
@@ -228,7 +228,7 @@
     "scientific_name": "Alouatta caraya",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Alouatta_caraya",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Alouatta+caraya",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Alouatta%20caraya",
     "image_url": ""
   },
   "47144": {
@@ -236,7 +236,7 @@
     "scientific_name": "Canis familiaris",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Canis_familiaris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Canis+familiaris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Canis%20familiaris",
     "image_url": ""
   },
   "47158son01": {
@@ -244,7 +244,7 @@
     "scientific_name": "Insect son01",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son01",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son01",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son01",
     "image_url": ""
   },
   "47158son02": {
@@ -252,7 +252,7 @@
     "scientific_name": "Insect son02",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son02",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son02",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son02",
     "image_url": ""
   },
   "47158son03": {
@@ -260,7 +260,7 @@
     "scientific_name": "Insect son03",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son03",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son03",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son03",
     "image_url": ""
   },
   "47158son04": {
@@ -268,7 +268,7 @@
     "scientific_name": "Insect son04",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son04",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son04",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son04",
     "image_url": ""
   },
   "47158son05": {
@@ -276,7 +276,7 @@
     "scientific_name": "Insect son05",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son05",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son05",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son05",
     "image_url": ""
   },
   "47158son06": {
@@ -284,7 +284,7 @@
     "scientific_name": "Insect son06",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son06",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son06",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son06",
     "image_url": ""
   },
   "47158son07": {
@@ -292,7 +292,7 @@
     "scientific_name": "Insect son07",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son07",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son07",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son07",
     "image_url": ""
   },
   "47158son08": {
@@ -300,7 +300,7 @@
     "scientific_name": "Insect son08",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son08",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son08",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son08",
     "image_url": ""
   },
   "47158son09": {
@@ -308,7 +308,7 @@
     "scientific_name": "Insect son09",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son09",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son09",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son09",
     "image_url": ""
   },
   "47158son10": {
@@ -316,7 +316,7 @@
     "scientific_name": "Insect son10",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son10",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son10",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son10",
     "image_url": ""
   },
   "47158son11": {
@@ -324,7 +324,7 @@
     "scientific_name": "Insect son11",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son11",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son11",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son11",
     "image_url": ""
   },
   "47158son12": {
@@ -332,7 +332,7 @@
     "scientific_name": "Insect son12",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son12",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son12",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son12",
     "image_url": ""
   },
   "47158son13": {
@@ -340,7 +340,7 @@
     "scientific_name": "Insect son13",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son13",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son13",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son13",
     "image_url": ""
   },
   "47158son14": {
@@ -348,7 +348,7 @@
     "scientific_name": "Insect son14",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son14",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son14",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son14",
     "image_url": ""
   },
   "47158son15": {
@@ -356,7 +356,7 @@
     "scientific_name": "Insect son15",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son15",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son15",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son15",
     "image_url": ""
   },
   "47158son16": {
@@ -364,7 +364,7 @@
     "scientific_name": "Insect son16",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son16",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son16",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son16",
     "image_url": ""
   },
   "47158son17": {
@@ -372,7 +372,7 @@
     "scientific_name": "Insect son17",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son17",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son17",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son17",
     "image_url": ""
   },
   "47158son18": {
@@ -380,7 +380,7 @@
     "scientific_name": "Insect son18",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son18",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son18",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son18",
     "image_url": ""
   },
   "47158son19": {
@@ -388,7 +388,7 @@
     "scientific_name": "Insect son19",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son19",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son19",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son19",
     "image_url": ""
   },
   "47158son20": {
@@ -396,7 +396,7 @@
     "scientific_name": "Insect son20",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son20",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son20",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son20",
     "image_url": ""
   },
   "47158son21": {
@@ -404,7 +404,7 @@
     "scientific_name": "Insect son21",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son21",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son21",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son21",
     "image_url": ""
   },
   "47158son22": {
@@ -412,7 +412,7 @@
     "scientific_name": "Insect son22",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son22",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son22",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son22",
     "image_url": ""
   },
   "47158son23": {
@@ -420,7 +420,7 @@
     "scientific_name": "Insect son23",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son23",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son23",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son23",
     "image_url": ""
   },
   "47158son24": {
@@ -428,7 +428,7 @@
     "scientific_name": "Insect son24",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son24",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son24",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son24",
     "image_url": ""
   },
   "47158son25": {
@@ -436,7 +436,7 @@
     "scientific_name": "Insect son25",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Insect_son25",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect+son25",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Insect%20son25",
     "image_url": ""
   },
   "476521": {
@@ -444,7 +444,7 @@
     "scientific_name": "Physalaemus nattereri",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Physalaemus_nattereri",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus+nattereri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Physalaemus%20nattereri",
     "image_url": ""
   },
   "516975": {
@@ -452,7 +452,7 @@
     "scientific_name": "Sapajus cay",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sapajus_cay",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sapajus+cay",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sapajus%20cay",
     "image_url": ""
   },
   "517063": {
@@ -460,7 +460,7 @@
     "scientific_name": "Pithecopus azureus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pithecopus_azureus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pithecopus+azureus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pithecopus%20azureus",
     "image_url": ""
   },
   "555123": {
@@ -468,7 +468,7 @@
     "scientific_name": "Boana lundii",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Boana_lundii",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana+lundii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana%20lundii",
     "image_url": ""
   },
   "555145": {
@@ -476,7 +476,7 @@
     "scientific_name": "Boana punctata",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Boana_punctata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana+punctata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana%20punctata",
     "image_url": ""
   },
   "555146": {
@@ -484,7 +484,7 @@
     "scientific_name": "Boana raniceps",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Boana_raniceps",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana+raniceps",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Boana%20raniceps",
     "image_url": ""
   },
   "64898": {
@@ -492,7 +492,7 @@
     "scientific_name": "Ameerega picta",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ameerega_picta",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ameerega+picta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ameerega%20picta",
     "image_url": ""
   },
   "65377": {
@@ -500,7 +500,7 @@
     "scientific_name": "Dendropsophus minutus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dendropsophus_minutus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendropsophus+minutus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendropsophus%20minutus",
     "image_url": ""
   },
   "65380": {
@@ -508,7 +508,7 @@
     "scientific_name": "Dendropsophus nanus",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dendropsophus_nanus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendropsophus+nanus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendropsophus%20nanus",
     "image_url": ""
   },
   "66971": {
@@ -516,7 +516,7 @@
     "scientific_name": "Pseudis platensis",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pseudis_platensis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudis+platensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudis%20platensis",
     "image_url": ""
   },
   "67107": {
@@ -524,7 +524,7 @@
     "scientific_name": "Rhinella diptycha",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rhinella_diptycha",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rhinella+diptycha",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rhinella%20diptycha",
     "image_url": ""
   },
   "67252": {
@@ -532,7 +532,7 @@
     "scientific_name": "Trachycephalus typhonius",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Trachycephalus_typhonius",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Trachycephalus+typhonius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Trachycephalus%20typhonius",
     "image_url": ""
   },
   "70711": {
@@ -540,7 +540,7 @@
     "scientific_name": "Leptodactylus macrosternum",
     "taxon": "Amphibia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptodactylus_macrosternum",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus+macrosternum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptodactylus%20macrosternum",
     "image_url": ""
   },
   "738183": {
@@ -548,7 +548,7 @@
     "scientific_name": "Plecturocebus pallescens",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Plecturocebus_pallescens",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Plecturocebus+pallescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Plecturocebus%20pallescens",
     "image_url": ""
   },
   "74113": {
@@ -556,7 +556,7 @@
     "scientific_name": "Bos taurus",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Bos_taurus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Bos+taurus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Bos%20taurus",
     "image_url": ""
   },
   "74580": {
@@ -564,7 +564,7 @@
     "scientific_name": "Mico melanurus",
     "taxon": "Mammalia",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Mico_melanurus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mico+melanurus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mico%20melanurus",
     "image_url": ""
   },
   "760266": {
@@ -572,7 +572,7 @@
     "scientific_name": "Prionacris erosa",
     "taxon": "Insecta",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Prionacris_erosa",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Prionacris+erosa",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Prionacris%20erosa",
     "image_url": ""
   },
   "ashgre1": {
@@ -580,7 +580,7 @@
     "scientific_name": "Hylophilus pectoralis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hylophilus_pectoralis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hylophilus+pectoralis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hylophilus%20pectoralis",
     "image_url": ""
   },
   "astcra1": {
@@ -588,7 +588,7 @@
     "scientific_name": "Mustelirallus albicollis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Mustelirallus_albicollis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mustelirallus+albicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mustelirallus%20albicollis",
     "image_url": ""
   },
   "bafcur1": {
@@ -596,7 +596,7 @@
     "scientific_name": "Crax fasciolata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Crax_fasciolata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crax+fasciolata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crax%20fasciolata",
     "image_url": ""
   },
   "baffal1": {
@@ -604,7 +604,7 @@
     "scientific_name": "Micrastur ruficollis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Micrastur_ruficollis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Micrastur+ruficollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Micrastur%20ruficollis",
     "image_url": ""
   },
   "banana": {
@@ -612,7 +612,7 @@
     "scientific_name": "Coereba flaveola",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Coereba_flaveola",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coereba+flaveola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coereba%20flaveola",
     "image_url": ""
   },
   "barant1": {
@@ -620,7 +620,7 @@
     "scientific_name": "Thamnophilus doliatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Thamnophilus_doliatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus+doliatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus%20doliatus",
     "image_url": ""
   },
   "batbel1": {
@@ -628,7 +628,7 @@
     "scientific_name": "Procnias nudicollis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Procnias_nudicollis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Procnias+nudicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Procnias%20nudicollis",
     "image_url": ""
   },
   "baymac": {
@@ -636,7 +636,7 @@
     "scientific_name": "Ara ararauna",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ara_ararauna",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ara+ararauna",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ara%20ararauna",
     "image_url": ""
   },
   "bbwduc": {
@@ -644,7 +644,7 @@
     "scientific_name": "Dendrocygna autumnalis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dendrocygna_autumnalis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendrocygna+autumnalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendrocygna%20autumnalis",
     "image_url": ""
   },
   "bcwfin2": {
@@ -652,7 +652,7 @@
     "scientific_name": "Microspingus melanoleucus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Microspingus_melanoleucus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Microspingus+melanoleucus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Microspingus%20melanoleucus",
     "image_url": ""
   },
   "bkcdon": {
@@ -660,7 +660,7 @@
     "scientific_name": "Donacobius atricapilla",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Donacobius_atricapilla",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Donacobius+atricapilla",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Donacobius%20atricapilla",
     "image_url": ""
   },
   "bkhpar": {
@@ -668,7 +668,7 @@
     "scientific_name": "Aratinga nenday",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aratinga_nenday",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aratinga+nenday",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aratinga%20nenday",
     "image_url": ""
   },
   "blchaw1": {
@@ -676,7 +676,7 @@
     "scientific_name": "Busarellus nigricollis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Busarellus_nigricollis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Busarellus+nigricollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Busarellus%20nigricollis",
     "image_url": ""
   },
   "blheag1": {
@@ -684,7 +684,7 @@
     "scientific_name": "Spizaetus tyrannus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Spizaetus_tyrannus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Spizaetus+tyrannus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Spizaetus%20tyrannus",
     "image_url": ""
   },
   "blttit1": {
@@ -692,7 +692,7 @@
     "scientific_name": "Tityra cayana",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tityra_cayana",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tityra+cayana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tityra%20cayana",
     "image_url": ""
   },
   "bncfly": {
@@ -700,7 +700,7 @@
     "scientific_name": "Myiarchus tyrannulus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiarchus_tyrannulus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiarchus+tyrannulus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiarchus%20tyrannulus",
     "image_url": ""
   },
   "bobfly1": {
@@ -708,7 +708,7 @@
     "scientific_name": "Megarynchus pitangua",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Megarynchus_pitangua",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megarynchus+pitangua",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megarynchus%20pitangua",
     "image_url": ""
   },
   "brcmar1": {
@@ -716,7 +716,7 @@
     "scientific_name": "Progne tapera",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Progne_tapera",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Progne+tapera",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Progne%20tapera",
     "image_url": ""
   },
   "brnowl": {
@@ -724,7 +724,7 @@
     "scientific_name": "Tyto furcata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tyto_furcata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyto+furcata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyto%20furcata",
     "image_url": ""
   },
   "bucmot4": {
@@ -732,7 +732,7 @@
     "scientific_name": "Momotus momota",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Momotus_momota",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Momotus+momota",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Momotus%20momota",
     "image_url": ""
   },
   "bucpar": {
@@ -740,7 +740,7 @@
     "scientific_name": "Thectocercus acuticaudatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Thectocercus_acuticaudatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thectocercus+acuticaudatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thectocercus%20acuticaudatus",
     "image_url": ""
   },
   "bufpar": {
@@ -748,7 +748,7 @@
     "scientific_name": "Amazona aestiva",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Amazona_aestiva",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Amazona+aestiva",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Amazona%20aestiva",
     "image_url": ""
   },
   "bunibi1": {
@@ -756,7 +756,7 @@
     "scientific_name": "Theristicus caudatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Theristicus_caudatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Theristicus+caudatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Theristicus%20caudatus",
     "image_url": ""
   },
   "burowl": {
@@ -764,7 +764,7 @@
     "scientific_name": "Athene cunicularia",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Athene_cunicularia",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Athene+cunicularia",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Athene%20cunicularia",
     "image_url": ""
   },
   "camfli1": {
@@ -772,7 +772,7 @@
     "scientific_name": "Colaptes campestris",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Colaptes_campestris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Colaptes+campestris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Colaptes%20campestris",
     "image_url": ""
   },
   "chacha1": {
@@ -780,7 +780,7 @@
     "scientific_name": "Ortalis canicollis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ortalis_canicollis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ortalis+canicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ortalis%20canicollis",
     "image_url": ""
   },
   "chbmoc1": {
@@ -788,7 +788,7 @@
     "scientific_name": "Mimus saturninus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Mimus_saturninus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mimus+saturninus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Mimus%20saturninus",
     "image_url": ""
   },
   "chobla1": {
@@ -796,7 +796,7 @@
     "scientific_name": "Gnorimopsar chopi",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Gnorimopsar_chopi",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Gnorimopsar+chopi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Gnorimopsar%20chopi",
     "image_url": ""
   },
   "chvcon1": {
@@ -804,7 +804,7 @@
     "scientific_name": "Conirostrum speciosum",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Conirostrum_speciosum",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Conirostrum+speciosum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Conirostrum%20speciosum",
     "image_url": ""
   },
   "cibspi1": {
@@ -812,7 +812,7 @@
     "scientific_name": "Synallaxis hypospodia",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_hypospodia",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+hypospodia",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis%20hypospodia",
     "image_url": ""
   },
   "coffal1": {
@@ -820,7 +820,7 @@
     "scientific_name": "Micrastur semitorquatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Micrastur_semitorquatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Micrastur+semitorquatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Micrastur%20semitorquatus",
     "image_url": ""
   },
   "compau": {
@@ -828,7 +828,7 @@
     "scientific_name": "Nyctidromus albicollis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctidromus_albicollis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctidromus+albicollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctidromus%20albicollis",
     "image_url": ""
   },
   "compot1": {
@@ -836,7 +836,7 @@
     "scientific_name": "Nyctibius griseus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctibius_griseus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctibius+griseus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctibius%20griseus",
     "image_url": ""
   },
   "crbthr1": {
@@ -844,7 +844,7 @@
     "scientific_name": "Turdus amaurochalinus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Turdus_amaurochalinus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Turdus+amaurochalinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Turdus%20amaurochalinus",
     "image_url": ""
   },
   "crebec1": {
@@ -852,7 +852,7 @@
     "scientific_name": "Pachyramphus validus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pachyramphus_validus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pachyramphus+validus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pachyramphus%20validus",
     "image_url": ""
   },
   "dwatin1": {
@@ -860,7 +860,7 @@
     "scientific_name": "Taoniscus nanus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Taoniscus_nanus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Taoniscus+nanus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Taoniscus%20nanus",
     "image_url": ""
   },
   "epaori4": {
@@ -868,7 +868,7 @@
     "scientific_name": "Icterus pyrrhopterus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Icterus_pyrrhopterus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Icterus+pyrrhopterus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Icterus%20pyrrhopterus",
     "image_url": ""
   },
   "eulfly1": {
@@ -876,7 +876,7 @@
     "scientific_name": "Lathrotriccus euleri",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lathrotriccus_euleri",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lathrotriccus+euleri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lathrotriccus%20euleri",
     "image_url": ""
   },
   "fabwre1": {
@@ -884,7 +884,7 @@
     "scientific_name": "Cantorchilus guarayanus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cantorchilus_guarayanus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cantorchilus+guarayanus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cantorchilus%20guarayanus",
     "image_url": ""
   },
   "fepowl": {
@@ -892,7 +892,7 @@
     "scientific_name": "Glaucidium brasilianum",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Glaucidium_brasilianum",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Glaucidium+brasilianum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Glaucidium%20brasilianum",
     "image_url": ""
   },
   "ficman1": {
@@ -900,7 +900,7 @@
     "scientific_name": "Machaeropterus pyrocephalus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Machaeropterus_pyrocephalus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Machaeropterus+pyrocephalus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Machaeropterus%20pyrocephalus",
     "image_url": ""
   },
   "flawar1": {
@@ -908,7 +908,7 @@
     "scientific_name": "Myiothlypis flaveola",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiothlypis_flaveola",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis+flaveola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis%20flaveola",
     "image_url": ""
   },
   "fotfly": {
@@ -916,7 +916,7 @@
     "scientific_name": "Tyrannus savana",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tyrannus_savana",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyrannus+savana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyrannus%20savana",
     "image_url": ""
   },
   "fusfly1": {
@@ -924,7 +924,7 @@
     "scientific_name": "Cnemotriccus fuscatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cnemotriccus_fuscatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cnemotriccus+fuscatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cnemotriccus%20fuscatus",
     "image_url": ""
   },
   "gilhum1": {
@@ -932,7 +932,7 @@
     "scientific_name": "Hylocharis chrysura",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hylocharis_chrysura",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hylocharis+chrysura",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hylocharis%20chrysura",
     "image_url": ""
   },
   "giwrai1": {
@@ -940,7 +940,7 @@
     "scientific_name": "Aramides ypecaha",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aramides_ypecaha",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramides+ypecaha",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramides%20ypecaha",
     "image_url": ""
   },
   "glteme1": {
@@ -948,7 +948,7 @@
     "scientific_name": "Chionomesa fimbriata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Chionomesa_fimbriata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chionomesa+fimbriata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chionomesa%20fimbriata",
     "image_url": ""
   },
   "grasal3": {
@@ -956,7 +956,7 @@
     "scientific_name": "Saltator coerulescens",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Saltator_coerulescens",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Saltator+coerulescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Saltator%20coerulescens",
     "image_url": ""
   },
   "greani1": {
@@ -964,7 +964,7 @@
     "scientific_name": "Crotophaga major",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Crotophaga_major",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crotophaga+major",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crotophaga%20major",
     "image_url": ""
   },
   "greant1": {
@@ -972,7 +972,7 @@
     "scientific_name": "Taraba major",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Taraba_major",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Taraba+major",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Taraba%20major",
     "image_url": ""
   },
   "greela": {
@@ -980,7 +980,7 @@
     "scientific_name": "Myiopagis viridicata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiopagis_viridicata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiopagis+viridicata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiopagis%20viridicata",
     "image_url": ""
   },
   "grekis": {
@@ -988,7 +988,7 @@
     "scientific_name": "Pitangus sulphuratus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pitangus_sulphuratus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pitangus+sulphuratus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pitangus%20sulphuratus",
     "image_url": ""
   },
   "grepot1": {
@@ -996,7 +996,7 @@
     "scientific_name": "Nyctibius grandis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Nyctibius_grandis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctibius+grandis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Nyctibius%20grandis",
     "image_url": ""
   },
   "gretho2": {
@@ -1004,7 +1004,7 @@
     "scientific_name": "Phacellodomus ruber",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Phacellodomus_ruber",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phacellodomus+ruber",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phacellodomus%20ruber",
     "image_url": ""
   },
   "greyel": {
@@ -1012,7 +1012,7 @@
     "scientific_name": "Tringa melanoleuca",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tringa_melanoleuca",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tringa+melanoleuca",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tringa%20melanoleuca",
     "image_url": ""
   },
   "grfdov1": {
@@ -1020,7 +1020,7 @@
     "scientific_name": "Leptotila rufaxilla",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptotila_rufaxilla",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptotila+rufaxilla",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptotila%20rufaxilla",
     "image_url": ""
   },
   "grhtan1": {
@@ -1028,7 +1028,7 @@
     "scientific_name": "Eucometis penicillata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Eucometis_penicillata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Eucometis+penicillata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Eucometis%20penicillata",
     "image_url": ""
   },
   "gycwor1": {
@@ -1036,7 +1036,7 @@
     "scientific_name": "Aramides cajaneus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aramides_cajaneus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramides+cajaneus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramides%20cajaneus",
     "image_url": ""
   },
   "horscr1": {
@@ -1044,7 +1044,7 @@
     "scientific_name": "Anhima cornuta",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Anhima_cornuta",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Anhima+cornuta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Anhima%20cornuta",
     "image_url": ""
   },
   "houspa": {
@@ -1052,7 +1052,7 @@
     "scientific_name": "Passer domesticus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Passer_domesticus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Passer+domesticus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Passer%20domesticus",
     "image_url": ""
   },
   "hyamac1": {
@@ -1060,7 +1060,7 @@
     "scientific_name": "Anodorhynchus hyacinthinus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Anodorhynchus_hyacinthinus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Anodorhynchus+hyacinthinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Anodorhynchus%20hyacinthinus",
     "image_url": ""
   },
   "larela1": {
@@ -1068,7 +1068,7 @@
     "scientific_name": "Elaenia spectabilis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Elaenia_spectabilis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia+spectabilis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia%20spectabilis",
     "image_url": ""
   },
   "lesela1": {
@@ -1076,7 +1076,7 @@
     "scientific_name": "Elaenia chiriquensis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Elaenia_chiriquensis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia+chiriquensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia%20chiriquensis",
     "image_url": ""
   },
   "lesgrf1": {
@@ -1084,7 +1084,7 @@
     "scientific_name": "Emberizoides ypiranganus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Emberizoides_ypiranganus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Emberizoides+ypiranganus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Emberizoides%20ypiranganus",
     "image_url": ""
   },
   "limpki": {
@@ -1092,7 +1092,7 @@
     "scientific_name": "Aramus guarauna",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Aramus_guarauna",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramus+guarauna",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Aramus%20guarauna",
     "image_url": ""
   },
   "linwoo1": {
@@ -1100,7 +1100,7 @@
     "scientific_name": "Dryocopus lineatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dryocopus_lineatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dryocopus+lineatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dryocopus%20lineatus",
     "image_url": ""
   },
   "litcuc2": {
@@ -1108,7 +1108,7 @@
     "scientific_name": "Coccycua minuta",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Coccycua_minuta",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coccycua+minuta",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coccycua%20minuta",
     "image_url": ""
   },
   "litnig1": {
@@ -1116,7 +1116,7 @@
     "scientific_name": "Setopagis parvula",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Setopagis_parvula",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Setopagis+parvula",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Setopagis%20parvula",
     "image_url": ""
   },
   "mabpar": {
@@ -1124,7 +1124,7 @@
     "scientific_name": "Pyrrhura frontalis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pyrrhura_frontalis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pyrrhura+frontalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pyrrhura%20frontalis",
     "image_url": ""
   },
   "magant1": {
@@ -1132,7 +1132,7 @@
     "scientific_name": "Cercomacra melanaria",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cercomacra_melanaria",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cercomacra+melanaria",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cercomacra%20melanaria",
     "image_url": ""
   },
   "magtan2": {
@@ -1140,7 +1140,7 @@
     "scientific_name": "Cissopis leverianus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cissopis_leverianus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cissopis+leverianus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cissopis%20leverianus",
     "image_url": ""
   },
   "masgna1": {
@@ -1148,7 +1148,7 @@
     "scientific_name": "Polioptila dumicola",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Polioptila_dumicola",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Polioptila+dumicola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Polioptila%20dumicola",
     "image_url": ""
   },
   "nacnig1": {
@@ -1156,7 +1156,7 @@
     "scientific_name": "Chordeiles nacunda",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Chordeiles_nacunda",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chordeiles+nacunda",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chordeiles%20nacunda",
     "image_url": ""
   },
   "ocecra1": {
@@ -1164,7 +1164,7 @@
     "scientific_name": "Rufirallus schomburgkii",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rufirallus_schomburgkii",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rufirallus+schomburgkii",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rufirallus%20schomburgkii",
     "image_url": ""
   },
   "oliwoo1": {
@@ -1172,7 +1172,7 @@
     "scientific_name": "Sittasomus griseicapillus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sittasomus_griseicapillus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sittasomus+griseicapillus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sittasomus%20griseicapillus",
     "image_url": ""
   },
   "orbtro3": {
@@ -1180,7 +1180,7 @@
     "scientific_name": "Icterus croconotus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Icterus_croconotus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Icterus+croconotus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Icterus%20croconotus",
     "image_url": ""
   },
   "orwpar": {
@@ -1188,7 +1188,7 @@
     "scientific_name": "Amazona amazonica",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Amazona_amazonica",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Amazona+amazonica",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Amazona%20amazonica",
     "image_url": ""
   },
   "osprey": {
@@ -1196,7 +1196,7 @@
     "scientific_name": "Pandion haliaetus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pandion_haliaetus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pandion+haliaetus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pandion%20haliaetus",
     "image_url": ""
   },
   "pabspi1": {
@@ -1204,7 +1204,7 @@
     "scientific_name": "Synallaxis albescens",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_albescens",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+albescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis%20albescens",
     "image_url": ""
   },
   "palhor3": {
@@ -1212,7 +1212,7 @@
     "scientific_name": "Furnarius leucopus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Furnarius_leucopus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Furnarius+leucopus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Furnarius%20leucopus",
     "image_url": ""
   },
   "paltan1": {
@@ -1220,7 +1220,7 @@
     "scientific_name": "Thraupis palmarum",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Thraupis_palmarum",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thraupis+palmarum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thraupis%20palmarum",
     "image_url": ""
   },
   "phecuc1": {
@@ -1228,7 +1228,7 @@
     "scientific_name": "Dromococcyx phasianellus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dromococcyx_phasianellus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dromococcyx+phasianellus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dromococcyx%20phasianellus",
     "image_url": ""
   },
   "picpig2": {
@@ -1236,7 +1236,7 @@
     "scientific_name": "Patagioenas picazuro",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Patagioenas_picazuro",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Patagioenas+picazuro",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Patagioenas%20picazuro",
     "image_url": ""
   },
   "pirfly1": {
@@ -1244,7 +1244,7 @@
     "scientific_name": "Legatus leucophaius",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Legatus_leucophaius",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Legatus+leucophaius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Legatus%20leucophaius",
     "image_url": ""
   },
   "plasla1": {
@@ -1252,7 +1252,7 @@
     "scientific_name": "Thamnophilus pelzelni",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Thamnophilus_pelzelni",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus+pelzelni",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus%20pelzelni",
     "image_url": ""
   },
   "platyr1": {
@@ -1260,7 +1260,7 @@
     "scientific_name": "Inezia inornata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Inezia_inornata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Inezia+inornata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Inezia%20inornata",
     "image_url": ""
   },
   "plcjay1": {
@@ -1268,7 +1268,7 @@
     "scientific_name": "Cyanocorax chrysops",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cyanocorax_chrysops",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax+chrysops",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax%20chrysops",
     "image_url": ""
   },
   "pluibi1": {
@@ -1276,7 +1276,7 @@
     "scientific_name": "Theristicus caerulescens",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Theristicus_caerulescens",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Theristicus+caerulescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Theristicus%20caerulescens",
     "image_url": ""
   },
   "purjay1": {
@@ -1284,7 +1284,7 @@
     "scientific_name": "Cyanocorax cyanomelas",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cyanocorax_cyanomelas",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax+cyanomelas",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax%20cyanomelas",
     "image_url": ""
   },
   "pvttyr1": {
@@ -1292,7 +1292,7 @@
     "scientific_name": "Hemitriccus margaritaceiventer",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hemitriccus_margaritaceiventer",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hemitriccus+margaritaceiventer",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hemitriccus%20margaritaceiventer",
     "image_url": ""
   },
   "ragmac1": {
@@ -1300,7 +1300,7 @@
     "scientific_name": "Ara chloropterus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ara_chloropterus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ara+chloropterus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ara%20chloropterus",
     "image_url": ""
   },
   "rebscy1": {
@@ -1308,7 +1308,7 @@
     "scientific_name": "Campylorhamphus trochilirostris",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Campylorhamphus_trochilirostris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Campylorhamphus+trochilirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Campylorhamphus%20trochilirostris",
     "image_url": ""
   },
   "recfin1": {
@@ -1316,7 +1316,7 @@
     "scientific_name": "Coryphospingus cucullatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Coryphospingus_cucullatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coryphospingus+cucullatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Coryphospingus%20cucullatus",
     "image_url": ""
   },
   "redjun": {
@@ -1324,7 +1324,7 @@
     "scientific_name": "Gallus gallus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Gallus_gallus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Gallus+gallus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Gallus%20gallus",
     "image_url": ""
   },
   "relser1": {
@@ -1332,7 +1332,7 @@
     "scientific_name": "Cariama cristata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cariama_cristata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cariama+cristata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cariama%20cristata",
     "image_url": ""
   },
   "rinkin1": {
@@ -1340,7 +1340,7 @@
     "scientific_name": "Megaceryle torquata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Megaceryle_torquata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megaceryle+torquata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megaceryle%20torquata",
     "image_url": ""
   },
   "rivwar1": {
@@ -1348,7 +1348,7 @@
     "scientific_name": "Myiothlypis rivularis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiothlypis_rivularis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis+rivularis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis%20rivularis",
     "image_url": ""
   },
   "roahaw": {
@@ -1356,7 +1356,7 @@
     "scientific_name": "Rupornis magnirostris",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Rupornis_magnirostris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rupornis+magnirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Rupornis%20magnirostris",
     "image_url": ""
   },
   "rubthr1": {
@@ -1364,7 +1364,7 @@
     "scientific_name": "Turdus rufiventris",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Turdus_rufiventris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Turdus+rufiventris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Turdus%20rufiventris",
     "image_url": ""
   },
   "rufcac2": {
@@ -1372,7 +1372,7 @@
     "scientific_name": "Pseudoseisura unirufa",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pseudoseisura_unirufa",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudoseisura+unirufa",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pseudoseisura%20unirufa",
     "image_url": ""
   },
   "rufcas2": {
@@ -1380,7 +1380,7 @@
     "scientific_name": "Casiornis rufus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Casiornis_rufus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Casiornis+rufus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Casiornis%20rufus",
     "image_url": ""
   },
   "rufgna3": {
@@ -1388,7 +1388,7 @@
     "scientific_name": "Conopophaga lineata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Conopophaga_lineata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Conopophaga+lineata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Conopophaga%20lineata",
     "image_url": ""
   },
   "rufhor2": {
@@ -1396,7 +1396,7 @@
     "scientific_name": "Furnarius rufus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Furnarius_rufus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Furnarius+rufus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Furnarius%20rufus",
     "image_url": ""
   },
   "rufnig1": {
@@ -1404,7 +1404,7 @@
     "scientific_name": "Antrostomus rufus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Antrostomus_rufus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Antrostomus+rufus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Antrostomus%20rufus",
     "image_url": ""
   },
   "ruftho1": {
@@ -1412,7 +1412,7 @@
     "scientific_name": "Phacellodomus rufifrons",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Phacellodomus_rufifrons",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phacellodomus+rufifrons",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phacellodomus%20rufifrons",
     "image_url": ""
   },
   "ruftof1": {
@@ -1420,7 +1420,7 @@
     "scientific_name": "Poecilotriccus latirostris",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Poecilotriccus_latirostris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Poecilotriccus+latirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Poecilotriccus%20latirostris",
     "image_url": ""
   },
   "rumfly1": {
@@ -1428,7 +1428,7 @@
     "scientific_name": "Myiozetetes cayanensis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiozetetes_cayanensis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiozetetes+cayanensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiozetetes%20cayanensis",
     "image_url": ""
   },
   "ruther1": {
@@ -1436,7 +1436,7 @@
     "scientific_name": "Tigrisoma lineatum",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tigrisoma_lineatum",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tigrisoma+lineatum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tigrisoma%20lineatum",
     "image_url": ""
   },
   "rutjac1": {
@@ -1444,7 +1444,7 @@
     "scientific_name": "Galbula ruficauda",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Galbula_ruficauda",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Galbula+ruficauda",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Galbula%20ruficauda",
     "image_url": ""
   },
   "sabspa1": {
@@ -1452,7 +1452,7 @@
     "scientific_name": "Arremon flavirostris",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Arremon_flavirostris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Arremon+flavirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Arremon%20flavirostris",
     "image_url": ""
   },
   "saffin": {
@@ -1460,7 +1460,7 @@
     "scientific_name": "Sicalis flaveola",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Sicalis_flaveola",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sicalis+flaveola",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Sicalis%20flaveola",
     "image_url": ""
   },
   "saytan1": {
@@ -1468,7 +1468,7 @@
     "scientific_name": "Thraupis sayaca",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Thraupis_sayaca",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thraupis+sayaca",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thraupis%20sayaca",
     "image_url": ""
   },
   "scadov1": {
@@ -1476,7 +1476,7 @@
     "scientific_name": "Columbina squammata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Columbina_squammata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Columbina+squammata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Columbina%20squammata",
     "image_url": ""
   },
   "schpar1": {
@@ -1484,7 +1484,7 @@
     "scientific_name": "Pionus maximiliani",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pionus_maximiliani",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pionus+maximiliani",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pionus%20maximiliani",
     "image_url": ""
   },
   "scther1": {
@@ -1492,7 +1492,7 @@
     "scientific_name": "Phaethornis eurynome",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Phaethornis_eurynome",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phaethornis+eurynome",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Phaethornis%20eurynome",
     "image_url": ""
   },
   "shcfly1": {
@@ -1500,7 +1500,7 @@
     "scientific_name": "Myiarchus ferox",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiarchus_ferox",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiarchus+ferox",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiarchus%20ferox",
     "image_url": ""
   },
   "shshaw": {
@@ -1508,7 +1508,7 @@
     "scientific_name": "Accipiter striatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Accipiter_striatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Accipiter+striatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Accipiter%20striatus",
     "image_url": ""
   },
   "shtnig1": {
@@ -1516,7 +1516,7 @@
     "scientific_name": "Lurocalis semitorquatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lurocalis_semitorquatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lurocalis+semitorquatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Lurocalis%20semitorquatus",
     "image_url": ""
   },
   "sibtan2": {
@@ -1524,7 +1524,7 @@
     "scientific_name": "Ramphocelus carbo",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ramphocelus_carbo",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ramphocelus+carbo",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ramphocelus%20carbo",
     "image_url": ""
   },
   "smbani": {
@@ -1532,7 +1532,7 @@
     "scientific_name": "Crotophaga ani",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Crotophaga_ani",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crotophaga+ani",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crotophaga%20ani",
     "image_url": ""
   },
   "smbtin1": {
@@ -1540,7 +1540,7 @@
     "scientific_name": "Crypturellus parvirostris",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Crypturellus_parvirostris",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus+parvirostris",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus%20parvirostris",
     "image_url": ""
   },
   "sobcac1": {
@@ -1548,7 +1548,7 @@
     "scientific_name": "Cacicus solitarius",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cacicus_solitarius",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cacicus+solitarius",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cacicus%20solitarius",
     "image_url": ""
   },
   "sobtyr1": {
@@ -1556,7 +1556,7 @@
     "scientific_name": "Camptostoma obsoletum",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Camptostoma_obsoletum",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Camptostoma+obsoletum",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Camptostoma%20obsoletum",
     "image_url": ""
   },
   "socfly1": {
@@ -1564,7 +1564,7 @@
     "scientific_name": "Myiozetetes similis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiozetetes_similis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiozetetes+similis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiozetetes%20similis",
     "image_url": ""
   },
   "sofspi1": {
@@ -1572,7 +1572,7 @@
     "scientific_name": "Synallaxis frontalis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_frontalis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+frontalis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis%20frontalis",
     "image_url": ""
   },
   "souant1": {
@@ -1580,7 +1580,7 @@
     "scientific_name": "Corythopis delalandi",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Corythopis_delalandi",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Corythopis+delalandi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Corythopis%20delalandi",
     "image_url": ""
   },
   "soulap1": {
@@ -1588,7 +1588,7 @@
     "scientific_name": "Vanellus chilensis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Vanellus_chilensis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Vanellus+chilensis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Vanellus%20chilensis",
     "image_url": ""
   },
   "souscr1": {
@@ -1596,7 +1596,7 @@
     "scientific_name": "Chauna torquata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Chauna_torquata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chauna+torquata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chauna%20torquata",
     "image_url": ""
   },
   "spbant3": {
@@ -1604,7 +1604,7 @@
     "scientific_name": "Hypoedaleus guttatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Hypoedaleus_guttatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hypoedaleus+guttatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Hypoedaleus%20guttatus",
     "image_url": ""
   },
   "spispi1": {
@@ -1612,7 +1612,7 @@
     "scientific_name": "Synallaxis spixi",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_spixi",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+spixi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis%20spixi",
     "image_url": ""
   },
   "sptnig1": {
@@ -1620,7 +1620,7 @@
     "scientific_name": "Antiurus maculicaudus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Antiurus_maculicaudus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Antiurus+maculicaudus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Antiurus%20maculicaudus",
     "image_url": ""
   },
   "squcuc1": {
@@ -1628,7 +1628,7 @@
     "scientific_name": "Piaya cayana",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Piaya_cayana",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Piaya+cayana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Piaya%20cayana",
     "image_url": ""
   },
   "stbwoo2": {
@@ -1636,7 +1636,7 @@
     "scientific_name": "Dendroplex picus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dendroplex_picus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendroplex+picus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendroplex%20picus",
     "image_url": ""
   },
   "strcuc1": {
@@ -1644,7 +1644,7 @@
     "scientific_name": "Tapera naevia",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tapera_naevia",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tapera+naevia",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tapera%20naevia",
     "image_url": ""
   },
   "strher2": {
@@ -1652,7 +1652,7 @@
     "scientific_name": "Butorides striata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Butorides_striata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Butorides+striata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Butorides%20striata",
     "image_url": ""
   },
   "strowl1": {
@@ -1660,7 +1660,7 @@
     "scientific_name": "Asio clamator",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Asio_clamator",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Asio+clamator",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Asio%20clamator",
     "image_url": ""
   },
   "swthum1": {
@@ -1668,7 +1668,7 @@
     "scientific_name": "Eupetomena macroura",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Eupetomena_macroura",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Eupetomena+macroura",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Eupetomena%20macroura",
     "image_url": ""
   },
   "swtman1": {
@@ -1676,7 +1676,7 @@
     "scientific_name": "Chiroxiphia caudata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Chiroxiphia_caudata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chiroxiphia+caudata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Chiroxiphia%20caudata",
     "image_url": ""
   },
   "tattin1": {
@@ -1684,7 +1684,7 @@
     "scientific_name": "Crypturellus tataupa",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Crypturellus_tataupa",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus+tataupa",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus%20tataupa",
     "image_url": ""
   },
   "thlwre1": {
@@ -1692,7 +1692,7 @@
     "scientific_name": "Campylorhynchus turdinus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Campylorhynchus_turdinus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Campylorhynchus+turdinus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Campylorhynchus%20turdinus",
     "image_url": ""
   },
   "toctou1": {
@@ -1700,7 +1700,7 @@
     "scientific_name": "Ramphastos toco",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Ramphastos_toco",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ramphastos+toco",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Ramphastos%20toco",
     "image_url": ""
   },
   "trokin": {
@@ -1708,7 +1708,7 @@
     "scientific_name": "Tyrannus melancholicus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tyrannus_melancholicus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyrannus+melancholicus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tyrannus%20melancholicus",
     "image_url": ""
   },
   "trsowl": {
@@ -1716,7 +1716,7 @@
     "scientific_name": "Megascops choliba",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Megascops_choliba",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megascops+choliba",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Megascops%20choliba",
     "image_url": ""
   },
   "undtin1": {
@@ -1724,7 +1724,7 @@
     "scientific_name": "Crypturellus undulatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Crypturellus_undulatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus+undulatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Crypturellus%20undulatus",
     "image_url": ""
   },
   "varant1": {
@@ -1732,7 +1732,7 @@
     "scientific_name": "Thamnophilus caerulescens",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Thamnophilus_caerulescens",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus+caerulescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Thamnophilus%20caerulescens",
     "image_url": ""
   },
   "watjac1": {
@@ -1740,7 +1740,7 @@
     "scientific_name": "Jacana jacana",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Jacana_jacana",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Jacana+jacana",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Jacana%20jacana",
     "image_url": ""
   },
   "wesfie1": {
@@ -1748,7 +1748,7 @@
     "scientific_name": "Pyriglena maura",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Pyriglena_maura",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pyriglena+maura",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Pyriglena%20maura",
     "image_url": ""
   },
   "wfwduc1": {
@@ -1756,7 +1756,7 @@
     "scientific_name": "Dendrocygna viduata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Dendrocygna_viduata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendrocygna+viduata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Dendrocygna%20viduata",
     "image_url": ""
   },
   "whbant2": {
@@ -1764,7 +1764,7 @@
     "scientific_name": "Biatas nigropectus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Biatas_nigropectus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Biatas+nigropectus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Biatas%20nigropectus",
     "image_url": ""
   },
   "whbwar2": {
@@ -1772,7 +1772,7 @@
     "scientific_name": "Myiothlypis leucoblephara",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Myiothlypis_leucoblephara",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis+leucoblephara",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Myiothlypis%20leucoblephara",
     "image_url": ""
   },
   "whiwoo1": {
@@ -1780,7 +1780,7 @@
     "scientific_name": "Melanerpes candidus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Melanerpes_candidus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Melanerpes+candidus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Melanerpes%20candidus",
     "image_url": ""
   },
   "whlspi1": {
@@ -1788,7 +1788,7 @@
     "scientific_name": "Synallaxis albilora",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Synallaxis_albilora",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis+albilora",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Synallaxis%20albilora",
     "image_url": ""
   },
   "whnjay1": {
@@ -1796,7 +1796,7 @@
     "scientific_name": "Cyanocorax cyanopogon",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Cyanocorax_cyanopogon",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax+cyanopogon",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Cyanocorax%20cyanopogon",
     "image_url": ""
   },
   "whtdov": {
@@ -1804,7 +1804,7 @@
     "scientific_name": "Leptotila verreauxi",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Leptotila_verreauxi",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptotila+verreauxi",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Leptotila%20verreauxi",
     "image_url": ""
   },
   "whwpic1": {
@@ -1812,7 +1812,7 @@
     "scientific_name": "Picumnus albosquamatus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Picumnus_albosquamatus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Picumnus+albosquamatus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Picumnus%20albosquamatus",
     "image_url": ""
   },
   "y00678": {
@@ -1820,7 +1820,7 @@
     "scientific_name": "Caracara plancus",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Caracara_plancus",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Caracara+plancus",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Caracara%20plancus",
     "image_url": ""
   },
   "yebcar": {
@@ -1828,7 +1828,7 @@
     "scientific_name": "Paroaria capitata",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Paroaria_capitata",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Paroaria+capitata",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Paroaria%20capitata",
     "image_url": ""
   },
   "yebela1": {
@@ -1836,7 +1836,7 @@
     "scientific_name": "Elaenia flavogaster",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Elaenia_flavogaster",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia+flavogaster",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Elaenia%20flavogaster",
     "image_url": ""
   },
   "yecmac": {
@@ -1844,7 +1844,7 @@
     "scientific_name": "Primolius auricollis",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Primolius_auricollis",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Primolius+auricollis",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Primolius%20auricollis",
     "image_url": ""
   },
   "yecpar": {
@@ -1852,7 +1852,7 @@
     "scientific_name": "Brotogeris chiriri",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Brotogeris_chiriri",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Brotogeris+chiriri",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Brotogeris%20chiriri",
     "image_url": ""
   },
   "yehcar1": {
@@ -1860,7 +1860,7 @@
     "scientific_name": "Daptrius chimachima",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Daptrius_chimachima",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Daptrius+chimachima",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Daptrius%20chimachima",
     "image_url": ""
   },
   "yeofly1": {
@@ -1868,7 +1868,7 @@
     "scientific_name": "Tolmomyias sulphurescens",
     "taxon": "Aves",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Tolmomyias_sulphurescens",
-    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tolmomyias+sulphurescens",
+    "xeno_canto_search": "https://www.xeno-canto.org/?query=Tolmomyias%20sulphurescens",
     "image_url": ""
   }
 }

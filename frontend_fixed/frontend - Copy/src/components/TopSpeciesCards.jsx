@@ -140,12 +140,17 @@ export default function TopSpeciesCards({
                 <div className="mt-4 pt-4 border-t border-[#171717] text-sm text-[#514a40] space-y-2">
                   {info.scientific_name && (
                     <p>
-                      <strong>Scientific:</strong> {info.scientific_name}
+                      <strong>Scientific:</strong> <em>{info.scientific_name}</em>
                     </p>
                   )}
                   {info.taxon && (
                     <p>
                       <strong>Taxon:</strong> {info.taxon}
+                    </p>
+                  )}
+                  {species.code && (
+                    <p>
+                      <strong>Code:</strong> <code className="text-xs font-mono bg-[#f4ead4] px-1 py-0.5">{species.code}</code>
                     </p>
                   )}
                   <div className="flex gap-2 pt-2">
@@ -154,9 +159,9 @@ export default function TopSpeciesCards({
                         href={info.wikipedia_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#171717] hover:text-[#171717]"
+                        className="text-[#4b9fc9] hover:text-[#2a7aa8] underline"
                       >
-                        Wikipedia ↗
+                        📚 Wikipedia
                       </a>
                     )}
                     {info.xeno_canto_search && (
@@ -164,9 +169,9 @@ export default function TopSpeciesCards({
                         href={info.xeno_canto_search}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#171717] hover:text-[#171717]"
+                        className="text-[#4b9fc9] hover:text-[#2a7aa8] underline"
                       >
-                        Xeno-canto ↗
+                        🔊 Xeno-canto
                       </a>
                     )}
                   </div>

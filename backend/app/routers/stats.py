@@ -189,3 +189,49 @@ async def get_stats(
         "life_list": life_list,
         "map_points": map_points,
     }
+
+
+@router.get("/taxonomy")
+async def get_taxonomy():
+    """
+    Get complete species taxonomy mapping from taxonomy.csv.
+    
+    Returns mapping of species codes to scientific names, common names, and taxon.
+    This is used to generate proper Wikipedia and Xeno-canto links.
+    """
+    import csv
+    from pathlib import Path
+    
+    # Load taxonomy
+    backend_dir = Path(__file__).parent.parent.parent
+    taxonomy_file = backend_dir / "taxonomy.csv"
+    
+    if not taxonomy_file.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="Taxonomy file not found",
+        )
+    
+    taxonomy = {}
+    
+    try:
+        with open(taxonomy_file, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                code = row['primary_label'].strip()
+                taxonomy[code] = {
+                    "scientific_name": row['scientific_name'].strip(),
+                    "common_name": row['common_name'].strip(),
+                    "taxon": row['class_name'].strip(),
+                    "inat_id": row['inat_taxon_id'].strip(),
+                }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error reading taxonomy: {str(e)}",
+        )
+    
+    return {
+        "total_species": len(taxonomy),
+        "taxonomy": taxonomy,
+    }

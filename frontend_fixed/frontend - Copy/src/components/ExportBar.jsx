@@ -41,70 +41,293 @@ export default function ExportBar({ recording, prediction, selectedChart }) {
     const pdf = new jsPDF('p', 'mm', 'a4')
     const pageWidth = pdf.internal.pageSize.getWidth()
     const pageHeight = pdf.internal.pageSize.getHeight()
-    let yPosition = 20
+    const margin = 15
+    const contentWidth = pageWidth - 2 * margin
+    let yPosition = margin
 
-    // Title
-    pdf.setFontSize(18)
-    pdf.text('Audio Classification Report', pageWidth / 2, yPosition, { align: 'center' })
-    yPosition += 15
-
-    // Recording info
-    pdf.setFontSize(10)
-    pdf.text(`File: ${recording.original_filename}`, 20, yPosition)
-    yPosition += 7
-    pdf.text(`Duration: ${recording.duration_sec.toFixed(1)}s`, 20, yPosition)
-    yPosition += 7
-    pdf.text(`Site: ${recording.site_id}, Hour: ${recording.hour}`, 20, yPosition)
-    yPosition += 7
-    pdf.text(`Date: ${new Date(recording.created_at).toLocaleString()}`, 20, yPosition)
-    yPosition += 15
-
-    // Top species
-    pdf.setFontSize(12)
-    pdf.text('Top Detected Species:', 20, yPosition)
-    yPosition += 10
-
+    // ============================================================
+    // HEADER SECTION
+    // ============================================================
+    
+    // WildEcho branding
+    pdf.setTextColor(52, 168, 219) // Blue
+    pdf.setFontSize(24)
+    pdf.text('WildEcho', margin, yPosition)
+    pdf.setTextColor(0, 0, 0)
+    
     pdf.setFontSize(9)
-    ;(prediction?.top_species || []).slice(0, 5).forEach((sp, idx) => {
-      const text = `${idx + 1}. ${sp.common_name} - ${(sp.max_score * 100).toFixed(1)}% (${sp.windows_detected} windows, ${sp.seconds_present?.toFixed(1) || 'N/A'}s)`
-      pdf.text(text, 20, yPosition)
-      yPosition += 7
+    pdf.text('Audio Biomonitoring Report', margin, yPosition + 7)
+    
+    // Divider
+    pdf.setDrawColor(100, 100, 100)
+    pdf.line(margin, yPosition + 10, pageWidth - margin, yPosition + 10)
+    yPosition += 18
 
-      if (yPosition > pageHeight - 20) {
-        pdf.addPage()
-        yPosition = 20
-      }
+    // ============================================================
+    // RECORDING METADATA
+    // ============================================================
+    
+    pdf.setFontSize(11)
+    pdf.setFont(undefined, 'bold')
+    pdf.text('RECORDING INFORMATION', margin, yPosition)
+    yPosition += 8
+    
+    pdf.setFont(undefined, 'normal')
+    pdf.setFontSize(9)
+    
+    const recInfo = [
+      [`File:`, recording.original_filename],
+      [`Duration:`, `${recording.duration_sec.toFixed(2)}s`],
+      [`Site ID:`, `${recording.site_id}`],
+      [`Hour:`, `${recording.hour}:00`],
+      [`Recorded:`, new Date(recording.created_at).toLocaleString()],
+      [`Recording ID:`, recording.id],
+    ]
+    
+    recInfo.forEach(([label, value]) => {
+      pdf.setFont(undefined, 'bold')
+      pdf.text(label, margin, yPosition)
+      pdf.setFont(undefined, 'normal')
+      pdf.text(value, margin + 30, yPosition)
+      yPosition += 5
     })
 
-    yPosition += 10
-
-    // Try to capture heatmap or chart if visible
-    try {
-      const chartElement = document.getElementById('results-chart')
-      if (chartElement) {
-        pdf.setFontSize(12)
-        pdf.text('Detection Heatmap:', 20, yPosition)
-        yPosition += 10
-
-        const canvas = await html2canvas(chartElement, {
-          backgroundColor: '#fff8e8',
-          scale: 1,
-        })
-        const imgData = canvas.toDataURL('image/png')
-        const imgWidth = pageWidth - 40
-        const imgHeight = (canvas.height / canvas.width) * imgWidth
-        if (imgHeight + yPosition > pageHeight - 20) {
-          pdf.addPage()
-          yPosition = 20
-        }
-        pdf.addImage(imgData, 'PNG', 20, yPosition, imgWidth, imgHeight)
-      }
-    } catch (err) {
-      console.error('Failed to capture chart:', err)
+    if (recording.lat && recording.lng) {
+      pdf.setFont(undefined, 'bold')
+      pdf.text('Location:', margin, yPosition)
+      pdf.setFont(undefined, 'normal')
+      pdf.text(`${recording.lat.toFixed(4)}, ${recording.lng.toFixed(4)}`, margin + 30, yPosition)
+      yPosition += 5
     }
 
+    yPosition += 5
+
+    // ============================================================
+    // ANALYSIS SUMMARY STATS
+    // ============================================================
+    
+    pdf.setFontSize(11)
+    pdf.setFont(undefined, 'bold')
+    pdf.text('ANALYSIS SUMMARY', margin, yPosition)
+    yPosition += 8
+
+    const topSpecies = prediction?.top_species || []
+    
+    // Stats boxes
+    const stats = [
+      ['Species Detected', `${topSpecies.length}`],
+      ['Valid Windows', `${prediction?.valid_windows || 0}`],
+      ['Top Confidence', `${topSpecies.length > 0 ? (topSpecies[0].max_score * 100).toFixed(1) : 'N/A'}%`],
+      ['Mean Confidence', `${topSpecies.length > 0 ? (topSpecies.reduce((a, sp) => a + sp.mean_score, 0) / topSpecies.length * 100).toFixed(1) : 'N/A'}%`],
+    ]
+
+    pdf.setFont(undefined, 'normal')
+    pdf.setFontSize(8)
+    
+    let statsX = margin
+    const statWidth = contentWidth / 2 - 2
+    
+    stats.forEach((stat, idx) => {
+      const col = idx % 2
+      const row = Math.floor(idx / 2)
+      const x = margin + col * (statWidth + 4)
+      const y = yPosition + row * 14
+
+      // Box
+      pdf.setDrawColor(200, 200, 200)
+      pdf.rect(x, y, statWidth, 12)
+
+      // Label
+      pdf.setFont(undefined, 'bold')
+      pdf.text(stat[0], x + 2, y + 4)
+
+      // Value
+      pdf.setFont(undefined, 'bold')
+      pdf.setTextColor(25, 118, 210)
+      pdf.setFontSize(10)
+      pdf.text(stat[1], x + 2, y + 9)
+      pdf.setTextColor(0, 0, 0)
+      pdf.setFontSize(8)
+    })
+
+    yPosition += 30
+    pdf.setFont(undefined, 'normal')
+
+    // ============================================================
+    // TOP SPECIES TABLE
+    // ============================================================
+    
+    if (topSpecies.length > 0) {
+      pdf.setFontSize(11)
+      pdf.setFont(undefined, 'bold')
+      pdf.text('TOP DETECTED SPECIES', margin, yPosition)
+      yPosition += 8
+
+      // Table header
+      pdf.setFillColor(52, 168, 219)
+      pdf.setTextColor(255, 255, 255)
+      pdf.setFont(undefined, 'bold')
+      pdf.setFontSize(8)
+
+      const colWidths = [12, 50, 20, 20, 20, 20]
+      const headers = ['#', 'Species', 'Max Score', 'Avg Score', 'Windows', 'Duration']
+      let xPos = margin
+
+      headers.forEach((h, i) => {
+        pdf.rect(xPos, yPosition - 5, colWidths[i], 6, 'F')
+        pdf.text(h, xPos + 1, yPosition - 1, { maxWidth: colWidths[i] - 2 })
+        xPos += colWidths[i]
+      })
+
+      yPosition += 6
+      pdf.setTextColor(0, 0, 0)
+      pdf.setFont(undefined, 'normal')
+      pdf.setFontSize(7.5)
+
+      // Table rows
+      topSpecies.slice(0, 10).forEach((sp, idx) => {
+        if (yPosition > pageHeight - 20) {
+          pdf.addPage()
+          yPosition = margin
+        }
+
+        xPos = margin
+        const rowData = [
+          String(idx + 1),
+          String(sp.common_name ?? 'Unknown'),
+          `${(Number(sp.max_score || 0) * 100).toFixed(1)}%`,
+          `${(Number(sp.mean_score || 0) * 100).toFixed(1)}%`,
+          String(sp.windows_detected ?? 0),
+          `${Number(sp.seconds_present || 0).toFixed(1)}s`,
+        ]
+
+        // Alternate row color
+        if (idx % 2 === 0) {
+          pdf.setFillColor(245, 245, 245)
+          pdf.rect(margin, yPosition - 3.5, contentWidth, 5, 'F')
+        }
+
+        rowData.forEach((val, colIdx) => {
+          pdf.text(val, xPos + 1, yPosition, { maxWidth: colWidths[colIdx] - 2 })
+          xPos += colWidths[colIdx]
+        })
+
+        yPosition += 5
+      })
+
+      yPosition += 5
+    }
+
+    // ============================================================
+    // TAXON BREAKDOWN
+    // ============================================================
+    
+    const taxons = Array.from(new Set(topSpecies.map(sp => sp.taxon)))
+    if (taxons.length > 0) {
+      pdf.setFontSize(10)
+      pdf.setFont(undefined, 'bold')
+      pdf.text('SPECIES BY TAXON', margin, yPosition)
+      yPosition += 7
+
+      pdf.setFont(undefined, 'normal')
+      pdf.setFontSize(8)
+
+      taxons.forEach((taxon) => {
+        const count = topSpecies.filter(sp => sp.taxon === taxon).length
+        const pct = ((count / topSpecies.length) * 100).toFixed(1)
+        
+        pdf.text(`${taxon}: ${count} species (${pct}%)`, margin, yPosition)
+        yPosition += 5
+      })
+
+      yPosition += 5
+    }
+
+    // ============================================================
+    // CONFIDENCE DISTRIBUTION
+    // ============================================================
+    
+    if (topSpecies.length > 0) {
+      pdf.setFontSize(10)
+      pdf.setFont(undefined, 'bold')
+      pdf.text('CONFIDENCE SCORE DISTRIBUTION', margin, yPosition)
+      yPosition += 7
+
+      pdf.setFont(undefined, 'normal')
+      pdf.setFontSize(7.5)
+
+      const ranges = [
+        { label: '90-100%', min: 0.9, max: 1.0, color: [6, 95, 70] },
+        { label: '70-90%', min: 0.7, max: 0.9, color: [5, 150, 105] },
+        { label: '50-70%', min: 0.5, max: 0.7, color: [16, 185, 129] },
+        { label: '30-50%', min: 0.3, max: 0.5, color: [245, 158, 11] },
+        { label: '<30%', min: 0, max: 0.3, color: [239, 68, 68] },
+      ]
+
+      ranges.forEach((range) => {
+        const count = topSpecies.filter(sp => sp.max_score >= range.min && sp.max_score <= range.max).length
+        const pct = ((count / topSpecies.length) * 100).toFixed(1)
+
+        // Colored bar
+        const barWidth = (count / topSpecies.length) * 40
+        pdf.setFillColor(...range.color)
+        pdf.rect(margin, yPosition - 2, barWidth, 3, 'F')
+
+        pdf.setTextColor(0, 0, 0)
+        pdf.text(`${range.label}: ${count} species (${pct}%)`, margin + 45, yPosition)
+
+        yPosition += 4
+      })
+
+      yPosition += 5
+    }
+
+    // ============================================================
+    // DETECTION METHODOLOGY
+    // ============================================================
+    
+    if (yPosition > pageHeight - 40) {
+      pdf.addPage()
+      yPosition = margin
+    }
+
+    pdf.setFontSize(10)
+    pdf.setFont(undefined, 'bold')
+    pdf.text('ANALYSIS METHODOLOGY', margin, yPosition)
+    yPosition += 7
+
+    pdf.setFont(undefined, 'normal')
+    pdf.setFontSize(8)
+    
+    const methodology = [
+      '• Audio windowed into 5-second segments for analysis',
+      '• Multiple machine learning models combined for robust detection',
+      '• Species confidence scores represent model agreement',
+      '• Detections filtered by temporal and spectral constraints',
+      '• Results include both direct and indirect detections',
+    ]
+
+    methodology.forEach((line) => {
+      const splitText = pdf.splitTextToSize(line, contentWidth - 5)
+      splitText.forEach((text) => {
+        pdf.text(text, margin + 2, yPosition)
+        yPosition += 3.5
+      })
+    })
+
+    yPosition += 5
+
+    // ============================================================
+    // FOOTER
+    // ============================================================
+    
+    pdf.setFontSize(7)
+    pdf.setTextColor(150, 150, 150)
+    pdf.text(`Generated by WildEcho on ${new Date().toLocaleString()}`, margin, pageHeight - 5)
+    pdf.text(`Report ID: ${recording.id.substring(0, 8)}`, pageWidth - margin - 40, pageHeight - 5)
+
     // Save
-    pdf.save(`${recording.id}_report.pdf`)
+    pdf.save(`WildEcho_Report_${recording.id.substring(0, 8)}.pdf`)
   }
 
   return (
@@ -128,7 +351,8 @@ export default function ExportBar({ recording, prediction, selectedChart }) {
       </div>
 
       <p className="text-[#766d5e] text-sm mt-3">
-        CSV includes window-by-window detections and species summary. PDF includes report with top species and heatmap.
+        <strong>CSV:</strong> Window-by-window detections and species summary.<br/>
+        <strong>PDF:</strong> Comprehensive professional report with statistics, analysis methodology, and confidence distribution.
       </p>
     </div>
   )
