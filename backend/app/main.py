@@ -120,13 +120,18 @@ print("\n[DEBUG] Registering application routers...")
 
 with log_stage("Router Registration"):
 
-    print("[DEBUG] Registering authentication router...")
+    print("[DEBUG] Registering recordings router...")
     app.include_router(auth.router)
     print("[SUCCESS] Authentication router registered.")
 
     print("[DEBUG] Registering recordings router...")
     app.include_router(recordings.router)
     print("[SUCCESS] Recordings router registered.")
+
+    print("[DEBUG] Registering log-mel spectrogram router...")
+    from .routers import logmel
+    app.include_router(logmel.router)
+    print("[SUCCESS] Log-Mel Spectrogram router registered.")
 
     print("[DEBUG] Registering statistics router...")
     app.include_router(stats.router)

@@ -15,6 +15,31 @@ from ..routers.auth import get_current_user
 router = APIRouter(prefix="/stats", tags=["stats"])
 
 
+@router.get("/debug/recordings")
+async def debug_recordings(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    """Debug endpoint to check what recordings exist for the current user."""
+    recordings = db.query(Recording).filter(
+        Recording.user_id == current_user.id,
+    ).all()
+    
+    return {
+        "total_records_found": len(recordings),
+        "recordings": [
+            {
+                "id": r.id,
+                "filename": r.original_filename,
+                "status": r.status,
+                "has_prediction": r.prediction is not None,
+                "created_at": r.created_at.isoformat(),
+            }
+            for r in recordings
+        ],
+    }
+
+
 @router.get("")
 async def get_stats(
     current_user: User = Depends(get_current_user),
@@ -34,10 +59,12 @@ async def get_stats(
     - map_points (recordings with coordinates)
     """
 
-    # Get user's recordings
+    # Get user's recordings (including "done" status)
+    # Note: Only include completed recordings with predictions
     recordings = db.query(Recording).filter(
         Recording.user_id == current_user.id,
         Recording.status == "done",
+        Recording.prediction != None,  # Must have a prediction to be displayed
     ).all()
 
     # 1. Basic stats

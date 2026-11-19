@@ -324,6 +324,33 @@ def process_inference_background(
                     logger.info(f"[BG_TASK] Recording {recording_id} - Status saved to DB as DONE")
                     
                     success = True
+                    
+                    # ============================================================
+                    # SPECTROGRAM GENERATION (Independent, Non-blocking)
+                    # ============================================================
+                    # This runs asynchronously after main prediction succeeds.
+                    # If it fails, it does NOT affect the main prediction result.
+                    try:
+                        from ..logmel_spectrogram import generate_logmel_spectrogram
+                        
+                        logger.info(f"[BG_TASK] Recording {recording_id} - Starting log-mel spectrogram generation...")
+                        
+                        spectrogram_result = generate_logmel_spectrogram(
+                            audio_path=full_path,
+                            recording_id=recording_id,
+                            real_duration_sec=float(result.get("real_duration_sec", recording.duration_sec)),
+                            prediction_result=result,
+                        )
+                        
+                        if spectrogram_result.get("status") == "completed":
+                            logger.info(f"[BG_TASK] Recording {recording_id} - Spectrogram generation completed successfully")
+                        else:
+                            logger.warning(f"[BG_TASK] Recording {recording_id} - Spectrogram generation failed: {spectrogram_result.get('error_message')}")
+                    
+                    except Exception as logmel_error:
+                        # Log but do NOT fail the prediction result
+                        logger.warning(f"[BG_TASK] Recording {recording_id} - Spectrogram generation error (non-critical): {logmel_error}")
+
             
             except Exception as persist_error:
                 # Persistence failed
@@ -453,11 +480,14 @@ async def upload_recording(
     
     if existing:
         # Return existing recording with duplicate flag
+        # Frontend will navigate to results using existing_id
         return {
             "id": existing.id,
             "status": existing.status,
             "duplicate": True,
             "existing_id": existing.id,
+            "original_filename": existing.original_filename,
+            "created_at": existing.created_at.isoformat(),
             "message": "This file was already uploaded",
         }
     
